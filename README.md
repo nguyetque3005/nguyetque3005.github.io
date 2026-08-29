@@ -72,7 +72,8 @@ Pushing uses the `id_ed25519_nguyetque` SSH key (handled by the deploy script).
 
 1. Fill the **2022–2024 gap** in the story — the CV had nothing between leaving
    HSBC (09/2022) and starting the MA (09/2024).
-2. Confirm: the 성적 최우수상 award, the date of the "đi dạy tiếng Anh" photo, and
-   whether the programme was Global Young **Force** (banner) or **Leader** (CV).
+2. Confirm: the 성적 최우수상 award, and the date of the "đi dạy tiếng Anh" photo.
+   The programme is now written as Global Young **Force** everywhere, matching the
+   banner in the photo; the CV said "Leader". Correct if the CV was right.
 3. Add real blog posts and testimonials.
 4. Fill in social links in `content/site.json`.
