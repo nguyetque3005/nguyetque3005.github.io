@@ -1,10 +1,10 @@
 {
   "letter": {
     "eyebrow": "Thư ngỏ từ Queenie",
-    "quote": "Mình không có năng khiếu ngoại ngữ.\nMình chỉ có một cuốn vở\nvà mười năm.",
+    "quote": "Mình bắt đầu học tiếng Hàn\nsau mười năm làm ngân hàng.\nTừ con số không.",
     "body": [
-      "Mình là Nguyễn Hồng Nguyệt Quế — mọi người hay gọi mình là Queenie. Mình từng làm ngân hàng suốt mười năm ở Shinhan, ANZ và HSBC. Rồi mình sang Hàn Quốc học lại từ đầu, và tốt nghiệp Thạc sĩ Biên–Phiên dịch Hàn–Việt.",
-      "Mình vẫn nhớ rõ cảm giác lần đầu nhìn bảng chữ 한글 mà thấy chóng mặt. Nên khi bạn nói “em học mãi không vào”, mình hiểu thật, chứ không phải nói cho có."
+      "Mình là Nguyễn Hồng Nguyệt Quế — mọi người hay gọi mình là Queenie. Mình làm ngân hàng mười năm ở Shinhan, ANZ và HSBC, và trong suốt mười năm đó mình không dùng tiếng Hàn một chữ nào.",
+      "Mình học từ bảng chữ 한글 sau khi nghỉ HSBC năm 2022. Bốn năm sau, mình tốt nghiệp Thạc sĩ Biên–Phiên dịch Hàn–Việt. Nên khi bạn nói “em bắt đầu muộn quá”, mình hiểu thật, chứ không phải nói cho có."
     ],
     "cta": {
       "label": "Đọc hành trình của mình",
@@ -18,7 +18,7 @@
   "journeyIntro": {
     "eyebrow": "Hành trình",
     "title": "Từ ngân hàng đến biên–phiên dịch",
-    "lead": "Mười ba năm, không có bước nhảy nào — chỉ là mỗi năm biết thêm một chút so với năm trước."
+    "lead": "Mười năm ngân hàng, rồi bắt đầu lại từ bảng chữ cái."
   },
   "chapters": [
     {
@@ -45,7 +45,7 @@
       "year": "2013",
       "title": "Shinhan Bank Việt Nam — phòng One-Stop Services",
       "body": [
-        "Tiền gửi, ngoại hối, chuyển khoản tại quầy. Đồng nghiệp trao đổi công việc bằng tiếng Hàn, và mình không hiểu. Mình bắt đầu tự học."
+        "Tiền gửi, ngoại hối, chuyển khoản tại quầy — công việc đầu tiên của mình trong ngành ngân hàng."
       ],
       "aside": null,
       "photos": [
@@ -60,7 +60,7 @@
       "year": "2014 — 2018",
       "title": "Senior Officer, phòng Ngân hàng Quốc tế",
       "body": [
-        "Tài trợ thương mại xuất nhập khẩu và chuyển tiền trong nước, quốc tế. Tiếng Hàn trở thành công cụ làm việc hằng ngày với hội sở. Mình cũng phụ trách đào tạo nhân viên mới — công việc đầu tiên gần với việc dạy."
+        "Tài trợ thương mại xuất nhập khẩu và chuyển tiền trong nước, quốc tế. Mình cũng phụ trách đào tạo nhân viên mới — công việc đầu tiên gần với việc dạy."
       ],
       "aside": "2016 — Giải Nhân viên xuất sắc. Được chi nhánh chọn tham dự chương trình Global Young Force tại hội sở Hàn Quốc.",
       "photos": [
@@ -107,9 +107,9 @@
     },
     {
       "year": "2022",
-      "title": "Kết thúc mười năm ngân hàng",
+      "title": "Nghỉ HSBC, bắt đầu học tiếng Hàn từ đầu",
       "body": [
-        "Tháng 9/2022 mình nghỉ HSBC để sang Hàn Quốc học lại từ đầu."
+        "Tháng 9/2022 mình nghỉ HSBC. Mình học bảng chữ 한글 từ con số không, khi đã đi làm mười năm và chưa từng dùng thứ tiếng này."
       ],
       "aside": null,
       "photos": []

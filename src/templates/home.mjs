@@ -124,7 +124,7 @@ function closing(site) {
   return `    <section class="closing">
       <div class="shell closing-inner reveal">
         <h2>Nếu bạn đang ở đoạn khó nhất, mình hiểu.</h2>
-        <p>Mình đã đứng đúng chỗ đó mười ba năm trước. Cứ nhắn cho mình một câu, kể mình nghe bạn đang mắc ở đâu.</p>
+        <p>Năm 2022 mình cũng bắt đầu từ bảng chữ cái, khi đã đi làm mười năm. Cứ nhắn cho mình một câu, kể mình nghe bạn đang mắc ở đâu.</p>
         <p class="closing-actions">
           <a class="btn btn-primary" href="/lien-he.html">Nhắn cho Queenie</a>
           <a class="btn btn-quiet" href="/lop-hoc.html">Xem lớp học</a>
