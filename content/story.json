@@ -30,14 +30,14 @@
       "aside": null,
       "photos": [
         {
-          "src": "/assets/hinh-tot-nghiep-dh.jpeg",
-          "alt": "Queenie trong lễ tốt nghiệp Đại học Ngân hàng TP.HCM, cầm bằng tốt nghiệp và bó hoa",
-          "caption": "Tốt nghiệp Đại học Ngân hàng TP.HCM, 2013"
-        },
-        {
           "src": "/assets/di-day-tieng-anh.jpeg",
           "alt": "Queenie ngồi bên bàn học, chấm bài trong một buổi dạy tiếng Anh",
           "caption": "Đi dạy tiếng Anh"
+        },
+        {
+          "src": "/assets/hinh-tot-nghiep-dh.jpeg",
+          "alt": "Queenie trong lễ tốt nghiệp Đại học Ngân hàng TP.HCM, cầm bằng tốt nghiệp và bó hoa",
+          "caption": "Tốt nghiệp Đại học Ngân hàng TP.HCM, 2013"
         }
       ]
     },
@@ -106,10 +106,10 @@
       ]
     },
     {
-      "year": "2022",
-      "title": "Nghỉ HSBC, bắt đầu học tiếng Hàn từ đầu",
+      "year": "2022 — 2024",
+      "title": "Nghỉ HSBC, sang Hàn học tiếng Hàn từ đầu",
       "body": [
-        "Tháng 9/2022 mình nghỉ HSBC. Mình học bảng chữ 한글 từ con số không, khi đã đi làm mười năm và chưa từng dùng thứ tiếng này."
+        "Tháng 9/2022 mình nghỉ HSBC và sang Hàn Quốc. Mình học chương trình tiếng Hàn cơ bản tại 울산과학대학교, bắt đầu từ bảng chữ 한글, khi đã đi làm mười năm và chưa từng dùng thứ tiếng này."
       ],
       "aside": null,
       "photos": []
