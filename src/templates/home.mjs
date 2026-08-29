@@ -67,31 +67,6 @@ ${story.chapters.map(chapter).join('\n')}
     </section>`;
 }
 
-function credentials(cv) {
-  const certs = cv.certificates
-    .map(
-      (c) => `          <li>
-            <span class="cert-name">${escapeHtml(c.name)}</span>
-            <span class="cert-issuer">${escapeHtml(c.issuer)}${c.detail ? ` · ${escapeHtml(c.detail)}` : ''}</span>
-          </li>`
-    )
-    .join('\n');
-
-  return `    <section class="credentials">
-      <div class="shell credentials-inner reveal">
-        <div class="credentials-head">
-          <p class="eyebrow">Bằng cấp &amp; chứng chỉ</p>
-          <h2>Những gì mình có trên giấy tờ</h2>
-          <p class="section-lead">Mình để đây cho đầy đủ, chứ không phải để khoe. Tất cả đều kiểm chứng được.</p>
-          <a class="btn btn-quiet" href="/ho-so.html">Xem hồ sơ đầy đủ</a>
-        </div>
-        <ul class="cert-list">
-${certs}
-        </ul>
-      </div>
-    </section>`;
-}
-
 function doors(story) {
   const items = story.doors.items
     .map(
@@ -158,11 +133,10 @@ function closing(site) {
     </section>`;
 }
 
-export function renderHome({ site, story, cv, testimonials, posts }) {
+export function renderHome({ site, story, testimonials, posts }) {
   return [
     letter(story, site.person),
     journey(story),
-    credentials(cv),
     doors(story),
     latestPosts(posts),
     testimonialSection(testimonials),

@@ -200,7 +200,7 @@ async function build() {
         title: 'Câu chuyện',
         path: '/',
         bodyClass: 'page-home',
-        main: renderHome({ site, story, cv, testimonials, posts }),
+        main: renderHome({ site, story, testimonials, posts }),
         extraHead: '',
       }).replace(
         '</head>',
