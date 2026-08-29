@@ -101,12 +101,15 @@ có nhãn, chứ không bị vỡ ảnh.
 
 ### Ảnh không được đăng lên mạng
 
-Những file sau nằm trong `assets/` nhưng **cố tình không** được đưa lên website:
+Tài liệu nội bộ nằm trong thư mục `private/` — thư mục này bị `.gitignore`
+loại ra nên **không bao giờ** lên GitHub, cũng không lên website:
 
-- File `.docx` và `.pdf` — hồ sơ CV bản gốc, tài liệu nội bộ
+- `1345_NGUYEN_HONG_NGUYET_QUE.docx` — hồ sơ CV bản Word
 - `queenie-template-reference.jpg` — ảnh mẫu thiết kế
 
-Danh sách này khai báo trong `build.mjs`, biến `KHONG_XUAT_BAN`.
+Ngoài ra `build.mjs` còn chặn thêm một lớp nữa: mọi file `.docx`/`.pdf`
+lỡ nằm trong `assets/` cũng không được chép ra bản xuất bản
+(khai báo ở biến `KHONG_XUAT_BAN`).
 
 ---
 
@@ -131,34 +134,58 @@ Chỉ thêm nhận xét **có thật từ học viên thật**.
 
 ## Đưa website lên mạng
 
-Website là các file tĩnh trong `dist/`, đưa lên đâu cũng chạy.
+Website đang chạy tại **https://nguyetque3005.github.io**
 
-### Netlify (khuyến nghị — miễn phí, có sẵn form liên hệ)
+Repo dùng hai nhánh:
 
-1. Đẩy thư mục này lên GitHub.
-2. Vào [netlify.com](https://netlify.com), chọn **Add new site → Import an existing project**.
-3. Khai báo:
-   - Build command: `npm run build`
-   - Publish directory: `dist`
-4. Form liên hệ sẽ tự hoạt động (Netlify Forms). Thư gửi về xem ở tab **Forms**.
+| Nhánh | Chứa gì |
+|---|---|
+| `source` | Mã nguồn: `content/`, `src/`, `assets/`, `build.mjs` — chỗ bạn làm việc |
+| `main` | Chỉ website đã dựng — GitHub Pages đọc nhánh này, **không sửa tay** |
 
-### Cloudflare Pages / GitHub Pages
+### Đăng bản mới sau khi sửa nội dung
 
-Cũng chạy được, cấu hình tương tự. Riêng **form liên hệ sẽ không hoạt động**
-vì đó là tính năng riêng của Netlify — khi đó nên đổi form sang
-[Formspree](https://formspree.io) hoặc bỏ form, chỉ để email.
+```bash
+npm run build     # xem thử ở máy trước
+npm run serve     # mở http://localhost:8000 kiểm tra
 
-### Tên miền
+git add -A
+git commit -m "Thêm bài viết mới"
+git push origin source
 
-Sau khi có tên miền thật, sửa `content/site.json`:
-
-```json
-"seo": { "url": "https://tenmiencuaban.com" }
+npm run deploy    # dựng lại và đẩy lên main → website cập nhật
 ```
 
-Giá trị này dùng cho sitemap, RSS và thẻ chia sẻ mạng xã hội.
+`npm run deploy` lo hết phần nhánh `main`. Sau khi chạy, đợi khoảng
+một phút để GitHub Pages cập nhật.
 
----
+### Khoá SSH
+
+Repo này đẩy bằng khoá `~/.ssh/id_ed25519_nguyetque` (tài khoản `nguyetque3005`).
+Script deploy đã tự dùng đúng khoá. Nếu chạy lệnh `git push` tay:
+
+```bash
+export GIT_SSH_COMMAND="ssh -i ~/.ssh/id_ed25519_nguyetque -o IdentitiesOnly=yes"
+```
+
+### Form liên hệ
+
+Website tĩnh nên không có máy chủ nhận form. Nút "Soạn email gửi Queenie"
+mở sẵn một email đã điền đầy đủ trong ứng dụng mail của người gửi —
+chạy được trên mọi nơi lưu trữ, không cần cấu hình gì.
+
+Nếu sau này muốn nhận form thẳng vào hộp thư mà người gửi không phải
+mở ứng dụng mail, có thể chuyển sang [Formspree](https://formspree.io)
+hoặc dời website sang Netlify.
+
+### Tên miền riêng
+
+Khi có tên miền thật:
+
+1. Sửa `content/site.json` → `"seo": { "url": "https://tenmiencuaban.com" }`
+2. Thêm file `CNAME` chứa tên miền vào thư mục `dist/` khi build
+   (hoặc khai báo trong Settings → Pages → Custom domain)
+3. Chạy `npm run deploy`
 
 ## Cấu trúc thư mục
 
@@ -178,7 +205,9 @@ queenie-korean-homepage/
 │  ├─ styles/style.css
 │  └─ scripts/main.js
 ├─ build.mjs             ← lệnh dựng website
-├─ dist/                 ← KẾT QUẢ (tự sinh, đừng sửa tay)
+├─ scripts/deploy.sh     ← đẩy website lên GitHub Pages
+├─ dist/                 ← KẾT QUẢ (tự sinh, đừng sửa tay, không lên git)
+├─ private/              ← tài liệu nội bộ (không lên git)
 └─ _v1-cu/               ← bản website cũ, giữ lại để tham khảo
 ```
 
