@@ -1,0 +1,13 @@
+# Kết quả build — sinh tự động, không commit vào nhánh source
+dist/
+
+# Tài liệu nội bộ: CV bản Word, ảnh mẫu thiết kế.
+# Repo này công khai nên tuyệt đối không đưa lên.
+private/
+
+# Công cụ
+node_modules/
+.superpowers/
+.playwright-mcp/
+*.log
+.DS_Store

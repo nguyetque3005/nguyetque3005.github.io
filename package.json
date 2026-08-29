@@ -1,0 +1,16 @@
+{
+  "name": "tieng-han-cung-queenie",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Trang cá nhân của Nguyễn Hồng Nguyệt Quế (Queenie) — Thạc sĩ Biên–Phiên dịch Hàn–Việt.",
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "dev": "node build.mjs && node --watch-path=./content --watch-path=./src build.mjs",
+    "serve": "node build.mjs && node --eval \"import('node:http').then(async({default:http})=>{const fs=await import('node:fs/promises');const path=await import('node:path');const types={'.html':'text/html; charset=utf-8','.css':'text/css; charset=utf-8','.js':'text/javascript; charset=utf-8','.jpeg':'image/jpeg','.jpg':'image/jpeg','.png':'image/png','.xml':'application/xml','.txt':'text/plain; charset=utf-8'};http.createServer(async(req,res)=>{let p=decodeURIComponent(req.url.split('?')[0]);if(p.endsWith('/'))p+='index.html';const f=path.join(process.cwd(),'dist',p);try{const b=await fs.readFile(f);res.writeHead(200,{'Content-Type':types[path.extname(f)]||'application/octet-stream'});res.end(b);}catch{try{const b=await fs.readFile(path.join(process.cwd(),'dist','404.html'));res.writeHead(404,{'Content-Type':'text/html; charset=utf-8'});res.end(b);}catch{res.writeHead(404);res.end('404');}}}).listen(process.env.PORT||8000,()=>console.log('http://localhost:'+(process.env.PORT||8000)));})\"",
+    "deploy": "bash scripts/deploy.sh"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "brand": {
+    "name": "Tiếng Hàn cùng Queenie",
+    "short": "Queenie",
+    "tagline": "Học chắc · Hiểu sâu · Dùng được",
+    "logo": "/assets/logo.jpeg"
+  },
+  "person": {
+    "fullName": "Nguyễn Hồng Nguyệt Quế",
+    "nickname": "Queenie",
+    "role": "Thạc sĩ Biên–Phiên dịch Hàn–Việt",
+    "credentialLine": "Thạc sĩ Biên–Phiên dịch Hàn–Việt · TOPIK 6급 · 10 năm tại Shinhan, ANZ và HSBC"
+  },
+  "seo": {
+    "url": "https://nguyetque3005.github.io",
+    "description": "Nguyễn Hồng Nguyệt Quế (Queenie) — Thạc sĩ Biên–Phiên dịch Hàn–Việt, TOPIK 6급, 10 năm làm việc tại Shinhan Bank, ANZ và HSBC. Chia sẻ tiếng Hàn, văn hoá và cuộc sống tại Hàn Quốc.",
+    "locale": "vi_VN",
+    "image": "/assets/logo.jpeg"
+  },
+  "nav": [
+    {
+      "label": "Câu chuyện",
+      "href": "/"
+    },
+    {
+      "label": "Hồ sơ",
+      "href": "/ho-so.html"
+    },
+    {
+      "label": "Blog",
+      "href": "/blog.html"
+    },
+    {
+      "label": "Lớp học",
+      "href": "/lop-hoc.html"
+    },
+    {
+      "label": "Liên hệ",
+      "href": "/lien-he.html"
+    }
+  ],
+  "navCta": {
+    "label": "Học cùng mình",
+    "href": "/lop-hoc.html"
+  },
+  "contact": {
+    "email": "nguyetque3005@gmail.com",
+    "location": "Seoul, Hàn Quốc",
+    "note": "Mình đọc và trả lời email mỗi ngày. Vì lệch múi giờ 2 tiếng với Việt Nam, đôi khi mình trả lời hơi muộn một chút — mong bạn thông cảm nhé."
+  },
+  "socials": [
+    {
+      "label": "Facebook",
+      "href": "",
+      "handle": ""
+    },
+    {
+      "label": "Instagram",
+      "href": "",
+      "handle": ""
+    },
+    {
+      "label": "TikTok",
+      "href": "",
+      "handle": ""
+    },
+    {
+      "label": "YouTube",
+      "href": "",
+      "handle": ""
+    }
+  ],
+  "footerNote": "Trang cá nhân của Nguyễn Hồng Nguyệt Quế (Queenie). Mọi thông tin học vấn, kinh nghiệm và chứng chỉ trên trang đều là thật và có thể kiểm chứng."
+}

@@ -1,0 +1,133 @@
+{
+  "intro": {
+    "eyebrow": "Hồ sơ",
+    "title": "Nguyễn Hồng Nguyệt Quế",
+    "lead": "Thạc sĩ Biên–Phiên dịch Hàn–Việt · TOPIK 6급 · gần 10 năm làm việc trong ngành ngân hàng tại Shinhan Bank Việt Nam, ANZ Việt Nam và HSBC Việt Nam, chủ yếu ở mảng tài trợ thương mại và thanh toán quốc tế.",
+    "note": "Toàn bộ thông tin dưới đây là thật và có thể kiểm chứng."
+  },
+  "experience": [
+    {
+      "org": "HSBC Bank Vietnam Limited",
+      "role": "Global Trade and Receivables Finance (GTRF) — Trade Middle Office Associate",
+      "period": "12/2018 – 09/2022",
+      "bullets": [
+        "Xử lý và kiểm tra toàn bộ giao dịch tài trợ thương mại: tín dụng thư, nhờ thu chứng từ, tuân thủ quy tắc ICC và chuẩn kiểm soát rủi ro nội bộ.",
+        "Xử lý khối lượng lớn giao dịch quốc tế chính xác và kịp thời, bảo đảm giao dịch xuyên biên giới thông suốt.",
+        "Phối hợp giữa khối kinh doanh và khối vận hành, xử lý sai sót giao dịch và các vướng mắc của khách hàng.",
+        "Tham gia cải tiến quy trình, góp phần nâng hiệu quả vận hành."
+      ],
+      "awards": [
+        "Top Performance 2020–2021",
+        "CEO Recognition Award 2021"
+      ]
+    },
+    {
+      "org": "ANZ Bank Vietnam Limited",
+      "role": "Client Service Department — Client Service Advisor",
+      "period": "06/2018 – 12/2018",
+      "bullets": [
+        "Tư vấn và hỗ trợ khách hàng về sản phẩm, dịch vụ ngân hàng bán lẻ.",
+        "Tiếp nhận và xử lý yêu cầu hằng ngày của khách hàng, phối hợp với các bộ phận liên quan để giải quyết vấn đề.",
+        "Nắm đúng nhu cầu khách hàng và phản hồi nhanh, góp phần nâng mức độ hài lòng."
+      ],
+      "awards": []
+    },
+    {
+      "org": "Shinhan Bank Vietnam Limited",
+      "role": "International Banking Department — Senior Officer",
+      "period": "05/2014 – 06/2018",
+      "bullets": [
+        "Xử lý và quản lý nghiệp vụ tài trợ thương mại xuất nhập khẩu, chuyển tiền trong nước và quốc tế, tuân thủ quy định pháp luật và quy định nội bộ.",
+        "Tư vấn và hỗ trợ khách hàng doanh nghiệp về dịch vụ tài trợ thương mại và chuyển tiền.",
+        "Đào tạo, kèm cặp nhân viên mới và nhân viên ít kinh nghiệm, nâng độ chính xác và hiệu quả công việc của nhóm."
+      ],
+      "awards": [
+        "Giải Nhân viên xuất sắc (Excellent Performance Staff) 2016",
+        "Điểm cao trong kỳ kiểm tra kiến thức nghiệp vụ do ngân hàng tổ chức hằng năm",
+        "Được chọn làm đại diện chi nhánh tham dự khoá Global Young Leader tại hội sở Hàn Quốc",
+        "Giải Ba cuộc thi 3S Ideas Contest (Speed, Standardization, Simplification) 2015"
+      ]
+    },
+    {
+      "org": "Shinhan Bank Vietnam Limited",
+      "role": "One-Stop Services Department — Officer",
+      "period": "06/2013 – 05/2014",
+      "bullets": [
+        "Trực tiếp xử lý giao dịch ngân hàng bán lẻ tại quầy: tiền gửi, ngoại hối, chuyển tiền.",
+        "Hỗ trợ tư vấn và chăm sóc khách hàng, tham gia hoạt động bán chéo sản phẩm."
+      ],
+      "awards": []
+    }
+  ],
+  "education": [
+    {
+      "org": "국제언어대학원대학교 (International Graduate School of Languages)",
+      "role": "Thạc sĩ Biên–Phiên dịch Hàn–Việt",
+      "period": "09/2024 – 08/2026",
+      "bullets": [
+        "GPA 4.3",
+        "Giải 성적 최우수상 — thành tích học tập xuất sắc nhất, tháng 8/2026"
+      ]
+    },
+    {
+      "org": "Đại học Ngân hàng TP. Hồ Chí Minh",
+      "role": "Cử nhân Ngôn ngữ Anh",
+      "period": "09/2009 – 06/2013",
+      "bullets": [
+        "GPA 8.14/10 — hạng 3 trên 150 sinh viên",
+        "Học bổng khuyến khích học tập mỗi học kỳ (Top 10)",
+        "Giải khuyến khích Nghiên cứu khoa học sinh viên 2011 — đề tài “Vai trò của ngoại hối trong nền kinh tế”"
+      ]
+    }
+  ],
+  "certificates": [
+    {
+      "name": "TOPIK 6급",
+      "issuer": "국립국제교육원 — Viện Giáo dục Quốc tế Quốc gia Hàn Quốc",
+      "detail": "Cấp cao nhất của kỳ thi Năng lực tiếng Hàn",
+      "image": "/assets/images/chung-chi-topik.jpg"
+    },
+    {
+      "name": "Chương trình Hội nhập xã hội KIIP — bậc 5",
+      "issuer": "Bộ Tư pháp Hàn Quốc — Cục Xuất nhập cảnh và Chính sách người nước ngoài",
+      "detail": "Bậc cuối cùng của chương trình hội nhập xã hội",
+      "image": "/assets/images/chung-chi-kiip.jpg"
+    },
+    {
+      "name": "CDCS — Certificate for Documentary Credit Specialists",
+      "issuer": "LIBF Centre for Digital Banking and Finance",
+      "detail": "92/100",
+      "image": "/assets/images/chung-chi-cdcs.jpg"
+    },
+    {
+      "name": "CITF — Certificate in International Trade and Finance",
+      "issuer": "LIBF Centre for Digital Banking and Finance",
+      "detail": "90/100",
+      "image": "/assets/images/chung-chi-citf.jpg"
+    },
+    {
+      "name": "Chứng chỉ Chuyên viên Tài chính – Ngân hàng",
+      "issuer": "Viện Nghiên cứu Tin học và Kinh tế ứng dụng — Sở Khoa học và Công nghệ TP.HCM",
+      "detail": "",
+      "image": ""
+    }
+  ],
+  "languages": [
+    {
+      "name": "Tiếng Việt",
+      "level": "Tiếng mẹ đẻ"
+    },
+    {
+      "name": "Tiếng Hàn",
+      "level": "TOPIK 6급 — Thạc sĩ Biên–Phiên dịch Hàn–Việt"
+    },
+    {
+      "name": "Tiếng Anh",
+      "level": "Cử nhân Ngôn ngữ Anh — môi trường làm việc tiếng Anh 10 năm"
+    }
+  ],
+  "status": {
+    "residence": "Đang sinh sống tại Hàn Quốc",
+    "visa": "Tư cách lưu trú F-2"
+  }
+}

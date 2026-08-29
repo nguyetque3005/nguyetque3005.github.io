@@ -1,0 +1,5 @@
+{
+  "_huong_dan": "Chỉ thêm nhận xét CÓ THẬT từ học viên thật. Nếu mảng 'items' rỗng, phần 'Học viên nói gì' sẽ tự động không hiển thị trên website. Mỗi mục: quote (lời nhận xét), name (tên hoặc tên viết tắt), context (bối cảnh, ví dụ: 'Lớp TOPIK, 2026').",
+  "title": "Học viên nói gì",
+  "items": []
+}
