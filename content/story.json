@@ -10,10 +10,6 @@
     "cta": {
       "label": "Đọc hành trình của mình",
       "href": "#hanh-trinh"
-    },
-    "ctaSecondary": {
-      "label": "Xem lớp học",
-      "href": "/lop-hoc.html"
     }
   },
   "journeyIntro": {

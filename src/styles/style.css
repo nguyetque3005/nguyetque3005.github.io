@@ -889,13 +889,6 @@ ul.chapter-aside li::before {
 
 .prose p {
   margin-bottom: 1.3em;
-  text-align: justify;
-  text-justify: inter-word;
-}
-
-.prose li {
-  text-align: justify;
-  text-justify: inter-word;
 }
 
 .prose ul,
@@ -2011,6 +2004,45 @@ ul.chapter-aside li::before {
 .js .reveal.is-visible {
   opacity: 1;
   transform: none;
+}
+
+
+/* =========================================================
+   Căn đều hai bên cho phần chữ chạy dài
+   Không áp dụng cho tiêu đề, nút bấm, nhãn và các khối
+   cố tình canh giữa — canh giữa mà căn đều thì dòng cuối
+   sẽ lệch trông rất xấu.
+   ========================================================= */
+
+.letter-body,
+.chapter-body p,
+.chapter-aside,
+ul.chapter-aside li,
+.entry-bullets li,
+.entry-awards li,
+.door-text,
+.skill p,
+.pain-list li,
+.pain-note,
+.check-list li,
+.step-text,
+.course-note,
+.quote blockquote,
+.post-summary,
+.post-foot-text,
+.contact-note,
+.cert-card-issuer,
+.prose p,
+.prose li,
+.prose blockquote p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* Bảng vẫn căn trái để hai cột thẳng hàng */
+.table-wrap td,
+.table-wrap th {
+  text-align: left;
 }
 
 /* =========================================================

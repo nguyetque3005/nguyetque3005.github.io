@@ -18,8 +18,9 @@ function letter(story) {
           ${story.letter.lead ? `<p class="letter-lead">${escapeHtml(story.letter.lead)}</p>` : ''}
           ${story.letter.body.map((p) => `<p class="letter-body">${escapeHtml(p)}</p>`).join('\n          ')}
           <p class="letter-actions">
-            <a class="btn btn-primary" href="${story.letter.cta.href}">${escapeHtml(story.letter.cta.label)}</a>
-            <a class="btn btn-quiet" href="${story.letter.ctaSecondary.href}">${escapeHtml(story.letter.ctaSecondary.label)}</a>
+            <a class="btn btn-primary" href="${story.letter.cta.href}">${escapeHtml(story.letter.cta.label)}</a>${story.letter.ctaSecondary
+              ? `\n            <a class="btn btn-quiet" href="${story.letter.ctaSecondary.href}">${escapeHtml(story.letter.ctaSecondary.label)}</a>`
+              : ''}
           </p>
         </article>
       </div>
