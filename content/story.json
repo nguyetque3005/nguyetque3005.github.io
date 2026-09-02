@@ -1,7 +1,7 @@
 {
   "letter": {
     "eyebrow": "Thư ngỏ từ Queenie",
-    "quote": "Mình bắt đầu học tiếng Hàn\nsau mười năm làm ngân hàng.\nTừ con số không.",
+    "quote": "Bắt đầu muộn,\nnhưng chưa bao giờ là quá muộn.",
     "body": [
       "Mình là Nguyễn Hồng Nguyệt Quế, hay Queenie. Trước khi đến với tiếng Hàn, mình có 10 năm làm việc trong ngành ngân hàng tại Shinhan, ANZ và HSBC. Trong suốt quãng thời gian đó, tiếng Hàn hoàn toàn không nằm trong công việc hay cuộc sống của mình.",
       "Năm 2022, sau khi rời HSBC và sang Hàn Quốc, mình bắt đầu học tiếng Hàn tại 울산과학대학교 (Ulsan College). Từ những bước đầu tiên, mình từng bước xây dựng nền tảng tiếng Hàn và tiếp tục theo đuổi con đường học thuật. Đến năm 2026, mình hoàn thành chương trình Thạc sĩ Biên–Phiên dịch Hàn–Việt tại 국제언어대학원대학교 (IGSE).",
@@ -14,8 +14,7 @@
     "ctaSecondary": {
       "label": "Xem lớp học",
       "href": "/lop-hoc.html"
-    },
-    "lead": "Bắt đầu muộn, nhưng chưa bao giờ là quá muộn."
+    }
   },
   "journeyIntro": {
     "eyebrow": "",
