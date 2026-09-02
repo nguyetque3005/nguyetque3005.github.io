@@ -1,7 +1,8 @@
 # Kết quả build — sinh tự động
 dist/
 
-# Tài liệu nội bộ, không đưa lên GitHub
+# Giữ trên máy, không đưa lên GitHub
+docs/
 private/
 
 # Công cụ và file tạm
