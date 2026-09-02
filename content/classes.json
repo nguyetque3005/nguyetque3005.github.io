@@ -1,71 +1,60 @@
 {
   "intro": {
     "eyebrow": "Lớp học",
-    "title": "Học tiếng Hàn cùng mình",
-    "lead": "Mình dạy theo đúng cách mình từng học: chậm ở phần gốc, chắc ở phần ngữ pháp, và luôn gắn với tình huống dùng thật. Không học mẹo, không học vẹt.",
+    "title": "Nội dung khoá học",
+    "lead": "Khoá học không chỉ tập trung vào việc củng cố từ vựng và ngữ pháp, mà còn giúp học viên hiểu cấu trúc và cách ra đề TOPIK, từ đó hình thành phương pháp và chiến lược làm bài hiệu quả. Thông qua quá trình phân tích dạng đề và luyện đề thực chiến, học viên được rèn luyện khả năng xử lý câu hỏi nhanh, chính xác, biết nhận diện bẫy, phân bổ thời gian hợp lý và tối ưu hoá điểm số.",
     "status": "open",
     "statusNote": ""
   },
-
-  "principles": [
-    {
-      "title": "Học chắc",
-      "text": "Không bỏ qua phần gốc. Phát âm, bảng chữ và ngữ pháp nền được làm cho thật kỹ, vì đó là chỗ quyết định bạn đi được bao xa."
-    },
-    {
-      "title": "Hiểu sâu",
-      "text": "Mình giải thích vì sao câu đó nói vậy, chứ không bắt bạn thuộc lòng. Hai năm học biên–phiên dịch dạy mình cách bóc một câu tiếng Hàn ra tận lõi."
-    },
-    {
-      "title": "Dùng được",
-      "text": "Mọi bài học đều gắn với một tình huống thật: đi làm, đi phỏng vấn, làm giấy tờ, nói chuyện với đồng nghiệp người Hàn."
-    }
-  ],
-
-  "courses": [
-    {
-      "name": "Tiếng Hàn từ con số không",
-      "for": "Người chưa biết gì, bắt đầu từ bảng chữ 한글",
-      "format": "Lớp nhỏ hoặc kèm riêng · học online",
-      "outcome": "Đọc viết được 한글, nắm ngữ pháp nền, tự giới thiệu và xử lý hội thoại cơ bản.",
-      "note": ""
-    },
-    {
-      "name": "Luyện thi TOPIK",
-      "for": "Người cần chứng chỉ để đi học, đi làm hoặc xin visa",
-      "format": "Theo cấp độ mục tiêu · có chữa bài viết",
-      "outcome": "Chiến lược làm bài từng phần, luyện đề có chấm chữa, và lấp những lỗ hổng ngữ pháp còn sót.",
-      "note": "Mình đã đi qua đúng kỳ thi này tới 6급."
-    },
-    {
-      "name": "Tiếng Hàn công sở — tài chính, ngân hàng, thương mại",
-      "for": "Người đi làm trong công ty Hàn, ngành ngân hàng, xuất nhập khẩu, logistics",
-      "format": "Kèm riêng hoặc theo nhóm doanh nghiệp",
-      "outcome": "Email, báo cáo, họp, và từ vựng nghiệp vụ thật: 신용장, 송금, 무역금융, 결재 và cách nói chuyện đúng thứ bậc trong công ty Hàn.",
-      "note": "Đây là phần mình có lợi thế mà ít giáo viên có: mười năm mình làm đúng những nghiệp vụ này."
-    },
-    {
-      "name": "Tiếng Hàn để sống ở Hàn",
-      "for": "Người Việt đang sinh sống tại Hàn Quốc",
-      "format": "Kèm riêng · online hoặc trực tiếp (tuỳ khu vực)",
-      "outcome": "Tiếng Hàn dùng ở bệnh viện, ngân hàng, cục xuất nhập cảnh, trường học của con — những chỗ mà sai một chữ là mất cả buổi.",
-      "note": "Mình cũng đã đi qua KIIP và các thủ tục này."
-    }
-  ],
-
   "process": {
     "title": "Bắt đầu thế nào",
     "steps": [
-      { "title": "Nhắn cho mình", "text": "Bạn kể mình nghe bạn đang ở đâu và muốn đi tới đâu. Không cần chuẩn bị gì cả." },
-      { "title": "Buổi trao đổi đầu", "text": "Mình xem trình độ hiện tại và cùng bạn chốt mục tiêu thật sự, chứ không phải mục tiêu chung chung." },
-      { "title": "Lộ trình riêng", "text": "Mình gửi bạn lộ trình, thời lượng và học phí cụ thể. Bạn thấy hợp thì mình bắt đầu." }
+      {
+        "title": "Nhắn cho mình",
+        "text": "Bạn kể mình nghe bạn đang ở đâu và muốn đi tới đâu. Không cần chuẩn bị gì cả."
+      },
+      {
+        "title": "Buổi trao đổi đầu",
+        "text": "Mình xem trình độ hiện tại và cùng bạn chốt mục tiêu thật sự, chứ không phải mục tiêu chung chung."
+      },
+      {
+        "title": "Lộ trình riêng",
+        "text": "Mình gửi bạn lộ trình, thời lượng và học phí cụ thể. Bạn thấy hợp thì mình bắt đầu."
+      }
     ]
   },
-
   "cta": {
     "title": "Chưa chắc lớp nào hợp với mình?",
     "text": "Cứ nhắn cho mình. Nếu mình thấy bạn chưa cần học với mình, mình sẽ nói thật và chỉ bạn chỗ nên bắt đầu.",
     "label": "Nhắn cho Queenie",
     "href": "/lien-he.html"
+  },
+  "skills": [
+    {
+      "icon": "🎧",
+      "title": "Nghe",
+      "text": "Luyện phản xạ bắt từ khoá, nhận diện bẫy và nắm bắt thông tin cốt lõi."
+    },
+    {
+      "icon": "📖",
+      "title": "Đọc",
+      "text": "Học cách đọc nhanh, xác định từ khoá và ý chính, bóc tách cấu trúc câu, phân tích đáp án và loại trừ phương án nhiễu."
+    },
+    {
+      "icon": "✍️",
+      "title": "Viết",
+      "text": "Hướng dẫn chi tiết cách xử lý câu 51, 52, 53 và chuyên sâu phương pháp làm câu 54 — từ phân tích đề, xây dựng ý đến triển khai bài viết mạch lạc và đúng tiêu chí chấm điểm."
+    }
+  ],
+  "goal": {
+    "icon": "🎯",
+    "title": "Mục tiêu",
+    "items": [
+      "Học chắc kiến thức",
+      "Hiểu cách ra đề",
+      "Làm chủ chiến thuật",
+      "Tối ưu thời gian",
+      "Bứt phá điểm số TOPIK"
+    ]
   }
 }

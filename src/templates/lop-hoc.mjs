@@ -1,15 +1,16 @@
 import { escapeHtml } from '../lib/markdown.mjs';
 import { pageHead, testimonialSection } from './partials.mjs';
 
-function principles(classes) {
-  return `    <section class="principles">
+function skills(classes) {
+  return `    <section class="skills">
       <div class="shell">
-        <div class="principle-grid">
-${classes.principles
+        <div class="skill-grid">
+${classes.skills
   .map(
-    (p) => `          <article class="principle reveal">
-            <h3>${escapeHtml(p.title)}</h3>
-            <p>${escapeHtml(p.text)}</p>
+    (s) => `          <article class="skill reveal">
+            <span class="skill-icon" aria-hidden="true">${s.icon}</span>
+            <h2>${escapeHtml(s.title)}</h2>
+            <p>${escapeHtml(s.text)}</p>
           </article>`
   )
   .join('\n')}
@@ -18,28 +19,14 @@ ${classes.principles
     </section>`;
 }
 
-function courses(classes) {
-  return `    <section class="courses">
-      <div class="shell">
-        <header class="section-head reveal">
-          <p class="eyebrow">Các lớp</p>
-          <h2>Bốn hướng đi, tuỳ bạn cần gì</h2>
-        </header>
-        <div class="course-list">
-${classes.courses
-  .map(
-    (c) => `          <article class="course reveal">
-            <h3 class="course-name">${escapeHtml(c.name)}</h3>
-            <dl class="course-meta">
-              <div><dt>Dành cho</dt><dd>${escapeHtml(c.for)}</dd></div>
-              <div><dt>Hình thức</dt><dd>${escapeHtml(c.format)}</dd></div>
-              <div><dt>Học xong bạn làm được</dt><dd>${escapeHtml(c.outcome)}</dd></div>
-            </dl>
-            ${c.note ? `<p class="course-note">${escapeHtml(c.note)}</p>` : ''}
-          </article>`
-  )
-  .join('\n')}
-        </div>
+function goal(classes) {
+  return `    <section class="goal">
+      <div class="shell goal-inner reveal">
+        <span class="goal-icon" aria-hidden="true">${classes.goal.icon}</span>
+        <h2>${escapeHtml(classes.goal.title)}</h2>
+        <ul class="goal-list">
+${classes.goal.items.map((i) => `          <li>${escapeHtml(i)}</li>`).join('\n')}
+        </ul>
       </div>
     </section>`;
 }
@@ -85,8 +72,8 @@ export function renderLopHoc({ classes, testimonials }) {
       lead: classes.intro.lead,
       note: classes.intro.statusNote,
     }),
-    principles(classes),
-    courses(classes),
+    skills(classes),
+    goal(classes),
     testimonialSection(testimonials),
     process(classes),
     cta(classes),

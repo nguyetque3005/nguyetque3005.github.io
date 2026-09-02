@@ -1,7 +1,7 @@
 import { escapeHtml } from '../lib/markdown.mjs';
 import { figure, postCard, testimonialSection } from './partials.mjs';
 
-function letter(story, person) {
+function letter(story) {
   const quote = escapeHtml(story.letter.quote)
     .split('\n')
     .map((l) => `<span>${l}</span>`)
@@ -15,13 +15,13 @@ function letter(story, person) {
           <blockquote class="letter-quote">
             ${quote}
           </blockquote>
+          ${story.letter.lead ? `<p class="letter-lead">${escapeHtml(story.letter.lead)}</p>` : ''}
           ${story.letter.body.map((p) => `<p class="letter-body">${escapeHtml(p)}</p>`).join('\n          ')}
           <p class="letter-actions">
             <a class="btn btn-primary" href="${story.letter.cta.href}">${escapeHtml(story.letter.cta.label)}</a>
             <a class="btn btn-quiet" href="${story.letter.ctaSecondary.href}">${escapeHtml(story.letter.ctaSecondary.label)}</a>
           </p>
         </article>
-        <p class="letter-credentials reveal">${escapeHtml(person.credentialLine)}</p>
       </div>
     </section>`;
 }
@@ -29,7 +29,11 @@ function letter(story, person) {
 function chapter(ch, index) {
   const side = index % 2 === 0 ? 'is-left' : 'is-right';
   const body = ch.body.map((p) => `<p>${escapeHtml(p)}</p>`).join('\n              ');
-  const aside = ch.aside ? `<p class="chapter-aside">${escapeHtml(ch.aside)}</p>` : '';
+  const aside = !ch.aside
+    ? ''
+    : Array.isArray(ch.aside)
+      ? `<ul class="chapter-aside">${ch.aside.map((a) => `<li>${escapeHtml(a)}</li>`).join('')}</ul>`
+      : `<p class="chapter-aside">${escapeHtml(ch.aside)}</p>`;
 
   const photos = ch.photos || [];
   const media = photos.length
@@ -54,38 +58,16 @@ function chapter(ch, index) {
 function journey(story) {
   return `    <section class="journey" id="hanh-trinh">
       <div class="shell">
-        <header class="section-head reveal">
+        ${story.journeyIntro.title
+          ? `<header class="section-head reveal">
           <p class="eyebrow">${escapeHtml(story.journeyIntro.eyebrow)}</p>
           <h2>${escapeHtml(story.journeyIntro.title)}</h2>
           <p class="section-lead">${escapeHtml(story.journeyIntro.lead)}</p>
-        </header>
+        </header>`
+          : ''}
 
         <div class="chapters">
 ${story.chapters.map(chapter).join('\n')}
-        </div>
-      </div>
-    </section>`;
-}
-
-function doors(story) {
-  const items = story.doors.items
-    .map(
-      (d) => `          <a class="door reveal" href="${d.href}">
-            <p class="door-kicker">${escapeHtml(d.kicker)}</p>
-            <h3>${escapeHtml(d.title)}</h3>
-            <p class="door-text">${escapeHtml(d.text)}</p>
-            <span class="door-cta">${escapeHtml(d.cta)} <span aria-hidden="true">→</span></span>
-          </a>`
-    )
-    .join('\n');
-
-  return `    <section class="doors">
-      <div class="shell">
-        <header class="section-head reveal">
-          <h2>${escapeHtml(story.doors.title)}</h2>
-        </header>
-        <div class="door-grid">
-${items}
         </div>
       </div>
     </section>`;
@@ -135,9 +117,8 @@ function closing(site) {
 
 export function renderHome({ site, story, testimonials, posts }) {
   return [
-    letter(story, site.person),
+    letter(story),
     journey(story),
-    doors(story),
     latestPosts(posts),
     testimonialSection(testimonials),
     closing(site),
