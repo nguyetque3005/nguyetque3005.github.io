@@ -131,6 +131,24 @@
     });
   }
 
+  /* ---------- Hạn chế sao chép nội dung tài liệu ----------
+     Chỉ là rào cản với người đọc thông thường. Không thể chặn tuyệt đối:
+     ai muốn lấy vẫn xem được mã nguồn, tắt JavaScript hoặc chụp màn hình. */
+
+  var sheet = document.querySelector('.doc-sheet');
+
+  if (sheet) {
+    ['copy', 'cut', 'dragstart'].forEach(function (evt) {
+      sheet.addEventListener(evt, function (e) {
+        e.preventDefault();
+      });
+    });
+
+    sheet.addEventListener('contextmenu', function (e) {
+      e.preventDefault();
+    });
+  }
+
   /* ---------- Lọc bài viết theo chuyên mục ---------- */
 
   var chips = document.querySelectorAll('[data-filter]');

@@ -20,7 +20,7 @@ Dùng để giới thiệu bối cảnh, thực trạng hoặc những thay đ�
 
 ### Xu hướng và thay đổi
 
-| Tiếng Hàn | Nghĩa tiếng Việt |
+| Tiếng Hàn | Tiếng Việt |
 | --- | --- |
 | 생활 방식이 변화하다 | Lối sống thay đổi |
 | 가치관이 달라지다 / 바뀌다 | Giá trị quan thay đổi |
@@ -38,7 +38,7 @@ Dùng để giới thiệu bối cảnh, thực trạng hoặc những thay đ�
 
 ### Xã hội hiện đại
 
-| Tiếng Hàn | Nghĩa tiếng Việt |
+| Tiếng Hàn | Tiếng Việt |
 | --- | --- |
 | 정보의 홍수 속에서 살아가다 | Sống trong thời đại thông tin tràn ngập |
 | 다문화 사회로 변화하다 | Thay đổi thành xã hội đa văn hoá |
@@ -56,7 +56,7 @@ Dùng để giải thích tại sao một vấn đề xảy ra hoặc tại sao 
 
 ### Nhận thức và thái độ
 
-| Tiếng Hàn | Nghĩa tiếng Việt |
+| Tiếng Hàn | Tiếng Việt |
 | --- | --- |
 | 사회적 인식이 부족하다 | Nhận thức xã hội còn thiếu |
 | ~에 대한 인식이 부족하다 | Thiếu nhận thức về ~ |
@@ -69,7 +69,7 @@ Dùng để giải thích tại sao một vấn đề xảy ra hoặc tại sao 
 
 ### Điều kiện và khó khăn
 
-| Tiếng Hàn | Nghĩa tiếng Việt |
+| Tiếng Hàn | Tiếng Việt |
 | --- | --- |
 | 경제적 여유가 부족하다 | Thiếu điều kiện tài chính |
 | 시간이 부족하다 | Thiếu thời gian |
@@ -82,7 +82,7 @@ Dùng để giải thích tại sao một vấn đề xảy ra hoặc tại sao 
 
 ### Nguyên nhân dẫn đến vấn đề
 
-| Tiếng Hàn | Nghĩa tiếng Việt |
+| Tiếng Hàn | Tiếng Việt |
 | --- | --- |
 | ~로 인해 | Do ~ |
 | ~ 때문에 | Vì ~ |
@@ -100,7 +100,7 @@ Dùng để trình bày những vấn đề phát sinh và tác động tiêu c�
 
 ### Vấn đề xã hội
 
-| Tiếng Hàn | Nghĩa tiếng Việt |
+| Tiếng Hàn | Tiếng Việt |
 | --- | --- |
 | 사회 문제로 이어지다 | Dẫn đến vấn đề xã hội |
 | 복합적인 문제가 발생하다 | Phát sinh những vấn đề phức tạp |
@@ -118,7 +118,7 @@ Dùng để trình bày những vấn đề phát sinh và tác động tiêu c�
 
 ### Tác động tiêu cực
 
-| Tiếng Hàn | Nghĩa tiếng Việt |
+| Tiếng Hàn | Tiếng Việt |
 | --- | --- |
 | 부정적인 영향을 미치다 | Gây ảnh hưởng tiêu cực |
 | 직접적인 피해를 주다 | Gây thiệt hại trực tiếp |
@@ -137,7 +137,7 @@ Dùng khi đề yêu cầu cá nhân cần làm gì hoặc khi đưa ra giải p
 
 ### Thay đổi nhận thức và tư duy
 
-| Tiếng Hàn | Nghĩa tiếng Việt |
+| Tiếng Hàn | Tiếng Việt |
 | --- | --- |
 | 인식을 바꾸다 | Thay đổi nhận thức |
 | 인식의 전환이 필요하다 | Cần có sự thay đổi nhận thức |
@@ -156,7 +156,7 @@ Dùng khi đề yêu cầu cá nhân cần làm gì hoặc khi đưa ra giải p
 
 ### Rèn luyện phẩm chất và năng lực
 
-| Tiếng Hàn | Nghĩa tiếng Việt |
+| Tiếng Hàn | Tiếng Việt |
 | --- | --- |
 | 공동체 의식을 함양하다 / 기르다 | Nuôi dưỡng ý thức cộng đồng |
 | 시민 의식을 함양하다 | Nuôi dưỡng ý thức công dân |
@@ -172,7 +172,7 @@ Dùng khi đề yêu cầu cá nhân cần làm gì hoặc khi đưa ra giải p
 
 ### Hành động cụ thể
 
-| Tiếng Hàn | Nghĩa tiếng Việt |
+| Tiếng Hàn | Tiếng Việt |
 | --- | --- |
 | ~을/를 실천에 옮기다 | Đưa ~ vào thực tiễn / biến ~ thành hành động |
 | 작은 변화부터 시작하다 | Bắt đầu từ những thay đổi nhỏ |
@@ -200,7 +200,7 @@ Dùng khi đề yêu cầu cá nhân cần làm gì hoặc khi đưa ra giải p
 
 ## 5. Giải pháp trong mối quan hệ giữa người với người
 
-| Tiếng Hàn | Nghĩa tiếng Việt |
+| Tiếng Hàn | Tiếng Việt |
 | --- | --- |
 | 타인을 배려하다 | Quan tâm, nghĩ cho người khác |
 | 서로를 배려하고 존중하다 | Quan tâm và tôn trọng lẫn nhau |
@@ -221,7 +221,7 @@ Dùng khi đề yêu cầu cá nhân cần làm gì hoặc khi đưa ra giải p
 
 ### Chính sách, pháp luật và thể chế
 
-| Tiếng Hàn | Nghĩa tiếng Việt |
+| Tiếng Hàn | Tiếng Việt |
 | --- | --- |
 | 제도를 마련하다 | Thiết lập cơ chế / hệ thống |
 | 제도를 강화하다 | Tăng cường cơ chế / hệ thống |
@@ -242,7 +242,7 @@ Dùng khi đề yêu cầu cá nhân cần làm gì hoặc khi đưa ra giải p
 
 ### Giải quyết các vấn đề xã hội
 
-| Tiếng Hàn | Nghĩa tiếng Việt |
+| Tiếng Hàn | Tiếng Việt |
 | --- | --- |
 | 경제적 불평등을 해소하다 | Xoá bỏ bất bình đẳng kinh tế |
 | 불평등을 해소하다 | Xoá bỏ bất bình đẳng |
@@ -254,7 +254,7 @@ Dùng khi đề yêu cầu cá nhân cần làm gì hoặc khi đưa ra giải p
 
 ### An sinh xã hội và hệ thống
 
-| Tiếng Hàn | Nghĩa tiếng Việt |
+| Tiếng Hàn | Tiếng Việt |
 | --- | --- |
 | 사회 안전망을 강화하다 | Tăng cường mạng lưới an sinh xã hội |
 | 사회 안전망을 구축하다 | Xây dựng mạng lưới an sinh xã hội |
@@ -267,7 +267,7 @@ Dùng khi đề yêu cầu cá nhân cần làm gì hoặc khi đưa ra giải p
 
 ### Giáo dục và tuyên truyền
 
-| Tiếng Hàn | Nghĩa tiếng Việt |
+| Tiếng Hàn | Tiếng Việt |
 | --- | --- |
 | 양질의 교육을 제공하다 | Cung cấp nền giáo dục chất lượng |
 | 교육의 질을 향상시키다 | Nâng cao chất lượng giáo dục |
@@ -285,7 +285,7 @@ Dùng khi đề yêu cầu cá nhân cần làm gì hoặc khi đưa ra giải p
 
 ## 7. Khuyến khích tham gia và hợp tác
 
-| Tiếng Hàn | Nghĩa tiếng Việt |
+| Tiếng Hàn | Tiếng Việt |
 | --- | --- |
 | 주민 참여를 확대하다 | Mở rộng sự tham gia của người dân |
 | 시민 참여를 장려하다 | Khuyến khích sự tham gia của người dân |
@@ -312,7 +312,7 @@ Dùng khi đề yêu cầu cá nhân cần làm gì hoặc khi đưa ra giải p
 
 ### Kinh tế và đổi mới
 
-| Tiếng Hàn | Nghĩa tiếng Việt |
+| Tiếng Hàn | Tiếng Việt |
 | --- | --- |
 | 경제 발전을 촉진하다 | Thúc đẩy phát triển kinh tế |
 | 경제 활성화를 도모하다 | Thúc đẩy sự phát triển / sôi động hoá nền kinh tế |
@@ -325,7 +325,7 @@ Dùng khi đề yêu cầu cá nhân cần làm gì hoặc khi đưa ra giải p
 
 ### Đóng góp cho xã hội
 
-| Tiếng Hàn | Nghĩa tiếng Việt |
+| Tiếng Hàn | Tiếng Việt |
 | --- | --- |
 | 지속 가능한 발전을 이루다 | Đạt được sự phát triển bền vững |
 | 지속 가능한 사회를 구축하다 | Xây dựng xã hội bền vững |
@@ -346,7 +346,7 @@ Dùng khi đề yêu cầu cá nhân cần làm gì hoặc khi đưa ra giải p
 
 ### Công bằng và quyền lợi
 
-| Tiếng Hàn | Nghĩa tiếng Việt |
+| Tiếng Hàn | Tiếng Việt |
 | --- | --- |
 | 자원 배분의 공정성을 확보하다 | Đảm bảo tính công bằng trong phân bổ tài nguyên |
 | 형평성을 고려하다 | Cân nhắc tính công bằng / hợp lý |
