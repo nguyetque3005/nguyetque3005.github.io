@@ -409,6 +409,14 @@ p {
   display: block;
 }
 
+.letter-lead {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(1.05rem, 2vw, 1.3rem);
+  color: var(--pink-600);
+  margin-bottom: 1.1em;
+}
+
 .letter-body {
   color: var(--muted);
   font-size: 1.03rem;
@@ -510,12 +518,34 @@ p {
 
 .chapter-aside {
   margin: 20px 0 0;
+  list-style: none;
   padding: 14px 18px;
   background: var(--soft);
   border-left: 3px solid var(--pink-200);
   border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
   font-size: 0.92rem;
   color: var(--muted);
+}
+
+ul.chapter-aside li {
+  position: relative;
+  padding-left: 16px;
+  margin-bottom: 6px;
+}
+
+ul.chapter-aside li:last-child {
+  margin-bottom: 0;
+}
+
+ul.chapter-aside li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.72em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--pink-200);
 }
 
 .chapter.no-photo .chapter-aside {
@@ -531,12 +561,12 @@ p {
 }
 
 /* Khi một chương có hai tấm ảnh: xếp lệch nhau cho đỡ cứng */
-.chapter-media.is-stacked .chapter-photo:nth-child(2) {
+.chapter-media.is-stacked .chapter-photo:nth-child(2):last-child {
   width: 78%;
   margin-left: auto;
 }
 
-.chapter.is-right .chapter-media.is-stacked .chapter-photo:nth-child(2) {
+.chapter.is-right .chapter-media.is-stacked .chapter-photo:nth-child(2):last-child {
   margin-left: 0;
   margin-right: auto;
 }
@@ -1343,6 +1373,89 @@ p {
   font-size: 0.95rem;
 }
 
+/* ---------- Nội dung khoá học ---------- */
+
+.skills {
+  padding: var(--step) 0;
+  background: var(--white);
+}
+
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.skill {
+  padding: 34px 30px;
+  background: var(--soft);
+  border: 1px solid var(--blush);
+  border-radius: var(--radius);
+}
+
+.skill-icon {
+  font-size: 1.9rem;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.skill h2 {
+  font-size: clamp(1.15rem, 2vw, 1.4rem);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--pink-600);
+  margin-bottom: 0.5em;
+}
+
+.skill p {
+  color: var(--muted);
+  font-size: 0.97rem;
+  margin: 0;
+}
+
+.goal {
+  padding: var(--step) 0;
+  background: linear-gradient(160deg, var(--blush), var(--soft));
+}
+
+.goal-inner {
+  max-width: 760px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.goal-icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.goal-inner h2 {
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: clamp(1.3rem, 2.4vw, 1.7rem);
+}
+
+.goal-list {
+  list-style: none;
+  margin: 22px 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.goal-list li {
+  background: var(--white);
+  border: 1px solid var(--pink-200);
+  color: var(--pink-600);
+  font-weight: 600;
+  font-size: 0.92rem;
+  padding: 10px 20px;
+  border-radius: 999px;
+}
+
 /* ---------- Liên hệ ---------- */
 
 .contact {
@@ -1655,7 +1768,7 @@ p {
   }
 
   .chapter-media.is-stacked .chapter-photo:nth-child(2),
-  .chapter.is-right .chapter-media.is-stacked .chapter-photo:nth-child(2) {
+  .chapter.is-right .chapter-media.is-stacked .chapter-photo:nth-child(2):last-child {
     width: 100%;
     margin: 0;
   }
