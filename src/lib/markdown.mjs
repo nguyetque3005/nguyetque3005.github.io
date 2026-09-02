@@ -1,7 +1,7 @@
 // Bộ chuyển Markdown -> HTML tối giản, không phụ thuộc thư viện ngoài.
 // Hỗ trợ: tiêu đề, đoạn văn, danh sách, trích dẫn, đường kẻ, khối mã,
 // ảnh, liên kết, in đậm, in nghiêng, mã inline.
-// Không hỗ trợ (có chủ đích): bảng, danh sách lồng nhau, HTML thô.
+// Không hỗ trợ (có chủ đích): danh sách lồng nhau, HTML thô.
 
 const CODE_TOKEN = '@@QKCODE';
 
@@ -61,6 +61,8 @@ const RE_HEADING = /^(#{1,6})\s+(.*)$/;
 const RE_QUOTE = /^>\s?/;
 const RE_UL = /^[-*]\s+/;
 const RE_OL = /^\d+\.\s+/;
+const RE_TABLE_ROW = /^\s*\|.*\|\s*$/;
+const RE_TABLE_SEP = /^\s*\|[\s:|-]+\|\s*$/;
 
 function startsBlock(line) {
   return (
@@ -69,8 +71,18 @@ function startsBlock(line) {
     RE_HEADING.test(line) ||
     RE_QUOTE.test(line) ||
     RE_UL.test(line) ||
-    RE_OL.test(line)
+    RE_OL.test(line) ||
+    RE_TABLE_ROW.test(line)
   );
+}
+
+// Tách một dòng bảng thành các ô, bỏ dấu | ở hai đầu
+function tableCells(line) {
+  return line
+    .trim()
+    .replace(/^\||\|$/g, '')
+    .split('|')
+    .map((c) => c.trim());
 }
 
 // Đoạn văn chỉ chứa một tấm ảnh -> dựng thành <figure> có chú thích
@@ -103,6 +115,21 @@ export function renderMarkdown(src, { headingIds = true } = {}) {
     if (RE_HR.test(line)) {
       out.push('<hr>');
       i++;
+      continue;
+    }
+
+    // Bảng: dòng tiêu đề, dòng phân cách, rồi các dòng dữ liệu
+    if (RE_TABLE_ROW.test(line) && i + 1 < lines.length && RE_TABLE_SEP.test(lines[i + 1])) {
+      const head = tableCells(lines[i]);
+      i += 2;
+      const rows = [];
+      while (i < lines.length && RE_TABLE_ROW.test(lines[i])) rows.push(tableCells(lines[i++]));
+
+      const thead = `<thead><tr>${head.map((c) => `<th>${renderInline(c)}</th>`).join('')}</tr></thead>`;
+      const tbody = `<tbody>${rows
+        .map((r) => `<tr>${r.map((c) => `<td>${renderInline(c)}</td>`).join('')}</tr>`)
+        .join('')}</tbody>`;
+      out.push(`<div class="table-wrap"><table>${thead}${tbody}</table></div>`);
       continue;
     }
 

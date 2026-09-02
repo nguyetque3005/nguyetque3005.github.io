@@ -78,8 +78,8 @@ function latestPosts(posts) {
     return `    <section class="posts-teaser">
       <div class="shell">
         <div class="empty-note reveal">
-          <p class="eyebrow">Blog</p>
-          <h2>Bài viết đầu tiên đang trên đường tới</h2>
+          <p class="eyebrow">Tài liệu</p>
+          <h2>Tài liệu đầu tiên đang trên đường tới</h2>
           <p class="section-lead">Mình đang chuẩn bị những bài đầu tiên về ngữ pháp, từ vựng và chuyện sống ở Hàn. Ghé lại sau nhé.</p>
         </div>
       </div>
@@ -90,10 +90,10 @@ function latestPosts(posts) {
       <div class="shell">
         <header class="section-head section-head-row reveal">
           <div>
-            <p class="eyebrow">Blog</p>
-            <h2>Bài viết mới</h2>
+            <p class="eyebrow">Tài liệu</p>
+            <h2>Tài liệu mới</h2>
           </div>
-          <a class="btn btn-quiet" href="/blog.html">Xem tất cả bài viết</a>
+          <a class="btn btn-quiet" href="/blog.html">Xem tất cả tài liệu</a>
         </header>
         <div class="post-grid">
 ${posts.slice(0, 3).map((p) => postCard(p)).join('\n')}

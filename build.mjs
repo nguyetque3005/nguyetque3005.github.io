@@ -29,21 +29,27 @@ const KHONG_XUAT_BAN = [
   /^\./, // file ẩn
 ];
 
-function biLoaiTru(name) {
+// Ngoại lệ: tài liệu PDF đặt trong assets/tai-lieu/ là để cho học viên tải về,
+// nên vẫn được xuất bản. Mọi PDF ở nơi khác vẫn bị chặn.
+const THU_MUC_CHO_PHEP_PDF = 'tai-lieu';
+
+function biLoaiTru(name, rel) {
+  if (/\.pdf$/i.test(name) && rel.split(path.sep)[0] === THU_MUC_CHO_PHEP_PDF) return false;
   return KHONG_XUAT_BAN.some((re) => re.test(name));
 }
 
-async function copyDir(from, to, skipped = []) {
+async function copyDir(from, to, skipped = [], rel = '') {
   await fs.mkdir(to, { recursive: true });
   const entries = await fs.readdir(from, { withFileTypes: true });
   for (const e of entries) {
-    if (biLoaiTru(e.name)) {
-      skipped.push(e.name);
+    const childRel = rel ? path.join(rel, e.name) : e.name;
+    if (biLoaiTru(e.name, childRel)) {
+      skipped.push(childRel);
       continue;
     }
     const src = path.join(from, e.name);
     const dest = path.join(to, e.name);
-    if (e.isDirectory()) await copyDir(src, dest, skipped);
+    if (e.isDirectory()) await copyDir(src, dest, skipped, childRel);
     else await fs.copyFile(src, dest);
   }
   return skipped;
@@ -99,6 +105,7 @@ async function loadPosts(site) {
       summary: data.summary || '',
       image: data.image || '',
       imageAlt: data.imageAlt || '',
+      pdf: data.pdf || '',
       author: site.person.fullName,
       readingMinutes: readingMinutes(body),
       html: renderMarkdown(body),
@@ -230,8 +237,8 @@ async function build() {
       'blog.html',
       page({
         site,
-        title: 'Blog',
-        description: 'Bài viết về ngữ pháp, từ vựng, luyện thi TOPIK và cuộc sống ở Hàn Quốc.',
+        title: 'Tài liệu',
+        description: 'Tài liệu và bài viết về ngữ pháp, từ vựng, luyện thi TOPIK và cuộc sống ở Hàn Quốc.',
         path: '/blog.html',
         bodyClass: 'page-blog',
         main: renderBlogIndex({ posts, categories }),

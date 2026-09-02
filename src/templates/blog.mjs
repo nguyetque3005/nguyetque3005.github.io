@@ -2,11 +2,7 @@ import { escapeHtml } from '../lib/markdown.mjs';
 import { pageHead, postCard, formatDate } from './partials.mjs';
 
 export function renderBlogIndex({ posts, categories }) {
-  const head = pageHead({
-    eyebrow: 'Blog',
-    title: 'Viết về tiếng Hàn, và về việc sống bằng tiếng Hàn',
-    lead: 'Ngữ pháp giải thích cho hiểu chứ không phải cho thuộc, từ vựng dùng được thật, và những chuyện nhỏ trong đời sống ở Hàn Quốc.',
-  });
+  const head = pageHead({ eyebrow: '', title: 'Tài liệu' });
 
   if (!posts.length) {
     return `${head}
@@ -14,7 +10,7 @@ export function renderBlogIndex({ posts, categories }) {
     <section class="blog-list">
       <div class="shell">
         <div class="empty-note reveal">
-          <h2>Chưa có bài viết nào</h2>
+          <h2>Chưa có tài liệu nào</h2>
           <p class="section-lead">Mình đang viết những bài đầu tiên. Bạn ghé lại sau một chút nhé — hoặc nhắn cho mình chủ đề bạn muốn đọc, mình sẽ viết cái đó trước.</p>
           <p><a class="btn btn-primary" href="/lien-he.html">Gợi ý chủ đề cho mình</a></p>
         </div>
@@ -67,7 +63,7 @@ ${related.map((p) => postCard(p)).join('\n')}
   return `    <article class="post">
       <div class="shell shell-narrow">
         <header class="post-head reveal">
-          <p class="post-breadcrumb"><a href="/blog.html">Blog</a> <span aria-hidden="true">/</span> ${escapeHtml(post.category || 'Bài viết')}</p>
+          <p class="post-breadcrumb"><a href="/blog.html">Tài liệu</a> <span aria-hidden="true">/</span> ${escapeHtml(post.category || 'Bài viết')}</p>
           <h1>${escapeHtml(post.title)}</h1>
           <p class="post-byline">
             <span>${escapeHtml(post.author)}</span>
@@ -77,10 +73,20 @@ ${related.map((p) => postCard(p)).join('\n')}
             <span>${post.readingMinutes} phút đọc</span>
           </p>
           ${post.summary ? `<p class="post-lead">${escapeHtml(post.summary)}</p>` : ''}
+          ${post.pdf
+            ? `<p class="post-download"><a class="btn btn-quiet" href="${post.pdf}" download>Tải bản PDF</a></p>`
+            : ''}
         </header>
 ${hero}
-        <div class="prose reveal">
+        <div class="doc-sheet reveal">
+          <span class="doc-corner tl" aria-hidden="true">&#9825;</span>
+          <span class="doc-corner tr" aria-hidden="true">&#9825;</span>
+          <span class="doc-corner bl" aria-hidden="true">&#9825;</span>
+          <span class="doc-corner br" aria-hidden="true">&#9825;</span>
+          <img class="doc-logo" src="/assets/logo.jpeg" alt="" width="76" height="76">
+          <div class="prose">
 ${post.html}
+          </div>
         </div>
 
         <footer class="post-foot reveal">
@@ -88,7 +94,9 @@ ${post.html}
           <div>
             <p class="post-foot-name">${escapeHtml(post.author)}</p>
             <p class="post-foot-text">Thạc sĩ Biên–Phiên dịch Hàn–Việt, TOPIK 6급. Mình dạy tiếng Hàn cho người Việt và viết lại những gì mình từng phải tự mò mẫm.</p>
-            <p><a class="btn btn-quiet" href="/lop-hoc.html">Xem lớp học của mình</a></p>
+            <p class="post-foot-actions">${post.pdf
+              ? `<a class="btn btn-primary" href="${post.pdf}" download>Tải bản PDF</a> `
+              : ''}<a class="btn btn-quiet" href="/lop-hoc.html">Xem lớp học của mình</a></p>
           </div>
         </footer>
       </div>
