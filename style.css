@@ -994,6 +994,11 @@ ul.chapter-aside li::before {
 
 .doc-sheet {
   position: relative;
+  /* Hạn chế bôi đen sao chép. Đây chỉ là rào cản, không phải khoá:
+     người dùng vẫn có thể xem mã nguồn, tắt JavaScript hoặc chụp màn hình. */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
   background: var(--white);
   border: 2px solid var(--pink-200);
   border-radius: 20px;
