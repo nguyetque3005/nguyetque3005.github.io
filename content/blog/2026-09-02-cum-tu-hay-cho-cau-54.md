@@ -3,7 +3,7 @@ title: Cụm từ hay cho câu 54 TOPIK II
 date: 2026-09-02
 category: TOPIK
 pdf: /assets/tai-lieu/cum-tu-hay-cho-cau-54.pdf
-summary: Tuyển tập cụm từ tiếng Hàn thường dùng khi viết câu 54, sắp xếp theo tám nhóm chức năng — từ nêu hiện trạng, phân tích nguyên nhân đến đề xuất giải pháp.
+summary: Tuyển tập cụm từ tiếng Hàn thường dùng khi viết câu 54, sắp xếp theo mười nhóm chức năng — từ nêu hiện trạng, phân tích nguyên nhân đến đề xuất giải pháp và cụm nối ý.
 ---
 
 Câu 54 không kiểm tra bạn thuộc bao nhiêu từ, mà kiểm tra bạn có triển khai được một lập luận hoàn chỉnh hay không. Bài viết thường đi theo một mạch cố định: nêu hiện trạng, chỉ ra nguyên nhân, phân tích hậu quả, rồi đề xuất giải pháp.
@@ -14,7 +14,7 @@ Một lưu ý trước khi dùng: đừng cố nhồi càng nhiều cụm càng 
 
 ---
 
-## 1. Hiện trạng và xu hướng xã hội
+## 1. HIỆN TRẠNG & XU HƯỚNG XÃ HỘI
 
 Dùng để giới thiệu bối cảnh, thực trạng hoặc những thay đổi đang diễn ra trong xã hội.
 
@@ -29,7 +29,7 @@ Dùng để giới thiệu bối cảnh, thực trạng hoặc những thay đ�
 | 1인 가구가 증가하다 | Số hộ gia đình một người gia tăng |
 | 출생률이 감소하다 | Tỷ lệ sinh giảm |
 | 교육 기회가 확대되다 | Cơ hội giáo dục được mở rộng |
-| 친환경 문화가 확산되다 | Văn hoá thân thiện với môi trường lan rộng |
+| 친환경 문화가 확산되다 | Văn hóa thân thiện với môi trường lan rộng |
 | 빈부 격차가 심화되다 | Khoảng cách giàu nghèo trở nên nghiêm trọng hơn |
 | 환경 문제가 대두되다 | Vấn đề môi trường nổi lên |
 | 고령 인구가 지속적으로 증가하다 | Dân số cao tuổi liên tục gia tăng |
@@ -41,16 +41,16 @@ Dùng để giới thiệu bối cảnh, thực trạng hoặc những thay đ�
 | Tiếng Hàn | Tiếng Việt |
 | --- | --- |
 | 정보의 홍수 속에서 살아가다 | Sống trong thời đại thông tin tràn ngập |
-| 다문화 사회로 변화하다 | Thay đổi thành xã hội đa văn hoá |
-| 문화적 차이가 존재하다 | Tồn tại sự khác biệt về văn hoá |
-| 다양한 문화가 공존하다 | Nhiều nền văn hoá cùng tồn tại |
+| 다문화 사회로 변화하다 | Thay đổi thành xã hội đa văn hóa |
+| 문화적 차이가 존재하다 | Tồn tại sự khác biệt về văn hóa |
+| 다양한 문화가 공존하다 | Nhiều nền văn hóa cùng tồn tại |
 | 발전 가능성이 크다 | Có tiềm năng phát triển lớn |
 | 기후 변화의 부정적인 영향 | Tác động tiêu cực của biến đổi khí hậu |
 | 자원 고갈 | Sự cạn kiệt tài nguyên |
 
 ---
 
-## 2. Nguyên nhân và hạn chế
+## 2. NGUYÊN NHÂN & HẠN CHẾ
 
 Dùng để giải thích tại sao một vấn đề xảy ra hoặc tại sao việc giải quyết vấn đề gặp khó khăn.
 
@@ -94,7 +94,7 @@ Dùng để giải thích tại sao một vấn đề xảy ra hoặc tại sao 
 
 ---
 
-## 3. Vấn đề và hậu quả tiêu cực
+## 3. VẤN ĐỀ & HẬU QUẢ TIÊU CỰC
 
 Dùng để trình bày những vấn đề phát sinh và tác động tiêu cực của chúng.
 
@@ -113,7 +113,7 @@ Dùng để trình bày những vấn đề phát sinh và tác động tiêu c�
 | 차별적 행위가 발생하다 | Xảy ra hành vi phân biệt đối xử |
 | 사회적 신뢰가 약화되다 | Niềm tin xã hội bị suy giảm |
 | 사회적 격차가 확대되다 | Khoảng cách xã hội gia tăng |
-| 양극화가 심화되다 | Sự phân cực xã hội trở nên nghiêm trọng |
+| 양극화가 심화되다 | Sự phân cực/phân hóa xã hội trở nên nghiêm trọng |
 | 사회적 갈등을 해소하기 어렵다 | Khó giải quyết xung đột xã hội |
 
 ### Tác động tiêu cực
@@ -131,7 +131,7 @@ Dùng để trình bày những vấn đề phát sinh và tác động tiêu c�
 
 ---
 
-## 4. Giải pháp ở cấp độ cá nhân
+## 4. GIẢI PHÁP Ở CẤP ĐỘ CÁ NHÂN
 
 Dùng khi đề yêu cầu cá nhân cần làm gì hoặc khi đưa ra giải pháp từ góc độ mỗi người.
 
@@ -178,7 +178,7 @@ Dùng khi đề yêu cầu cá nhân cần làm gì hoặc khi đưa ra giải p
 | 작은 변화부터 시작하다 | Bắt đầu từ những thay đổi nhỏ |
 | 작은 것부터 실천하다 | Bắt đầu thực hiện từ những việc nhỏ |
 | 올바른 판단을 내리다 | Đưa ra phán đoán đúng đắn |
-| 합리적인 판단을 내리다 | Đưa ra quyết định / phán đoán hợp lý |
+| 합리적인 판단을 내리다 | Đưa ra quyết định/phán đoán hợp lý |
 | 습관을 고치다 | Sửa đổi thói quen |
 | 행동을 개선하다 | Cải thiện hành vi |
 | 건강한 생활 습관을 형성하다 | Hình thành thói quen sống lành mạnh |
@@ -198,33 +198,33 @@ Dùng khi đề yêu cầu cá nhân cần làm gì hoặc khi đưa ra giải p
 
 ---
 
-## 5. Giải pháp trong mối quan hệ giữa người với người
+## 5. GIẢI PHÁP TRONG MỐI QUAN HỆ GIỮA NGƯỜI VỚI NGƯỜI
 
 | Tiếng Hàn | Tiếng Việt |
 | --- | --- |
 | 타인을 배려하다 | Quan tâm, nghĩ cho người khác |
 | 서로를 배려하고 존중하다 | Quan tâm và tôn trọng lẫn nhau |
 | 인간관계를 개선하다 | Cải thiện các mối quan hệ giữa người với người |
-| 서로 다른 배경을 이해하다 | Hiểu những nền tảng / bối cảnh khác nhau của nhau |
+| 서로 다른 배경을 이해하다 | Hiểu những nền tảng/bối cảnh khác nhau của nhau |
 | 서로의 차이를 이해하다 | Hiểu sự khác biệt của nhau |
 | 상호 이해를 높이다 | Nâng cao sự thấu hiểu lẫn nhau |
 | 오해와 갈등을 해결하다 | Giải quyết hiểu lầm và mâu thuẫn |
 | 신뢰를 구축하다 | Xây dựng niềm tin |
 | 신뢰를 얻다 | Có được niềm tin |
-| 불신을 해소하다 | Xoá bỏ sự mất niềm tin |
+| 불신을 해소하다 | Xóa bỏ sự mất niềm tin |
 | 유대감을 형성하다 | Hình thành sự gắn kết |
 | 유대감을 강화하다 | Tăng cường sự gắn kết |
 
 ---
 
-## 6. Giải pháp ở cấp độ xã hội và chính phủ
+## 6. GIẢI PHÁP Ở CẤP ĐỘ XÃ HỘI & CHÍNH PHỦ
 
 ### Chính sách, pháp luật và thể chế
 
 | Tiếng Hàn | Tiếng Việt |
 | --- | --- |
-| 제도를 마련하다 | Thiết lập cơ chế / hệ thống |
-| 제도를 강화하다 | Tăng cường cơ chế / hệ thống |
+| 제도를 마련하다 | Thiết lập cơ chế/ hệ thống |
+| 제도를 강화하다 | Tăng cường cơ chế/ hệ thống |
 | 제도적 장치를 마련하다 | Thiết lập cơ chế mang tính thể chế |
 | 법적 장치를 마련하다 | Thiết lập cơ chế pháp lý |
 | 법적 규제를 강화하다 | Tăng cường quy định pháp luật |
@@ -244,12 +244,12 @@ Dùng khi đề yêu cầu cá nhân cần làm gì hoặc khi đưa ra giải p
 
 | Tiếng Hàn | Tiếng Việt |
 | --- | --- |
-| 경제적 불평등을 해소하다 | Xoá bỏ bất bình đẳng kinh tế |
-| 불평등을 해소하다 | Xoá bỏ bất bình đẳng |
+| 경제적 불평등을 해소하다 | Xóa bỏ bất bình đẳng kinh tế |
+| 불평등을 해소하다 | Xóa bỏ bất bình đẳng |
 | 빈곤 문제를 해결하다 | Giải quyết vấn đề nghèo đói |
 | 사회적 약자를 보호하다 | Bảo vệ người yếu thế trong xã hội |
 | 차별적 행위를 금지하다 | Cấm các hành vi phân biệt đối xử |
-| 민감한 문제를 다루다 | Xử lý / giải quyết vấn đề nhạy cảm |
+| 민감한 문제를 다루다 | Xử lý/giải quyết vấn đề nhạy cảm |
 | 복합적인 문제를 해결하다 | Giải quyết vấn đề phức tạp |
 
 ### An sinh xã hội và hệ thống
@@ -258,8 +258,8 @@ Dùng khi đề yêu cầu cá nhân cần làm gì hoặc khi đưa ra giải p
 | --- | --- |
 | 사회 안전망을 강화하다 | Tăng cường mạng lưới an sinh xã hội |
 | 사회 안전망을 구축하다 | Xây dựng mạng lưới an sinh xã hội |
-| 재난 대응 체계를 구축하다 | Xây dựng hệ thống ứng phó với thảm hoạ |
-| 건강 관리 체계를 강화하다 | Tăng cường hệ thống quản lý sức khoẻ |
+| 재난 대응 체계를 구축하다 | Xây dựng hệ thống ứng phó với thảm họa |
+| 건강 관리 체계를 강화하다 | Tăng cường hệ thống quản lý sức khỏe |
 | 공공 서비스를 개선하다 | Cải thiện dịch vụ công |
 | 노동 조건을 개선하다 | Cải thiện điều kiện lao động |
 | 사회적 안전을 보장하다 | Đảm bảo an toàn xã hội |
@@ -275,15 +275,15 @@ Dùng khi đề yêu cầu cá nhân cần làm gì hoặc khi đưa ra giải p
 | 고용 기회를 확대하다 | Mở rộng cơ hội việc làm |
 | 교육을 강화하다 | Tăng cường giáo dục |
 | 재난 대비 교육을 실시하다 | Tiến hành giáo dục phòng chống thiên tai |
-| 인재를 양성하다 | Đào tạo / phát triển nhân tài |
+| 인재를 양성하다 | Đào tạo/phát triển nhân tài |
 | 대중의 관심을 끌다 | Thu hút sự quan tâm của công chúng |
 | 대중의 관심을 높이다 | Nâng cao sự quan tâm của công chúng |
 | 지속적인 관심을 기울이다 | Dành sự quan tâm liên tục |
-| 지속적인 관리가 필요하다 | Cần quản lý liên tục / lâu dài |
+| 지속적인 관리가 필요하다 | Cần quản lý liên tục/lâu dài |
 
 ---
 
-## 7. Khuyến khích tham gia và hợp tác
+## 7. KHUYẾN KHÍCH THAM GIA & HỢP TÁC
 
 | Tiếng Hàn | Tiếng Việt |
 | --- | --- |
@@ -298,28 +298,28 @@ Dùng khi đề yêu cầu cá nhân cần làm gì hoặc khi đưa ra giải p
 | 공익을 위한 노력을 기울이다 | Nỗ lực vì lợi ích cộng đồng |
 | 상호 협력이 필요하다 | Cần sự hợp tác lẫn nhau |
 | 협력 관계를 유지하다 | Duy trì quan hệ hợp tác |
-| 문화 교류를 증진하다 | Thúc đẩy giao lưu văn hoá |
+| 문화 교류를 증진하다 | Thúc đẩy giao lưu văn hóa |
 | 국제 협력을 증진하다 | Thúc đẩy hợp tác quốc tế |
-| 다양한 의견을 수렴하다 | Thu thập / lắng nghe nhiều ý kiến |
+| 다양한 의견을 수렴하다 | Thu thập/lắng nghe nhiều ý kiến |
 | 다양한 의견을 수용하다 | Tiếp nhận nhiều ý kiến |
 | 사회적 합의를 이루다 | Đạt được sự đồng thuận xã hội |
-| 다양한 계층을 포용하다 | Bao quát / tiếp nhận các tầng lớp đa dạng |
+| 다양한 계층을 포용하다 | Bao quát/tiếp nhận các tầng lớp đa dạng |
 | 지방 분권을 추진하다 | Thúc đẩy phân quyền địa phương |
 
 ---
 
-## 8. Đóng góp và phát triển bền vững
+## 8. ĐÓNG GÓP & PHÁT TRIỂN BỀN VỮNG
 
 ### Kinh tế và đổi mới
 
 | Tiếng Hàn | Tiếng Việt |
 | --- | --- |
 | 경제 발전을 촉진하다 | Thúc đẩy phát triển kinh tế |
-| 경제 활성화를 도모하다 | Thúc đẩy sự phát triển / sôi động hoá nền kinh tế |
+| 경제 활성화를 도모하다 | Thúc đẩy sự phát triển/sôi động hóa nền kinh tế |
 | 혁신적인 아이디어를 도입하다 | Đưa vào những ý tưởng đổi mới |
 | 기술 혁신을 도입하다 | Áp dụng đổi mới công nghệ |
 | 적극적으로 참여하다 | Tham gia tích cực |
-| 본격적으로 뛰어들다 | Chính thức / mạnh mẽ tham gia |
+| 본격적으로 뛰어들다 | Chính thức/mạnh mẽ tham gia |
 | 약진하다 | Phát triển mạnh, bứt phá |
 | 지속 가능한 농업을 발전시키다 | Phát triển nền nông nghiệp bền vững |
 
@@ -330,7 +330,7 @@ Dùng khi đề yêu cầu cá nhân cần làm gì hoặc khi đưa ra giải p
 | 지속 가능한 발전을 이루다 | Đạt được sự phát triển bền vững |
 | 지속 가능한 사회를 구축하다 | Xây dựng xã hội bền vững |
 | 건강한 사회를 구축하다 | Xây dựng một xã hội lành mạnh |
-| 평화로운 사회를 유지하다 | Duy trì xã hội hoà bình |
+| 평화로운 사회를 유지하다 | Duy trì xã hội hòa bình |
 | 차별 없는 사회를 만들다 | Xây dựng xã hội không phân biệt đối xử |
 | 공동체 발전에 기여하다 | Góp phần phát triển cộng đồng |
 | 문제 해결에 기여하다 | Góp phần giải quyết vấn đề |
@@ -338,9 +338,9 @@ Dùng khi đề yêu cầu cá nhân cần làm gì hoặc khi đưa ra giải p
 | 사회에 공헌하다 | Cống hiến cho xã hội |
 | 사회적 자본을 강화하다 | Tăng cường vốn xã hội |
 | 사회적 연대를 강화하다 | Tăng cường sự đoàn kết xã hội |
-| 사회 통합을 촉진하다 | Thúc đẩy hội nhập / gắn kết xã hội |
+| 사회 통합을 촉진하다 | Thúc đẩy hội nhập/gắn kết xã hội |
 | 사회 통합을 이루다 | Đạt được sự gắn kết xã hội |
-| 문화를 정착시키다 | Hình thành và đưa một văn hoá / thói quen vào ổn định |
+| 문화를 정착시키다 | Hình thành và đưa một văn hóa/thói quen vào ổn định |
 | 사회적 책임을 강조하다 | Nhấn mạnh trách nhiệm xã hội |
 | 공공의 이익을 우선시하다 | Ưu tiên lợi ích công cộng |
 
@@ -349,7 +349,7 @@ Dùng khi đề yêu cầu cá nhân cần làm gì hoặc khi đưa ra giải p
 | Tiếng Hàn | Tiếng Việt |
 | --- | --- |
 | 자원 배분의 공정성을 확보하다 | Đảm bảo tính công bằng trong phân bổ tài nguyên |
-| 형평성을 고려하다 | Cân nhắc tính công bằng / hợp lý |
+| 형평성을 고려하다 | Cân nhắc tính công bằng/hợp lý |
 | 공정한 기회를 보장하다 | Đảm bảo cơ hội công bằng |
 | 공정한 경쟁을 보장하다 | Đảm bảo cạnh tranh công bằng |
 | 기본적인 권리를 보장하다 | Đảm bảo các quyền cơ bản |
@@ -360,6 +360,89 @@ Dùng khi đề yêu cầu cá nhân cần làm gì hoặc khi đưa ra giải p
 | 사회 복지를 증진하다 | Thúc đẩy phúc lợi xã hội |
 | 사회적 비용을 절감하다 | Giảm chi phí xã hội |
 | 정보의 투명성을 확보하다 | Đảm bảo tính minh bạch của thông tin |
+
+---
+
+## 9. NÂNG CAO CHẤT LƯỢNG CUỘC SỐNG
+
+| Tiếng Hàn | Tiếng Việt |
+| --- | --- |
+| 삶의 질을 향상시키다 | Nâng cao chất lượng cuộc sống |
+| 삶의 만족도를 높이다 | Nâng cao mức độ hài lòng với cuộc sống |
+| 자아실현을 추구하다 | Theo đuổi sự tự hiện thực hóa bản thân |
+| 경제적 자립을 지원하다 | Hỗ trợ tự lập về kinh tế |
+| 환경 보존에 힘쓰다 | Nỗ lực bảo tồn môi trường |
+| 상생의 길을 찾다 | Tìm con đường cùng tồn tại và cùng phát triển |
+| 긍정적인 영향을 미치다 | Gây ảnh hưởng tích cực |
+| 긍정적인 영향력을 행사하다 | Tạo ra ảnh hưởng tích cực |
+| 긍정적인 분위기를 만들다 | Tạo bầu không khí tích cực |
+| 사회적 분위기를 조성하다 | Tạo dựng bầu không khí xã hội |
+| 사회 전반에 영향을 미치다 | Gây ảnh hưởng đến toàn xã hội |
+
+---
+
+## 10. CỤM TỪ LIÊN KẾT & MẪU CÂU ĐA NĂNG
+
+### Đưa ra căn cứ
+
+| Tiếng Hàn | Tiếng Việt |
+| --- | --- |
+| ~을/를 바탕으로 하다 | Dựa trên ~ |
+| 과학적 근거를 바탕으로 하다 | Dựa trên cơ sở khoa học |
+| 객관적인 자료를 바탕으로 하다 | Dựa trên dữ liệu khách quan |
+
+### Đưa ra giải pháp
+
+| Tiếng Hàn | Tiếng Việt |
+| --- | --- |
+| 근본적인 해결책이 필요하다 | Cần một giải pháp mang tính căn bản |
+| 실질적인 대책이 필요하다 | Cần có biện pháp thiết thực |
+| 다양한 노력이 필요하다 | Cần có nhiều nỗ lực |
+| 효과적인 방법을 찾다 | Tìm phương pháp hiệu quả |
+| 실천 가능한 목표를 세우다 | Đặt ra mục tiêu có thể thực hiện được |
+| 공동의 목표를 설정하다 | Thiết lập mục tiêu chung |
+| 윤리적 기준을 마련하다 | Thiết lập tiêu chuẩn đạo đức |
+| 도덕적 기준을 세우다 | Đặt ra tiêu chuẩn đạo đức |
+| 사회적 역할을 수행하다 | Thực hiện vai trò xã hội |
+
+### Cụm nối ý quan trọng
+
+#### Nguyên nhân
+
+| Tiếng Hàn | Tiếng Việt |
+| --- | --- |
+| ~기 때문이다 | Bởi vì ~ |
+| ~로 인해 | Do ~ |
+| ~의 영향으로 | Dưới ảnh hưởng của ~ |
+| ~에 따라 | Theo/cùng với ~ |
+
+#### Bổ sung
+
+| Tiếng Hàn | Tiếng Việt |
+| --- | --- |
+| 뿐만 아니라 | Không chỉ ~ mà còn |
+| 더 나아가 | Hơn nữa, xa hơn nữa |
+| 특히 | Đặc biệt |
+| 무엇보다 | Trên hết, quan trọng hơn cả |
+
+#### Đối lập
+
+| Tiếng Hàn | Tiếng Việt |
+| --- | --- |
+| 반면에 | Ngược lại/trong khi đó |
+| 그러나 | Tuy nhiên |
+| 반대로 | Ngược lại |
+| 물론 ~지만 | Tất nhiên là ~ nhưng |
+
+#### Kết quả
+
+| Tiếng Hàn | Tiếng Việt |
+| --- | --- |
+| 그 결과 | Kết quả là |
+| 이로 인해 | Vì điều này |
+| 이에 따라 | Theo đó |
+| 결국 | Cuối cùng |
+| 따라서 | Vì vậy |
 
 ---
 
