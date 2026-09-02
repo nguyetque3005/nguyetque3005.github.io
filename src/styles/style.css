@@ -827,7 +827,14 @@ ul.chapter-aside li::before {
 
 .post-head {
   text-align: center;
-  margin-bottom: 36px;
+  margin-bottom: 30px;
+}
+
+.page-post .post-head h1 {
+  color: var(--pink-600);
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  font-weight: 700;
 }
 
 .post-breadcrumb {
@@ -1052,21 +1059,30 @@ ul.chapter-aside li::before {
 
 /* tiêu đề mục lớn */
 .doc-sheet .prose h2 {
-  margin-top: 2.1em;
-  padding-bottom: 0.35em;
-  border-bottom: 2px solid var(--blush);
-  font-size: clamp(1.25rem, 2.4vw, 1.6rem);
+  margin-top: 2.2em;
+  font-size: clamp(1.1rem, 2vw, 1.32rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.005em;
+  color: var(--ink);
 }
 
 /* tiêu đề mục nhỏ, nền vàng như bản PDF */
+.doc-sheet .prose h2 + p {
+  color: var(--muted);
+  margin-top: 0.5em;
+}
+
 .doc-sheet .prose h3 {
   display: inline-block;
   margin-top: 1.9em;
   padding: 2px 10px 3px;
   font-size: clamp(1rem, 1.9vw, 1.15rem);
   color: var(--ink);
-  background: linear-gradient(transparent 52%, #fdf0a8 52%);
+  background: linear-gradient(transparent 50%, #fdeb9e 50%);
   border-radius: 3px;
+  color: #9a5b1e;
+  font-weight: 700;
 }
 
 /* ---------- Bảng ---------- */
@@ -1117,7 +1133,8 @@ ul.chapter-aside li::before {
 }
 
 .post-download {
-  margin: 22px 0 0;
+  margin: 30px 0 0;
+  text-align: center;
 }
 
 .post-foot-actions {

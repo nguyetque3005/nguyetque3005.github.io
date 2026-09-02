@@ -73,9 +73,6 @@ ${related.map((p) => postCard(p)).join('\n')}
             <span>${post.readingMinutes} phút đọc</span>
           </p>
           ${post.summary ? `<p class="post-lead">${escapeHtml(post.summary)}</p>` : ''}
-          ${post.pdf
-            ? `<p class="post-download"><a class="btn btn-quiet" href="${post.pdf}" download>Tải bản PDF</a></p>`
-            : ''}
         </header>
 ${hero}
         <div class="doc-sheet reveal">
@@ -89,14 +86,16 @@ ${post.html}
           </div>
         </div>
 
+        ${post.pdf
+          ? `<p class="post-download reveal"><a class="btn btn-primary" href="${post.pdf}" download>Tải tài liệu bản PDF</a></p>`
+          : ''}
+
         <footer class="post-foot reveal">
           <img class="post-foot-logo" src="/assets/logo.jpeg" alt="" width="72" height="72">
           <div>
             <p class="post-foot-name">${escapeHtml(post.author)}</p>
             <p class="post-foot-text">Thạc sĩ Biên–Phiên dịch Hàn–Việt, TOPIK 6급. Mình dạy tiếng Hàn cho người Việt và viết lại những gì mình từng phải tự mò mẫm.</p>
-            <p class="post-foot-actions">${post.pdf
-              ? `<a class="btn btn-primary" href="${post.pdf}" download>Tải bản PDF</a> `
-              : ''}<a class="btn btn-quiet" href="/lop-hoc.html">Xem lớp học của mình</a></p>
+            <p><a class="btn btn-quiet" href="/lop-hoc.html">Xem lớp học của mình</a></p>
           </div>
         </footer>
       </div>

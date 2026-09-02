@@ -27,8 +27,9 @@ function header(site, current) {
       </button>
 
       <nav class="main-nav" id="main-nav" aria-label="Điều hướng chính" data-nav>
-          ${navLinks(site, current)}
-        <a class="nav-cta" href="${site.navCta.href}">${escapeHtml(site.navCta.label)}</a>
+          ${navLinks(site, current)}${site.navCta
+          ? `\n        <a class="nav-cta" href="${site.navCta.href}">${escapeHtml(site.navCta.label)}</a>`
+          : ''}
       </nav>
     </div>
   </header>`;
