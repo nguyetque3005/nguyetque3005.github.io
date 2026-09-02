@@ -7,5 +7,6 @@ private/
 
 # Công cụ và file tạm
 node_modules/
+.playwright-mcp/
 *.log
 .DS_Store
