@@ -75,7 +75,7 @@ ${related.map((p) => postCard(p)).join('\n')}
           ${post.summary ? `<p class="post-lead">${escapeHtml(post.summary)}</p>` : ''}
         </header>
 ${hero}
-        <div class="doc-sheet reveal">
+        <div class="doc-sheet">
           <span class="doc-corner tl" aria-hidden="true">&#9825;</span>
           <span class="doc-corner tr" aria-hidden="true">&#9825;</span>
           <span class="doc-corner bl" aria-hidden="true">&#9825;</span>

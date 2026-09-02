@@ -889,6 +889,13 @@ ul.chapter-aside li::before {
 
 .prose p {
   margin-bottom: 1.3em;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.prose li {
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .prose ul,
@@ -1103,6 +1110,9 @@ ul.chapter-aside li::before {
 
 .table-wrap {
   overflow-x: auto;
+  /* Bảng ngoài màn hình chưa cần dựng, giúp trang dài mở nhanh hơn */
+  content-visibility: auto;
+  contain-intrinsic-size: auto 480px;
   margin: 1.2em 0 2em;
   border: 1px solid var(--blush);
   border-radius: var(--radius-sm);
