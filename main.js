@@ -74,7 +74,9 @@
           }
         });
       },
-      { rootMargin: '0px 0px -60px 0px', threshold: 0.08 }
+      // threshold phải là 0: khối nội dung cao hơn màn hình thì không bao giờ
+      // đạt được tỉ lệ hiển thị lớn, để 0.08 sẽ khiến nó không bao giờ hiện ra.
+      { rootMargin: '0px 0px -60px 0px', threshold: 0 }
     );
 
     Array.prototype.forEach.call(revealables, function (el) {
