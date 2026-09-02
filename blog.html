@@ -68,11 +68,22 @@
 
     <section class="blog-list">
       <div class="shell">
-        <div class="empty-note reveal">
-          <h2>Chưa có bài viết nào</h2>
-          <p class="section-lead">Mình đang viết những bài đầu tiên. Bạn ghé lại sau một chút nhé — hoặc nhắn cho mình chủ đề bạn muốn đọc, mình sẽ viết cái đó trước.</p>
-          <p><a class="btn btn-primary" href="/lien-he.html">Gợi ý chủ đề cho mình</a></p>
+        <div class="blog-filters reveal">
+          <button type="button" class="chip is-active" data-filter="*">Tất cả</button>
+          <button type="button" class="chip" data-filter="TOPIK">TOPIK</button>
         </div>
+        <div class="post-grid" data-post-grid>
+          <a class="post-card reveal" data-category="TOPIK" href="/blog/cum-tu-hay-cho-cau-54.html">
+            <span class="post-thumb post-thumb-blank" aria-hidden="true"></span>
+            <span class="post-meta">
+              <span class="post-category">TOPIK</span>
+              <span class="post-date">02/09/2026</span>
+            </span>
+            <span class="post-title">Cụm từ hay cho câu 54 TOPIK II</span>
+            <span class="post-summary">Tuyển tập cụm từ tiếng Hàn thường dùng khi viết câu 54, sắp xếp theo tám nhóm chức năng — từ nêu hiện trạng, phân tích nguyên nhân đến đề xuất giải pháp.</span>
+          </a>
+        </div>
+        <p class="blog-empty-filter" data-empty-filter hidden>Chưa có bài viết nào trong mục này.</p>
       </div>
     </section>
   </main>
