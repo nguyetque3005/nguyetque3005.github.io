@@ -110,7 +110,6 @@ function closing(site) {
         <p>Năm 2022 mình cũng bắt đầu từ bảng chữ cái, khi đã đi làm mười năm. Cứ nhắn cho mình một câu, kể mình nghe bạn đang mắc ở đâu.</p>
         <p class="closing-actions">
           <a class="btn btn-primary" href="/lien-he.html">Nhắn cho Queenie</a>
-          <a class="btn btn-quiet" href="/lop-hoc.html">Xem lớp học</a>
         </p>
       </div>
     </section>`;
