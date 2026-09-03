@@ -29,7 +29,14 @@ echo "→ Chuẩn bị nhánh $BRANCH_PUBLISH…"
 git worktree remove --force "$WORKTREE" 2>/dev/null || true
 rm -rf "$WORKTREE"
 
+git fetch --quiet origin "$BRANCH_PUBLISH" 2>/dev/null || true
+
 if git show-ref --verify --quiet "refs/heads/$BRANCH_PUBLISH"; then
+  git worktree add --quiet "$WORKTREE" "$BRANCH_PUBLISH"
+elif git show-ref --verify --quiet "refs/remotes/origin/$BRANCH_PUBLISH"; then
+  # Nhánh đã có trên GitHub nhưng chưa có ở máy — tạo lại từ bản trên GitHub.
+  # Nếu bỏ qua bước này, script sẽ tạo nhánh mồ côi và git push bị từ chối.
+  git branch --quiet "$BRANCH_PUBLISH" "origin/$BRANCH_PUBLISH"
   git worktree add --quiet "$WORKTREE" "$BRANCH_PUBLISH"
 else
   git worktree add --quiet --detach "$WORKTREE"
