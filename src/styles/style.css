@@ -1026,7 +1026,7 @@ ul.chapter-aside li::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: url('/assets/logo.jpeg') center 46% / clamp(220px, 34%, 340px) no-repeat;
+  background: url('/assets/logo.png') center 46% / clamp(220px, 34%, 340px) no-repeat;
   opacity: 0.045;
   pointer-events: none;
 }

@@ -5,14 +5,18 @@ import { escapeHtml } from '../lib/markdown.mjs';
 // photo.ratio: bỏ trống = khung ngang 4:3 (mặc định)
 //              "portrait" = khung dọc 3:4, hợp với ảnh chụp dọc
 //              "natural"  = giữ nguyên tỉ lệ gốc, không cắt gì cả
+// photo.focus: điểm lấy nét khi ảnh vẫn bị cắt, ví dụ "50% 38%" — giữ khuôn
+//              mặt trong khung thay vì cắt từ giữa. Bỏ trống là canh giữa.
+//              Tính bằng: python3 scripts/photo-focus.py
 export function figure(photo, className = '') {
   if (!photo || !photo.src) return '';
   const caption = photo.caption
     ? `<figcaption>${escapeHtml(photo.caption)}</figcaption>`
     : '';
   const ratio = photo.ratio === 'portrait' ? ' is-portrait' : photo.ratio === 'natural' ? ' is-natural' : '';
+  const focus = photo.focus ? ` style="object-position:${escapeHtml(photo.focus)}"` : '';
   return `<figure class="photo ${className}${ratio}">
-            <img src="${photo.src}" alt="${escapeHtml(photo.alt || '')}" loading="lazy" data-fallback="${escapeHtml(photo.alt || 'Ảnh')}">
+            <img src="${photo.src}"${focus} alt="${escapeHtml(photo.alt || '')}" loading="lazy" data-fallback="${escapeHtml(photo.alt || 'Ảnh')}">
             ${caption}
           </figure>`;
 }

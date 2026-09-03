@@ -10,3 +10,6 @@ node_modules/
 .playwright-mcp/
 *.log
 .DS_Store
+
+# Python bytecode do scripts/photo-focus.py sinh ra
+__pycache__/

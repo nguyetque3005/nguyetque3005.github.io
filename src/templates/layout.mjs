@@ -106,8 +106,10 @@ export function page({
 <meta property="og:site_name" content="${escapeHtml(site.brand.name)}">
 <meta name="twitter:card" content="summary_large_image">
 
-<link rel="icon" href="${site.brand.logo}">
-<link rel="apple-touch-icon" href="${site.brand.logo}">
+<!-- favicon dùng PNG nền trong, đã bo tròn sẵn trong file.
+     apple-touch-icon phải có nền đục: iOS ghép phần trong suốt lên nền đen. -->
+<link rel="icon" type="image/png" href="${site.brand.logo}">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

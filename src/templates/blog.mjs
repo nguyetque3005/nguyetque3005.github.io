@@ -80,7 +80,7 @@ ${hero}
           <span class="doc-corner tr" aria-hidden="true">&#9825;</span>
           <span class="doc-corner bl" aria-hidden="true">&#9825;</span>
           <span class="doc-corner br" aria-hidden="true">&#9825;</span>
-          <img class="doc-logo" src="/assets/logo.jpeg" alt="" width="76" height="76">
+          <img class="doc-logo" src="/assets/logo.png" alt="" width="76" height="76">
           <div class="prose">
 ${post.html}
           </div>
@@ -91,7 +91,7 @@ ${post.html}
           : ''}
 
         <footer class="post-foot reveal">
-          <img class="post-foot-logo" src="/assets/logo.jpeg" alt="" width="72" height="72">
+          <img class="post-foot-logo" src="/assets/logo.png" alt="" width="72" height="72">
           <div>
             <p class="post-foot-name">${escapeHtml(post.author)}</p>
             <p class="post-foot-text">Thạc sĩ Biên–Phiên dịch Hàn–Việt, TOPIK 6급. Mình dạy tiếng Hàn cho người Việt và viết lại những gì mình từng phải tự mò mẫm.</p>

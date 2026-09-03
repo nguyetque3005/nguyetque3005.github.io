@@ -10,7 +10,7 @@ function letter(story) {
   return `    <section class="letter">
       <div class="shell">
         <article class="letter-card reveal">
-          <img class="letter-logo" src="/assets/logo.jpeg" alt="Logo Tiếng Hàn cùng Queenie" width="120" height="120">
+          <img class="letter-logo" src="/assets/logo.png" alt="Logo Tiếng Hàn cùng Queenie" width="120" height="120">
           <p class="eyebrow">${escapeHtml(story.letter.eyebrow)}</p>
           <blockquote class="letter-quote">
             ${quote}
@@ -106,10 +106,10 @@ ${posts.slice(0, 3).map((p) => postCard(p)).join('\n')}
 function closing(site) {
   return `    <section class="closing">
       <div class="shell closing-inner reveal">
-        <h2>Nếu bạn đang ở đoạn khó nhất, mình hiểu.</h2>
-        <p>Năm 2022 mình cũng bắt đầu từ bảng chữ cái, khi đã đi làm mười năm. Cứ nhắn cho mình một câu, kể mình nghe bạn đang mắc ở đâu.</p>
+        <h2>Nếu bạn muốn đạt tới cột mốc mới trong tiếng Hàn.</h2>
+        <p>Nhưng chưa có kế hoạch cụ thể hãy nhắn cho mình, mình sẽ hỗ trợ bạn.</p>
         <p class="closing-actions">
-          <a class="btn btn-primary" href="/lien-he.html">Nhắn cho Queenie</a>
+          <a class="btn btn-primary" href="/lien-he.html">Inbox</a>
         </p>
       </div>
     </section>`;
