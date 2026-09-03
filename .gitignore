@@ -13,3 +13,4 @@ node_modules/
 
 # Python bytecode do scripts/photo-focus.py sinh ra
 __pycache__/
+.vscode
