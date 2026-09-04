@@ -961,6 +961,25 @@ ul.chapter-aside li::before {
   margin-bottom: 0;
 }
 
+.prose mark {
+  background: #fff2cc;
+  color: inherit;
+  padding: 0 0.2em;
+  border-radius: 4px;
+}
+
+.prose mark.hl-xanh {
+  background: #cfe2f3;
+}
+
+.prose mark.hl-tim {
+  background: #d9d2e9;
+}
+
+.prose mark.hl-la {
+  background: #d9ead3;
+}
+
 .prose code {
   background: var(--blush);
   color: var(--pink-600);
