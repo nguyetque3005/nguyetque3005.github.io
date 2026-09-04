@@ -1196,11 +1196,6 @@ ul.chapter-aside li::before {
   color: var(--muted);
 }
 
-.post-download {
-  margin: 30px 0 0;
-  text-align: center;
-}
-
 .post-foot-actions {
   display: flex;
   flex-wrap: wrap;
