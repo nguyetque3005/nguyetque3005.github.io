@@ -1,9 +1,9 @@
 {
     "letter": {
-        "eyebrow": "Thư ngỏ từ Queenie",
+        "eyebrow": "Thư ngỏ",
         "quote": "Bắt đầu muộn,\nnhưng chưa bao giờ là quá trễ.",
         "body": [
-            "Mình là Nguyễn Hồng Nguyệt Quế, hay Queenie. Trước khi đến với tiếng Hàn, mình có 10 năm làm việc trong ngành ngân hàng tại Shinhan, ANZ và HSBC. Trong suốt quãng thời gian đó, tiếng Hàn hoàn toàn không nằm trong công việc hay cuộc sống của mình.",
+            "Chào mọi người, mình là Nguyệt Quế (Queenie). Trước khi đến với tiếng Hàn, mình có 10 năm làm việc trong ngành ngân hàng tại Shinhan, ANZ và HSBC. Trong suốt quãng thời gian đó, tiếng Hàn hoàn toàn không nằm trong công việc hay cuộc sống của mình.",
             "Năm 2022, sau khi rời HSBC và sang Hàn Quốc, mình bắt đầu học tiếng Hàn tại 울산과학대학교 (Ulsan College). Từ những bước đầu tiên, mình từng bước xây dựng nền tảng tiếng Hàn và tiếp tục theo đuổi con đường học thuật. Đến năm 2026, mình hoàn thành chương trình Thạc sĩ Biên–Phiên dịch Hàn–Việt tại 국제언어대학원대학교 (IGSE).",
             "Nên khi ai đó nói “giờ trễ rồi”, mình hiểu cảm giác đó vì mình đã từng như vậy."
         ],
@@ -23,19 +23,19 @@
             "title": "Đại học Ngân hàng TP.HCM",
             "body": [
                 "Cử nhân Ngôn ngữ Anh — Học bổng thành tích qua từng học kỳ và tốt nghiệp loại giỏi với GPA 8.14/10.",
-                "Những năm tháng đại học của mình không chỉ gói gọn trên giảng đường: song song với việc học, mỗi cuối tuần mình đều đứng lớp đi dạy tiếng Anh. Những buổi dạy đầu tiên ấy không chỉ giúp mình tự lập tài chính từ sớm, mà còn nuôi dưỡng niềm yêu thích truyền đạt ngôn ngữ — hành trình kết nối và gieo mầm đam mê cho đến tận sau này."
+                "Những năm tháng đại học của mình không chỉ gói gọn trên giảng đường: song song với việc học, mỗi cuối tuần mình đều đi dạy tiếng Anh. Những buổi dạy đầu tiên ấy không chỉ giúp mình tự lập tài chính từ sớm, mà còn nuôi dưỡng niềm yêu thích truyền đạt ngôn ngữ — hành trình kết nối và gieo mầm đam mê cho đến tận sau này."
             ],
             "aside": null,
             "photos": [
                 {
                     "src": "/assets/di-day-tieng-anh.jpeg",
-                    "alt": "Queenie trong một buổi dạy tiếng Anh thời sinh viên",
+                    "alt": "Mình trong một buổi dạy tiếng Anh thời sinh viên",
                     "caption": "Đi dạy tiếng Anh",
                     "ratio": "portrait"
                 },
                 {
                     "src": "/assets/hinh-tot-nghiep-dh.jpeg",
-                    "alt": "Queenie trong lễ tốt nghiệp Đại học Ngân hàng TP.HCM",
+                    "alt": "Mình trong lễ tốt nghiệp Đại học Ngân hàng TP.HCM",
                     "caption": "Tốt nghiệp Đại học Ngân hàng TP.HCM, 2013",
                     "ratio": "portrait"
                 }
@@ -52,19 +52,19 @@
             "photos": [
                 {
                     "src": "/assets/shinhan-1.jpeg",
-                    "alt": "Queenie tại quầy giao dịch Shinhan Bank Việt Nam",
-                    "caption": "Những ngày đầu ở Shinhan Bank Việt Nam",
+                    "alt": "Mình tại quầy giao dịch Shinhan Bank Việt Nam",
+                    "caption": "Những ngày ở Shinhan Bank Việt Nam",
                     "ratio": "portrait",
                     "focus": "50% 38%"
                 },
                 {
                     "src": "/assets/shinhan-2.jpeg",
-                    "alt": "Queenie cùng đồng nghiệp tại chương trình Global Young Force của Shinhan Bank",
+                    "alt": "Mình cùng đồng nghiệp tại chương trình Global Young Force của Shinhan Bank",
                     "caption": "Chương trình Global Young Force tại Hàn Quốc"
                 },
                 {
                     "src": "/assets/shinhan-3.jpeg",
-                    "alt": "Queenie trong màu áo tình nguyện Shinhan Bank tại Seoul",
+                    "alt": "Mình trong màu áo tình nguyện Shinhan Bank tại Seoul",
                     "caption": "Hoạt động tình nguyện tại Seoul",
                     "ratio": "portrait"
                 }
@@ -92,12 +92,12 @@
             "photos": [
                 {
                     "src": "/assets/hsbc-1.jpeg",
-                    "alt": "Queenie cùng đồng nghiệp tại văn phòng HSBC Việt Nam",
+                    "alt": "Mình cùng đồng nghiệp tại văn phòng HSBC Việt Nam",
                     "caption": "Đồng nghiệp ở HSBC Việt Nam"
                 },
                 {
                     "src": "/assets/hsbc-2.jpeg",
-                    "alt": "Queenie cùng đồng nghiệp HSBC dịp cuối năm",
+                    "alt": "Mình cùng đồng nghiệp HSBC dịp cuối năm",
                     "caption": "Một mùa cuối năm ở HSBC",
                     "ratio": "portrait"
                 }
