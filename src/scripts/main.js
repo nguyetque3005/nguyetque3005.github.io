@@ -151,31 +151,78 @@
     });
   }
 
-  /* ---------- Lọc bài viết theo thẻ ---------- */
+  /* ---------- Lọc bài viết theo thẻ ----------
+     Bấm một thẻ: các bài mang thẻ đó được gom lên đầu, những bài còn lại
+     xếp xuống dưới mục "Bài viết khác" chứ không bị ẩn đi. Thẻ đang chọn
+     được ghi vào địa chỉ (?tag=…) nên có thể chia sẻ hoặc tải lại trang. */
 
   var chips = document.querySelectorAll('[data-filter]');
   var grid = document.querySelector('[data-post-grid]');
   var emptyMsg = document.querySelector('[data-empty-filter]');
 
   if (chips.length && grid) {
+    var cards = Array.prototype.slice.call(grid.children);
+
+    var headMatch = document.createElement('h2');
+    headMatch.className = 'post-group-head';
+    headMatch.hidden = true;
+
+    var headRest = document.createElement('h2');
+    headRest.className = 'post-group-head is-rest';
+    headRest.textContent = 'Bài viết khác';
+    headRest.hidden = true;
+
+    function applyFilter(want) {
+      var match = [];
+      var rest = [];
+
+      cards.forEach(function (card) {
+        var tags = (card.getAttribute('data-tags') || '').split('|');
+        if (want === '*' || tags.indexOf(want) !== -1) match.push(card);
+        else rest.push(card);
+      });
+
+      Array.prototype.forEach.call(chips, function (c) {
+        c.classList.toggle('is-active', c.getAttribute('data-filter') === want);
+      });
+
+      headMatch.hidden = want === '*' || match.length === 0;
+      headMatch.textContent = 'Thẻ: ' + want;
+      headRest.hidden = want === '*' || rest.length === 0;
+
+      grid.appendChild(headMatch);
+      match.forEach(function (c) { grid.appendChild(c); });
+      grid.appendChild(headRest);
+      rest.forEach(function (c) { grid.appendChild(c); });
+
+      if (emptyMsg) emptyMsg.hidden = !(want !== '*' && match.length === 0);
+    }
+
     Array.prototype.forEach.call(chips, function (chip) {
       chip.addEventListener('click', function () {
         var want = chip.getAttribute('data-filter');
+        applyFilter(want);
 
-        Array.prototype.forEach.call(chips, function (c) {
-          c.classList.toggle('is-active', c === chip);
-        });
-
-        var shown = 0;
-        Array.prototype.forEach.call(grid.children, function (card) {
-          var tags = (card.getAttribute('data-tags') || '').split('|');
-          var match = want === '*' || tags.indexOf(want) !== -1;
-          card.hidden = !match;
-          if (match) shown++;
-        });
-
-        if (emptyMsg) emptyMsg.hidden = shown !== 0;
+        if (window.history && window.history.replaceState) {
+          var url = window.location.pathname + (want === '*' ? '' : '?tag=' + encodeURIComponent(want));
+          window.history.replaceState(null, '', url);
+        }
       });
     });
+
+    // Thẻ đến từ địa chỉ, ví dụ /blog.html?tag=TOPIK
+    var fromUrl = (function () {
+      var m = /[?&]tag=([^&]*)/.exec(window.location.search);
+      if (!m) return null;
+      try { return decodeURIComponent(m[1].replace(/\+/g, ' ')); } catch (e) { return null; }
+    })();
+
+    if (fromUrl) {
+      var known = false;
+      Array.prototype.forEach.call(chips, function (c) {
+        if (c.getAttribute('data-filter') === fromUrl) known = true;
+      });
+      if (known) applyFilter(fromUrl);
+    }
   }
 })();

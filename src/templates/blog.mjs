@@ -73,7 +73,7 @@ ${related.map((p) => postCard(p)).join('\n')}
           ${post.summary ? `<p class="post-lead">${escapeHtml(post.summary)}</p>` : ''}
           ${(post.tags || []).length
             ? `<p class="post-tags">${post.tags
-                .map((t) => `<a class="tag" href="/blog.html">${escapeHtml(t)}</a>`)
+                .map((t) => `<a class="tag" href="/blog.html?tag=${encodeURIComponent(t)}">${escapeHtml(t)}</a>`)
                 .join('')}</p>`
             : ''}
         </header>
@@ -97,8 +97,8 @@ ${post.html}
           <img class="post-foot-logo" src="/assets/logo.png" alt="" width="72" height="72">
           <div>
             <p class="post-foot-name">${escapeHtml(post.author)}</p>
-            <p class="post-foot-text">Thạc sĩ Biên–Phiên dịch Hàn–Việt, TOPIK 6급. Mình dạy tiếng Hàn cho người Việt và viết lại những gì mình từng phải tự mò mẫm.</p>
-            <p><a class="btn btn-quiet" href="/lop-hoc.html">Xem lớp học của mình</a></p>
+            <p class="post-foot-text">Thạc sĩ Biên–Phiên dịch Hàn–Việt, TOPIK 6급, KIIP 5. Yêu tiếng Hàn, thích dạy TOPIK.</p>
+            <p><a class="btn btn-quiet" href="/lop-hoc.html">Xem lớp học</a></p>
           </div>
         </footer>
       </div>

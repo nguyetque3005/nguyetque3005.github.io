@@ -1,7 +1,7 @@
 // Bộ chuyển Markdown -> HTML tối giản, không phụ thuộc thư viện ngoài.
 // Hỗ trợ: tiêu đề, đoạn văn, danh sách, trích dẫn, đường kẻ, khối mã,
 // ảnh, liên kết, in đậm, in nghiêng, mã inline.
-// Không hỗ trợ (có chủ đích): danh sách lồng nhau, HTML thô.
+// Không hỗ trợ (có chủ đích): danh sách lồng nhau, HTML thô (trừ <br>).
 
 const CODE_TOKEN = '@@QKCODE';
 
@@ -49,6 +49,9 @@ function renderInline(text) {
 
   s = s.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
   s = s.replace(/(^|[^*])\*([^*\n]+)\*/g, '$1<em>$2</em>');
+
+  // Cho phép duy nhất thẻ <br> để giữ ngắt dòng trong ô bảng
+  s = s.replace(/&lt;br\s*\/?&gt;/g, '<br>');
 
   s = s.replace(new RegExp(`${CODE_TOKEN}(\\d+)@@`, 'g'), (_m, i) => `<code>${codes[Number(i)]}</code>`);
 

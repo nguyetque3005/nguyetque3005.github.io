@@ -7,15 +7,7 @@ bannerTitle: Cụm từ hay cho câu 54
 image: /assets/banner/cum-tu-hay-cho-cau-54.jpg
 imageAlt: Banner bài viết — Cụm từ hay cho câu 54
 pdf: /assets/tai-lieu/cum-tu-hay-cho-cau-54.pdf
-summary: Tuyển tập cụm từ tiếng Hàn thường dùng khi viết câu 54, sắp xếp theo mười nhóm chức năng — từ nêu hiện trạng, phân tích nguyên nhân đến đề xuất giải pháp và cụm nối ý.
----
-
-Câu 54 không kiểm tra bạn thuộc bao nhiêu từ, mà kiểm tra bạn có triển khai được một lập luận hoàn chỉnh hay không. Bài viết thường đi theo một mạch cố định: nêu hiện trạng, chỉ ra nguyên nhân, phân tích hậu quả, rồi đề xuất giải pháp.
-
-Dưới đây là các cụm từ mình gom lại theo đúng mạch đó. Mỗi nhóm ứng với một chức năng trong bài viết, nên khi làm bài bạn chỉ cần xác định mình đang ở đoạn nào và lấy cụm phù hợp.
-
-Một lưu ý trước khi dùng: đừng cố nhồi càng nhiều cụm càng tốt. Một cụm đúng chỗ có giá trị hơn năm cụm rải rác không ăn nhập với ý.
-
+summary: Cụm từ hay cho câu 54, gom theo mười nhóm chức năng khi viết bài.
 ---
 
 ## 1. HIỆN TRẠNG & XU HƯỚNG XÃ HỘI
@@ -51,8 +43,6 @@ Dùng để giới thiệu bối cảnh, thực trạng hoặc những thay đ�
 | 발전 가능성이 크다 | Có tiềm năng phát triển lớn |
 | 기후 변화의 부정적인 영향 | Tác động tiêu cực của biến đổi khí hậu |
 | 자원 고갈 | Sự cạn kiệt tài nguyên |
-
----
 
 ## 2. NGUYÊN NHÂN & HẠN CHẾ
 
@@ -96,8 +86,6 @@ Dùng để giải thích tại sao một vấn đề xảy ra hoặc tại sao 
 | ~에 기인하다 | Bắt nguồn từ / do ~ |
 | ~로 이어지다 | Dẫn đến ~ |
 
----
-
 ## 3. VẤN ĐỀ & HẬU QUẢ TIÊU CỰC
 
 Dùng để trình bày những vấn đề phát sinh và tác động tiêu cực của chúng.
@@ -132,8 +120,6 @@ Dùng để trình bày những vấn đề phát sinh và tác động tiêu c�
 | 경제적 부담이 커지다 | Gánh nặng kinh tế gia tăng |
 | 사회적 갈등을 유발하다 | Gây ra xung đột xã hội |
 | 문제 해결이 지지부진하다 | Việc giải quyết vấn đề tiến triển trì trệ |
-
----
 
 ## 4. GIẢI PHÁP Ở CẤP ĐỘ CÁ NHÂN
 
@@ -200,8 +186,6 @@ Dùng khi đề yêu cầu cá nhân cần làm gì hoặc khi đưa ra giải p
 | 사회 문제에 대응하다 | Ứng phó với vấn đề xã hội |
 | 환경 문제에 대응하다 | Ứng phó với vấn đề môi trường |
 
----
-
 ## 5. GIẢI PHÁP TRONG MỐI QUAN HỆ GIỮA NGƯỜI VỚI NGƯỜI
 
 | Tiếng Hàn | Tiếng Việt |
@@ -218,8 +202,6 @@ Dùng khi đề yêu cầu cá nhân cần làm gì hoặc khi đưa ra giải p
 | 불신을 해소하다 | Xóa bỏ sự mất niềm tin |
 | 유대감을 형성하다 | Hình thành sự gắn kết |
 | 유대감을 강화하다 | Tăng cường sự gắn kết |
-
----
 
 ## 6. GIẢI PHÁP Ở CẤP ĐỘ XÃ HỘI & CHÍNH PHỦ
 
@@ -285,8 +267,6 @@ Dùng khi đề yêu cầu cá nhân cần làm gì hoặc khi đưa ra giải p
 | 지속적인 관심을 기울이다 | Dành sự quan tâm liên tục |
 | 지속적인 관리가 필요하다 | Cần quản lý liên tục/lâu dài |
 
----
-
 ## 7. KHUYẾN KHÍCH THAM GIA & HỢP TÁC
 
 | Tiếng Hàn | Tiếng Việt |
@@ -309,8 +289,6 @@ Dùng khi đề yêu cầu cá nhân cần làm gì hoặc khi đưa ra giải p
 | 사회적 합의를 이루다 | Đạt được sự đồng thuận xã hội |
 | 다양한 계층을 포용하다 | Bao quát/tiếp nhận các tầng lớp đa dạng |
 | 지방 분권을 추진하다 | Thúc đẩy phân quyền địa phương |
-
----
 
 ## 8. ĐÓNG GÓP & PHÁT TRIỂN BỀN VỮNG
 
@@ -365,8 +343,6 @@ Dùng khi đề yêu cầu cá nhân cần làm gì hoặc khi đưa ra giải p
 | 사회적 비용을 절감하다 | Giảm chi phí xã hội |
 | 정보의 투명성을 확보하다 | Đảm bảo tính minh bạch của thông tin |
 
----
-
 ## 9. NÂNG CAO CHẤT LƯỢNG CUỘC SỐNG
 
 | Tiếng Hàn | Tiếng Việt |
@@ -382,8 +358,6 @@ Dùng khi đề yêu cầu cá nhân cần làm gì hoặc khi đưa ra giải p
 | 긍정적인 분위기를 만들다 | Tạo bầu không khí tích cực |
 | 사회적 분위기를 조성하다 | Tạo dựng bầu không khí xã hội |
 | 사회 전반에 영향을 미치다 | Gây ảnh hưởng đến toàn xã hội |
-
----
 
 ## 10. CỤM TỪ LIÊN KẾT & MẪU CÂU ĐA NĂNG
 
@@ -447,13 +421,3 @@ Dùng khi đề yêu cầu cá nhân cần làm gì hoặc khi đưa ra giải p
 | 이에 따라 | Theo đó |
 | 결국 | Cuối cùng |
 | 따라서 | Vì vậy |
-
----
-
-## Dùng những cụm này thế nào
-
-Khi luyện viết, mình khuyên bạn chọn ra khoảng hai đến ba cụm cho mỗi nhóm và dùng thật thuần thục, thay vì đọc lướt hết cả danh sách rồi không nhớ cụm nào.
-
-Cách làm hiệu quả nhất là viết một bài hoàn chỉnh, sau đó xem lại từng đoạn và tự hỏi: đoạn này đang làm chức năng gì — nêu hiện trạng, giải thích nguyên nhân, hay đề xuất giải pháp? Rồi thay cụm từ đang dùng bằng một cụm phù hợp hơn trong nhóm tương ứng.
-
-Làm vài lần như vậy, các cụm sẽ tự vào đầu theo đúng vị trí của chúng trong bài.

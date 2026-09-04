@@ -1,0 +1,72 @@
+# Tự động dựng website và đăng lên nhánh main mỗi khi có commit mới trên nhánh source.
+#
+#   nhánh "source" giữ mã nguồn (content/, src/, build.mjs…)
+#   nhánh "main"   chỉ chứa website đã dựng — đây là nhánh GitHub Pages đọc.
+#
+# Cách dùng: commit như bình thường rồi `git push`. Khoảng 1 phút sau website đã cập nhật.
+# Muốn chạy tay: vào tab Actions trên GitHub, chọn workflow này rồi bấm "Run workflow".
+
+name: Dựng và đăng website
+
+on:
+  push:
+    branches: [source]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# Nhiều commit liên tiếp thì chỉ đăng bản mới nhất.
+concurrency:
+  group: dang-website
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Lấy mã nguồn
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Cài Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Dựng website
+        run: |
+          npm run build
+          test -f dist/index.html
+
+      - name: Đăng lên nhánh main
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git fetch origin main:refs/remotes/origin/main || true
+
+          if git show-ref --verify --quiet refs/remotes/origin/main; then
+            git worktree add .publish origin/main
+          else
+            git worktree add --detach .publish
+            git -C .publish checkout --orphan main
+            git -C .publish rm -rf --quiet . || true
+          fi
+
+          # Xoá nội dung cũ nhưng giữ lại thư mục .git
+          find .publish -mindepth 1 -maxdepth 1 ! -name '.git' -exec rm -rf {} +
+          cp -r dist/. .publish/
+
+          cd .publish
+          git add -A
+
+          if git diff --cached --quiet; then
+            echo "Không có gì thay đổi. Bỏ qua."
+          else
+            git commit -q -m "Cập nhật website — $(date '+%d/%m/%Y %H:%M')"
+            git push origin HEAD:main
+            echo "Đã đăng. Website: https://nguyetque3005.github.io"
+          fi
