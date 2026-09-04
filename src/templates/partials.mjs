@@ -32,7 +32,11 @@ export function postCard(post) {
     ? `<span class="post-thumb"><img src="${post.image}" alt="${escapeHtml(post.imageAlt || '')}" loading="lazy" data-fallback="${escapeHtml(post.category || 'Bài viết')}"></span>`
     : '<span class="post-thumb post-thumb-blank" aria-hidden="true"></span>';
 
-  return `          <a class="post-card reveal" href="${post.url}">
+  const tagAttr = (post.tags || []).length
+    ? ` data-tags="${escapeHtml((post.tags || []).join('|'))}"`
+    : '';
+
+  return `          <a class="post-card reveal"${tagAttr} href="${post.url}">
             ${thumb}
             <span class="post-meta">
               <span class="post-category">${escapeHtml(post.category || 'Bài viết')}</span>

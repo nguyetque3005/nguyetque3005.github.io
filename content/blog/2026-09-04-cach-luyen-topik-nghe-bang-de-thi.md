@@ -3,6 +3,7 @@ title: Cách luyện TOPIK 듣기 bằng đề thi
 bannerTitle: Luyện nghe TOPIK bằng đề thi
 date: 2026-09-04
 category: TOPIK
+tags: TOPIK, Nghe 듣기, Kinh nghiệm
 image: /assets/banner/cach-luyen-topik-nghe-bang-de-thi.jpg
 imageAlt: Banner bài viết — Luyện nghe TOPIK bằng đề thi
 summary: Năm bước dùng đề thi để luyện nghe cho đúng cách: làm đề như thi thật, đánh dấu câu đoán đúng, mổ xẻ câu sai, nghe lại có mục đích, và chữa kỹ thay vì làm nhiều.

@@ -1,7 +1,7 @@
 import { escapeHtml } from '../lib/markdown.mjs';
 import { pageHead, postCard, formatDate } from './partials.mjs';
 
-export function renderBlogIndex({ posts, categories }) {
+export function renderBlogIndex({ posts, tags }) {
   const head = pageHead({ eyebrow: '', title: 'Tài liệu' });
 
   if (!posts.length) {
@@ -18,16 +18,14 @@ export function renderBlogIndex({ posts, categories }) {
     </section>`;
   }
 
-  const filters = categories.length
+  const filters = tags.length
     ? `        <div class="blog-filters reveal">
           <button type="button" class="chip is-active" data-filter="*">Tất cả</button>
-${categories.map((c) => `          <button type="button" class="chip" data-filter="${escapeHtml(c)}">${escapeHtml(c)}</button>`).join('\n')}
+${tags.map((t) => `          <button type="button" class="chip" data-filter="${escapeHtml(t)}">${escapeHtml(t)}</button>`).join('\n')}
         </div>`
     : '';
 
-  const cards = posts
-    .map((p) => postCard(p).replace('<a class="post-card reveal"', `<a class="post-card reveal" data-category="${escapeHtml(p.category || '')}"`))
-    .join('\n');
+  const cards = posts.map((p) => postCard(p)).join('\n');
 
   return `${head}
 
@@ -73,6 +71,11 @@ ${related.map((p) => postCard(p)).join('\n')}
             <span>${post.readingMinutes} phút đọc</span>
           </p>
           ${post.summary ? `<p class="post-lead">${escapeHtml(post.summary)}</p>` : ''}
+          ${(post.tags || []).length
+            ? `<p class="post-tags">${post.tags
+                .map((t) => `<a class="tag" href="/blog.html">${escapeHtml(t)}</a>`)
+                .join('')}</p>`
+            : ''}
         </header>
 ${hero}
         <div class="doc-sheet">

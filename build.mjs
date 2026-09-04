@@ -102,6 +102,10 @@ async function loadPosts(site) {
       title: data.title,
       date: data.date,
       category: data.category || 'Bài viết',
+      tags: (data.tags || '')
+        .split(',')
+        .map((t) => t.trim())
+        .filter(Boolean),
       summary: data.summary || '',
       image: data.image || '',
       imageAlt: data.imageAlt || '',
@@ -195,7 +199,8 @@ async function build() {
   await fs.mkdir(DIST, { recursive: true });
 
   const posts = await loadPosts(site);
-  const categories = [...new Set(posts.map((p) => p.category))].sort();
+  // Thẻ dùng cho bộ lọc ở trang Tài liệu, giữ nguyên thứ tự xuất hiện trong bài.
+  const tags = [...new Set(posts.flatMap((p) => p.tags))];
   const written = [];
 
   // Trang chủ
@@ -241,7 +246,7 @@ async function build() {
         description: 'Tài liệu và bài viết về ngữ pháp, từ vựng, luyện thi TOPIK và cuộc sống ở Hàn Quốc.',
         path: '/blog.html',
         bodyClass: 'page-blog',
-        main: renderBlogIndex({ posts, categories }),
+        main: renderBlogIndex({ posts, tags }),
       })
     )
   );

@@ -9,7 +9,8 @@ Chạy:  python3 scripts/tao-banner.py
 Kết quả: assets/banner/<slug>.jpg cho mỗi bài trong content/blog/.
 
 Chữ trên banner lấy từ "bannerTitle" trong phần đầu file .md; nếu không có
-thì dùng "title". Giữ chữ ngắn — banner chỉ cần một dòng nhận diện.
+thì dùng "title", và luôn được in hoa toàn bộ. Giữ chữ ngắn — banner chỉ
+cần một dòng nhận diện.
 """
 
 import re
@@ -123,6 +124,7 @@ def dung_nen(goc):
 def ve_chu(anh, tieu_de):
     draw = ImageDraw.Draw(anh)
     rong_toi_da = W - 260
+    tieu_de = tieu_de.upper()  # banner luôn viết hoa toàn bộ
 
     # Cỡ chữ: thử từ lớn xuống, dừng khi vừa 2 dòng (tối đa 3).
     for size in range(112, 51, -4):

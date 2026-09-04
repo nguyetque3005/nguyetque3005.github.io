@@ -3,6 +3,7 @@ title: Từ vựng thường gặp trong câu 51
 bannerTitle: Từ vựng cho câu 51
 date: 2026-09-04
 category: TOPIK
+tags: TOPIK, Câu 51, Từ vựng
 image: /assets/banner/tu-vung-thuong-gap-trong-cau-51.jpg
 imageAlt: Banner bài viết — Từ vựng cho câu 51
 summary: Từ vựng câu 51 TOPIK II gom theo mười lăm tình huống hay ra đề — từ thông báo tuyển người, hướng dẫn sử dụng, thiệp mời, đến tin tìm đồ thất lạc và thư gửi radio.
