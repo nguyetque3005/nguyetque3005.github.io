@@ -89,10 +89,6 @@ ${post.html}
           </div>
         </div>
 
-        ${post.pdf
-          ? `<p class="post-download reveal"><a class="btn btn-primary" href="${post.pdf}" download>Tải tài liệu bản PDF</a></p>`
-          : ''}
-
         <footer class="post-foot reveal">
           <img class="post-foot-logo" src="/assets/logo.png" alt="" width="72" height="72">
           <div>

@@ -6,7 +6,6 @@ tags: TOPIK, Câu 54, Từ vựng
 bannerTitle: Cụm từ hay cho câu 54
 image: /assets/banner/cum-tu-hay-cho-cau-54.jpg
 imageAlt: Banner bài viết — Cụm từ hay cho câu 54
-pdf: /assets/tai-lieu/cum-tu-hay-cho-cau-54.pdf
 summary: Cụm từ hay cho câu 54, gom theo mười nhóm chức năng khi viết bài.
 ---
 
