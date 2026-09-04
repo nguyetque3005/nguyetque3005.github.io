@@ -9,51 +9,51 @@ imageAlt: Banner bài viết — Phân biệt 은/는 và 이/가
 summary: HIỂU 1 LẦN, DÙNG ĐÚNG HƠN!
 ---
 
-Chào các bạn! Có phải khi mới học tiếng Hàn, bộ đôi 은/는 và 이/가 đã khiến không ít lần chúng ta phải "vò đầu bứt tai" vì không biết lúc nào dùng cái nào đúng không? 😵‍💫
+Chào các bạn! Có phải khi mới học tiếng Hàn, bộ đôi **==xanh: 은/는==** và **==tim: 이/가==** đã khiến không ít lần chúng ta phải “vò đầu bứt tai” vì không biết lúc nào dùng cái nào đúng không? 😵‍💫
 
-Hôm nay chúng ta sẽ phân biệt cách dùng 은/는 và 이/가 bằng những quy tắc siêu thực tế và dễ nhớ dưới đây nhé!
+Hôm nay chúng ta sẽ phân biệt cách dùng **==xanh: 은/는==** và **==tim: 이/가==** bằng những quy tắc siêu thực tế và dễ nhớ dưới đây nhé!
 
-## 1. Bí kíp "Lần đầu gặp mặt" vs "Quen mặt nhớ tên"
+## 1. Bí kíp “Lần đầu gặp mặt” vs “Quen mặt nhớ tên”
 
-| 이/가 (Lần đầu tiên) | 은/는 (Đã quen thuộc) |
+| **==tim: 이/가 (Lần đầu tiên)==** | **==xanh: 은/는 (Đã quen thuộc)==** |
 | --- | --- |
-| Dùng khi bạn nhắc đến một sự vật, sự việc lần đầu tiên trong câu chuyện. 처음 말하는 내용일 때 이/가 | Dùng khi sự vật đó đã được nhắc đến ở câu trước và mọi người đều đã biết. 그 내용을 다시 말할 때 은/는 |
+| Dùng khi bạn nhắc đến một sự vật, sự việc lần đầu tiên trong câu chuyện. 처음 말하는 내용일 때 **이/가** | Dùng khi sự vật đó đã được nhắc đến ở câu trước và mọi người đều đã biết. 그 내용을 다시 말할 때 **은/는** |
 
 **Ví dụ:**
 
-> 책상 위에 펜**이** 있다. 그 펜**은** 내 것이다.
+> 책상 위에 **펜이** 있다. **그** 펜**은** 내 것이다.
 >
-> Trên bàn có cây viết. Cây viết đó là của tôi.
+> Trên bàn có **cây viết**. Cây viết **==la: đó==** là của tôi.
 >
-> (Trên bàn có một cây viết [mới xuất hiện → 이]. Cây viết đó là của tôi [đã biết là cây nào → 은].)
+> (Trên bàn có **một cây viết** [mới xuất hiện → **이**]. **Cây viết đó** là của tôi [đã biết là cây nào → **은**].)
 
-> 옛날 옛날, 어느 숲 속에 호랑이 한 마리**가** 살고 있었어요. 시간이 흐르고, 그**는** 사냥을 하기엔 너무 늙어버렸어요.
+> 옛날 옛날, 어느 숲 속에 **호랑이 한 마리가** 살고 있었어요. 시간**이** 흐르고, 그**는** 사냥을 하기엔 너무 늙어버렸어요.
 >
-> Ngày xửa ngày xưa, có một con hổ sống trong một khu rừng. Nhiều năm trôi qua, nó trở nên quá già để có thể đi săn.
+> Ngày xửa ngày xưa, có **một con hổ** sống trong một khu rừng. Nhiều năm trôi qua, **==la: nó==** trở nên quá già để có thể đi săn.
 >
-> (Ngày xửa ngày xưa, có một con hổ sống trong rừng → [가]. Nhiều năm trôi qua, nó... [đã biết con hổ nào → 는].)
+> (Ngày xửa ngày xưa, có **một con hổ** sống trong rừng → [**가**]. Nhiều năm trôi qua, **nó**... [đã biết con hổ nào → **는**].)
 
 ## 2. Trọng tâm câu nằm ở đâu?
 
-| 이/가 | 은/는 |
+| **==tim: 이/가==** | **==xanh: 은/는==** |
 | --- | --- |
-| Tập trung sự chú ý vào thông tin phía trước (đặc biệt là câu trả lời cho các từ để hỏi như ai, cái gì,...). 이/가은 앞 정보가 중요 | Tập trung sự chú ý vào thông tin phía sau (nội dung chính muốn thông báo về chủ đề). 은/는은 뒷 정보가 중요 |
+| Tập trung sự chú ý vào thông tin phía trước (đặc biệt là câu trả lời cho các từ để hỏi như ai, cái gì,...). **이/가**은 앞 정보가 중요 | Tập trung sự chú ý vào thông tin phía sau (nội dung chính muốn thông báo về chủ đề). **은/는**은 뒷 정보가 중요 |
 
 **Ví dụ:**
 
-> 누가 한국 사람이에요? — Ai là người Hàn Quốc?
+> **누가** 한국 사람이에요? — **Ai** là người Hàn Quốc?
 >
-> 제**가** 한국 사람이에요. — Tôi là người Hàn Quốc.
+> **제가** 한국 사람이에요. — **Tôi** là người Hàn Quốc.
 >
-> (Ai là người Hàn Quốc? → Chính tôi là người Hàn Quốc - Nhấn mạnh đáp án cho từ "ai").
+> (Ai là người Hàn Quốc? → **Chính tôi** là người Hàn Quốc - Nhấn mạnh đáp án cho từ “ai”).
 
-> 당신**은** 어느 나라 사람이에요? — Chị là người nước nào?
+> 당신**은 어느 나라 사람**이에요? — Chị là người nước nào?
 >
-> 나**는** 한국 사람이에요. — Tôi là người Hàn Quốc.
+> 나**는 한국 사람**이에요. — Tôi là **người Hàn Quốc**.
 >
-> (Bạn là người nước nào? → Tôi là người Hàn Quốc - Giới thiệu thông tin mới phía sau)
+> (Bạn là người nước nào? → Tôi là **người Hàn Quốc** - Giới thiệu thông tin mới phía sau)
 
-## 3. Ba "đặc quyền" riêng của 은/는
+## 3. Ba “đặc quyền” riêng của 은/는
 
 ### So sánh, đối chiếu 은/는
 
@@ -61,9 +61,9 @@ Hôm nay chúng ta sẽ phân biệt cách dùng 은/는 và 이/가 bằng nh�
 
 **Ví dụ:**
 
-> 어제**는** 추웠는데 오늘**은** 덥다. — Hôm qua lạnh nhưng hôm nay nóng.
+> **어제는** 추웠는데 **오늘은** 덥다. — **Hôm qua** lạnh nhưng **hôm nay** nóng.
 >
-> 아버지**는** 경찰이고, 어머니**는** 주부예요. — Bố tôi là cảnh sát còn mẹ tôi là nội trợ.
+> **아버지는** 경찰이고, **어머니는** 주부예요. — **Bố tôi** là cảnh sát còn **mẹ tôi** là nội trợ.
 
 ### Sự thật hiển nhiên, chân lý: 은/는
 
@@ -93,10 +93,10 @@ Hôm nay chúng ta sẽ phân biệt cách dùng 은/는 và 이/가 bằng nh�
 
 Khi trong câu có 2 chủ ngữ:
 
-- Chủ ngữ lớn/chủ đề đầu câu dùng 은/는
-- Chủ ngữ phụ phía sau dùng 이/가.
+- Chủ ngữ lớn/chủ đề đầu câu dùng **==xanh: 은/는==**
+- Chủ ngữ phụ phía sau dùng **==tim: 이/가==**.
 
-은/는과 이/가를 한 문장에 쓸 때 처음 주어에는 은/는, 나중 주어에는 이/가
+**은/는**과 **이/가**를 한 문장에 쓸 때 처음 주어에는 **은/는,** 나중 주어에는 **이/가**
 
 **Ví dụ:**
 
@@ -106,7 +106,7 @@ Khi trong câu có 2 chủ ngữ:
 
 ### Chủ ngữ trong mệnh đề phụ: 이/가
 
-내포문의 주어에는 이/가
+내포문의 주어에는 **이/가**
 
 **Ví dụ:**
 

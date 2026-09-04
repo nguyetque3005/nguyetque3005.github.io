@@ -1,6 +1,6 @@
 // Bộ chuyển Markdown -> HTML tối giản, không phụ thuộc thư viện ngoài.
 // Hỗ trợ: tiêu đề, đoạn văn, danh sách, trích dẫn, đường kẻ, khối mã,
-// ảnh, liên kết, in đậm, in nghiêng, mã inline.
+// ảnh, liên kết, in đậm, in nghiêng, bôi nền (highlight), mã inline.
 // Không hỗ trợ (có chủ đích): danh sách lồng nhau, HTML thô (trừ <br>).
 
 const CODE_TOKEN = '@@QKCODE';
@@ -49,6 +49,12 @@ function renderInline(text) {
 
   s = s.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
   s = s.replace(/(^|[^*])\*([^*\n]+)\*/g, '$1<em>$2</em>');
+
+  // Bôi nền như trong Google Docs: ==chữ== (vàng) hoặc ==xanh: chữ==
+  s = s.replace(/==(?:(vang|xanh|tim|la):\s*)?([^=\n]+)==/g, (_m, color, t) => {
+    const cls = color && color !== 'vang' ? ` class="hl-${color}"` : '';
+    return `<mark${cls}>${t}</mark>`;
+  });
 
   // Cho phép duy nhất thẻ <br> để giữ ngắt dòng trong ô bảng
   s = s.replace(/&lt;br\s*\/?&gt;/g, '<br>');
