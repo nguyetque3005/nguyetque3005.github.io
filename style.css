@@ -821,6 +821,33 @@ ul.chapter-aside li::before {
   margin-top: 32px;
 }
 
+.post-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin: 18px 0 0;
+}
+
+.post-tags .tag {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 5px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--pink-200);
+  background: var(--soft);
+  color: var(--pink-600);
+  text-decoration: none;
+  transition: background 0.18s ease, color 0.18s ease;
+}
+
+.post-tags .tag:hover {
+  background: var(--pink-400);
+  border-color: var(--pink-400);
+  color: #fff;
+}
+
 /* ---------- Trang bài viết ---------- */
 
 .post {

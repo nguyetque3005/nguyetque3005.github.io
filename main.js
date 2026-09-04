@@ -151,7 +151,7 @@
     });
   }
 
-  /* ---------- Lọc bài viết theo chuyên mục ---------- */
+  /* ---------- Lọc bài viết theo thẻ ---------- */
 
   var chips = document.querySelectorAll('[data-filter]');
   var grid = document.querySelector('[data-post-grid]');
@@ -168,7 +168,8 @@
 
         var shown = 0;
         Array.prototype.forEach.call(grid.children, function (card) {
-          var match = want === '*' || card.getAttribute('data-category') === want;
+          var tags = (card.getAttribute('data-tags') || '').split('|');
+          var match = want === '*' || tags.indexOf(want) !== -1;
           card.hidden = !match;
           if (match) shown++;
         });
