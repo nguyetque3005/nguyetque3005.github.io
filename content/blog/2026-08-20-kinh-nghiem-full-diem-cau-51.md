@@ -9,9 +9,9 @@ imageAlt: Banner bài viết — Full điểm câu 51
 summary: Khi làm câu này không cố dùng từ vựng hay ngữ pháp quá "cao siêu", mà hãy tập trung vào đọc hiểu ngữ cảnh, tìm từ khóa và ngữ pháp chắc chắn.
 ---
 
-Câu 51 là câu mở đầu trong đề thi viết, không quá khó và nội dung chủ yếu liên quan đến những kinh nghiệm trong cuộc sống thực tiễn như: Quảng cáo, đăng tin, tuyển dụng, thông báo hay thậm chí là những tin nhắn hội thoại cá nhân, Email.. Với mục đích là để đánh giá khả năng tiếng hàn thực tiễn trong cuộc sống của thí sinh.
+*Câu 51 là câu mở đầu trong đề thi viết, không quá khó và nội dung chủ yếu liên quan đến những kinh nghiệm trong cuộc sống thực tiễn như: Quảng cáo, đăng tin, tuyển dụng, thông báo hay thậm chí là những tin nhắn hội thoại cá nhân, Email.. Với mục đích là để đánh giá khả năng tiếng hàn thực tiễn trong cuộc sống của thí sinh.*
 
-Tuy không quá khó nhưng rất dễ mất điểm vì những lỗi tưởng như rất nhỏ. Vì vậy, khi làm câu này không cố dùng từ vựng hay ngữ pháp quá "cao siêu", mà hãy tập trung vào đọc hiểu ngữ cảnh, tìm từ khóa và ngữ pháp chắc chắn.
+*Tuy không quá khó nhưng rất dễ mất điểm vì những lỗi tưởng như rất nhỏ. Vì vậy, khi làm câu này không cố dùng từ vựng hay ngữ pháp quá “cao siêu”, mà hãy tập trung vào đọc hiểu ngữ cảnh, tìm từ khóa và ngữ pháp chắc chắn.*
 
 ## BƯỚC 1: ĐỌC QUA 1 LƯỢT ĐỂ HIỂU NỘI DUNG
 
@@ -35,4 +35,4 @@ Tuy không quá khó nhưng rất dễ mất điểm vì những lỗi tưởng 
 
 - Sau khi chọn được từ vựng và ngữ pháp thì sẽ kiểm tra lại đáp án theo câu thần chú: **KÍNH - CHỦ - TRỢ - DẤU - THÌ** (Kính ngữ - Chủ ngữ - Trợ từ - Dấu câu - Thì).
 
-→ 5 ĐIỂM NÀY ỔN RỒI THÌ CHỐT ĐÁP ÁN VÀ KHÔNG NGHĨ THÊM NỮA.
+**==→ 5 ĐIỂM NÀY ỔN RỒI THÌ CHỐT ĐÁP ÁN VÀ KHÔNG NGHĨ THÊM NỮA.==**

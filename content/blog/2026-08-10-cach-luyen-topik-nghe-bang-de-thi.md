@@ -25,7 +25,7 @@ Sau khi chấm điểm, hãy đánh dấu:
 - ⚠️ Câu đoán đúng
 - ⭕ Câu làm chắc chắn
 
-Đặc biệt chú ý những câu đúng nhưng thực ra là đoán.
+Đặc biệt chú ý những câu **đúng nhưng thực ra là đoán**.
 
 → Đây mới là những câu cho thấy mình còn lỗ hổng.
 
@@ -40,7 +40,7 @@ Với mỗi câu sai, thử tìm xem mình sai vì đâu:
 - Không kịp đọc câu hỏi?
 - Mất tập trung vì câu trước?
 
-👉 Biết mình sai ở đâu quan trọng hơn việc biết đáp án là gì.
+👉 Biết **mình sai ở đâu** quan trọng hơn việc biết đáp án là gì.
 
 ## 4. Nghe lại có mục đích
 
@@ -53,9 +53,9 @@ Hãy thử:
 - 📖 Xem script → hiểu chính xác nội dung
 - 🎧 Tắt script → nghe lại một lần nữa
 
-Khi đã nghe rõ, có thể nhại theo audio để luyện tốc độ và ngữ điệu.
+Khi đã nghe rõ, có thể **nhại theo audio** để luyện tốc độ và ngữ điệu.
 
-## 5. Làm nhiều đề nhưng phải "ăn" được đề
+## 5. Làm nhiều đề nhưng phải “ăn” được đề
 
 Không phải cứ làm 20 đề là sẽ nghe tốt.
 
@@ -67,16 +67,16 @@ Một đề làm kỹ có thể cho bạn:
 - biết bẫy thường gặp
 - cải thiện tốc độ nghe
 
-Làm ít nhưng chữa kỹ vẫn tốt hơn làm nhiều rồi quên.
+**Làm ít nhưng chữa kỹ vẫn tốt hơn làm nhiều rồi quên.**
 
 ## 🎯 Và một điều rất quan trọng
 
-Không cần lúc nào cũng cố nghe hiểu 100% tất cả câu.
+Không cần lúc nào cũng cố nghe hiểu **100% tất cả câu**.
 
-Hãy xác định trước: "Mình đang cần bao nhiêu điểm?"
+Hãy xác định trước: **“Mình đang cần bao nhiêu điểm?”**
 
-Sau đó tập trung nâng chắc những câu nằm trong mục tiêu điểm của mình.
+Sau đó tập trung nâng chắc những câu nằm trong **mục tiêu điểm của mình**.
 
 TOPIK 듣기 không chỉ là cuộc thi xem ai nghe được nhiều nhất.
 
-👉 Mà là cuộc thi xem ai xử lý bài nghe hiệu quả hơn trong thời gian giới hạn.
+👉 Mà là cuộc thi xem **ai xử lý bài nghe hiệu quả hơn trong thời gian giới hạn**.
