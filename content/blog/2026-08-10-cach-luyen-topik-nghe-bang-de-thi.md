@@ -1,7 +1,7 @@
 ---
 title: Cách luyện TOPIK 듣기 bằng đề thi
 bannerTitle: Luyện nghe TOPIK bằng đề thi
-date: 2026-09-04
+date: 2026-08-10
 category: TOPIK
 tags: TOPIK, Nghe 듣기, Kinh nghiệm
 image: /assets/banner/cach-luyen-topik-nghe-bang-de-thi.jpg
