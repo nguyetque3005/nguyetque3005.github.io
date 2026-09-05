@@ -45,7 +45,6 @@ function register(c) {
   const r = c.register;
   return `    <section class="closing" id="dang-ky">
       <div class="shell closing-inner reveal">
-        <h2>${escapeHtml(r.title)}</h2>
         <p class="closing-actions">
           <a class="btn btn-primary" href="${r.href}">${escapeHtml(r.label)}</a>
         </p>
