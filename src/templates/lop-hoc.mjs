@@ -19,31 +19,6 @@ ${c.pains.items.map((t) => `          <li>${escapeHtml(t)}</li>`).join('\n')}
     </section>`;
 }
 
-function method(c) {
-  const m = c.method;
-  return `    <section class="method">
-      <div class="shell">
-        <header class="section-head reveal">
-          <h2>${escapeHtml(m.title)}</h2>
-          <p class="section-lead">${renderInline(m.intro)}</p>
-        </header>
-
-        <ol class="flow reveal">
-${m.flow.map((s) => `          <li>${escapeHtml(s)}</li>`).join('\n')}
-        </ol>
-
-        <p class="focus-label reveal">${escapeHtml(m.focusLabel)}</p>
-        <ul class="focus-list reveal">
-${m.focus
-  .map(
-    (f) => `          <li>${escapeHtml(f)}</li>`
-  )
-  .join('\n')}
-        </ul>
-      </div>
-    </section>`;
-}
-
 function content(c) {
   const k = c.content;
   return `    <section class="skills">
@@ -66,37 +41,11 @@ ${paragraphs(s.text)}
     </section>`;
 }
 
-function audience(c) {
-  const a = c.audience;
-  return `    <section class="audience">
-      <div class="shell audience-inner reveal">
-        <h2>${escapeHtml(a.title)}</h2>
-        <p class="section-lead">${renderInline(a.intro)}</p>
-        <ul class="check-list">
-${a.items.map((t) => `          <li>${escapeHtml(t)}</li>`).join('\n')}
-        </ul>
-        <p class="audience-note">${renderInline(a.note)}</p>
-      </div>
-    </section>`;
-}
-
-function goal(c) {
-  return `    <section class="goal">
-      <div class="shell goal-inner reveal">
-        <h2>${escapeHtml(c.goal.title)}</h2>
-        <ol class="goal-flow">
-${c.goal.items.map((i) => `          <li>${escapeHtml(i)}</li>`).join('\n')}
-        </ol>
-      </div>
-    </section>`;
-}
-
 function register(c) {
   const r = c.register;
   return `    <section class="closing" id="dang-ky">
       <div class="shell closing-inner reveal">
         <h2>${escapeHtml(r.title)}</h2>
-        <p>${renderInline(r.text)}</p>
         <p class="closing-actions">
           <a class="btn btn-primary" href="${r.href}">${escapeHtml(r.label)}</a>
         </p>
@@ -113,10 +62,7 @@ export function renderLopHoc({ classes, testimonials }) {
       note: classes.intro.statusNote,
     }),
     pains(classes),
-    method(classes),
     content(classes),
-    audience(classes),
-    goal(classes),
     testimonialSection(testimonials),
     register(classes),
   ]
