@@ -25,7 +25,7 @@ export function slugify(s) {
     .slice(0, 80);
 }
 
-function renderInline(text) {
+export function renderInline(text) {
   const codes = [];
   let s = escapeHtml(text);
 
