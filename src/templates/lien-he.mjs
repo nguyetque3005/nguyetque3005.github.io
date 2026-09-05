@@ -1,5 +1,5 @@
 import { escapeHtml } from '../lib/markdown.mjs';
-import { pageHead } from './partials.mjs';
+import { pageHead, icon, socialIcon } from './partials.mjs';
 
 export function renderLienHe({ site }) {
   const socials = (site.socials || []).filter((s) => s.href);
@@ -10,7 +10,7 @@ export function renderLienHe({ site }) {
 ${socials
   .map(
     (s) =>
-      `            <a class="contact-pill" href="${s.href}" target="_blank" rel="noopener noreferrer">${escapeHtml(s.label)}</a>`
+      `            <a class="contact-pill" href="${s.href}" target="_blank" rel="noopener noreferrer">${socialIcon(s)}<span>${escapeHtml(s.label)}</span></a>`
   )
   .join('\n')}
           </p>
@@ -29,11 +29,11 @@ ${socials
 
         <div class="contact-row">
           <p class="contact-label">Email</p>
-          <p class="contact-email"><a href="mailto:${site.contact.email}">${escapeHtml(site.contact.email)}</a></p>
+          <p class="contact-email"><a href="mailto:${site.contact.email}">${icon('mail', 'icon contact-icon')}<span>${escapeHtml(site.contact.email)}</span></a></p>
         </div>
 
 ${socialHtml}
-          <p class="contact-note">Local time: UTC+9 · ${escapeHtml(site.contact.location)}</p>
+          <p class="contact-note">${icon('location', 'icon contact-icon')}<span>Local time: UTC+9 · ${escapeHtml(site.contact.location)}</span></p>
 
         </div>
       </div>

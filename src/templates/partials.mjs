@@ -83,3 +83,40 @@ export function pageHead({ eyebrow, title, lead, note }) {
       </div>
     </section>`;
 }
+
+// Icon SVG viết thẳng trong mã, không dùng thư viện ngoài.
+// Nét vẽ theo currentColor nên đổi màu chữ là icon đổi theo.
+const ICONS = {
+  facebook:
+    '<path d="M14 8.5V7c0-.8.2-1.2 1.3-1.2H17V3.1c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8v1.7H8.6V11h2.5v7h3v-7h2.4l.4-2.5H14z"/>',
+  tiktok:
+    '<path d="M16.6 6.9a4.3 4.3 0 0 1-2.7-1.6 4.2 4.2 0 0 1-.8-2.3h-2.6v9.6a2 2 0 1 1-1.5-1.9V8a4.6 4.6 0 1 0 4.1 4.6V8.9c.9.6 2 1 3.1 1V6.9h.4z"/>',
+  youtube:
+    '<path d="M19.2 7.2a2 2 0 0 0-1.4-1.4C16.5 5.4 10 5.4 10 5.4s-6.5 0-7.8.4A2 2 0 0 0 .8 7.2C.4 8.5.4 11 .4 11s0 2.5.4 3.8a2 2 0 0 0 1.4 1.4c1.3.4 7.8.4 7.8.4s6.5 0 7.8-.4a2 2 0 0 0 1.4-1.4c.4-1.3.4-3.8.4-3.8s0-2.5-.4-3.8zM8.1 13.5V8.5l5 2.5-5 2.5z"/>',
+  instagram:
+    '<path d="M10 2.7c2.4 0 2.7 0 3.6.1.9 0 1.4.2 1.7.3.4.2.7.4 1 .7.3.3.5.6.7 1 .1.3.3.8.3 1.7 0 .9.1 1.2.1 3.5s0 2.6-.1 3.5c0 .9-.2 1.4-.3 1.7-.2.4-.4.7-.7 1-.3.3-.6.5-1 .7-.3.1-.8.3-1.7.3-.9 0-1.2.1-3.6.1s-2.7 0-3.6-.1c-.9 0-1.4-.2-1.7-.3a2.8 2.8 0 0 1-1-.7 2.8 2.8 0 0 1-.7-1c-.1-.3-.3-.8-.3-1.7 0-.9-.1-1.2-.1-3.5s0-2.6.1-3.5c0-.9.2-1.4.3-1.7.2-.4.4-.7.7-1 .3-.3.6-.5 1-.7.3-.1.8-.3 1.7-.3.9 0 1.2-.1 3.6-.1m0 3.7a3.6 3.6 0 1 0 0 7.2 3.6 3.6 0 0 0 0-7.2m0 5.9a2.3 2.3 0 1 1 0-4.6 2.3 2.3 0 0 1 0 4.6m4.6-6a.85.85 0 1 1-1.7 0 .85.85 0 0 1 1.7 0"/>',
+  zalo:
+    '<path fill-rule="evenodd" d="M6 2h8a5 5 0 0 1 5 5v4a5 5 0 0 1-5 5H8.6l-5 2.9a.5.5 0 0 1-.73-.6L4.2 15A5 5 0 0 1 1 10.3V7a5 5 0 0 1 5-5zm.5 4.3v1.5h4.3l-4.5 4v1.6h7.2v-1.6H9.1l4.4-4V6.3H6.5z"/>',
+  mail:
+    '<path d="M3 5h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm.9 1.6L10 10.4l6.1-3.8V6.4H3.9v.2zm12.2 1.7-5.7 3.5a.9.9 0 0 1-.8 0L3.9 8.3v5.3h12.2V8.3z"/>',
+  location:
+    '<path d="M10 2a5.4 5.4 0 0 0-5.4 5.4c0 4 4.7 10 4.9 10.2a.7.7 0 0 0 1 0c.2-.2 4.9-6.2 4.9-10.2A5.4 5.4 0 0 0 10 2zm0 7.7a2.3 2.3 0 1 1 0-4.6 2.3 2.3 0 0 1 0 4.6z"/>',
+};
+
+// Tên mạng xã hội trong site.json -> khoá icon
+function iconKey(label = '') {
+  const k = label.toLowerCase().replace(/[^a-z]/g, '');
+  return ICONS[k] ? k : '';
+}
+
+export function icon(name, className = 'icon') {
+  const path = ICONS[name];
+  if (!path) return '';
+  return `<svg class="${className}" viewBox="0 0 20 20" width="20" height="20" fill="currentColor" aria-hidden="true" focusable="false">${path}</svg>`;
+}
+
+// Icon cho một mục trong site.socials; không nhận ra tên thì trả về chữ
+export function socialIcon(social, className = 'icon') {
+  const key = iconKey(social.label);
+  return key ? icon(key, className) : '';
+}

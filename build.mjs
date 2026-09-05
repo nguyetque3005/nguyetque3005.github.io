@@ -218,7 +218,7 @@ async function build() {
         title: "Câu chuyện",
         path: "/",
         bodyClass: "page-home",
-        main: renderHome({ site, story, testimonials, posts }),
+        main: renderHome({ site, story, testimonials }),
         extraHead: "",
       }).replace(
         "</head>",

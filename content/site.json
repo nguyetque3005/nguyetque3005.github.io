@@ -19,12 +19,12 @@
   },
   "nav": [
     {
-      "label": "Tài liệu",
-      "href": "/blog.html"
-    },
-    {
       "label": "Khóa học",
       "href": "/khoa-hoc.html"
+    },
+    {
+      "label": "Tài liệu",
+      "href": "/blog.html"
     },
     {
       "label": "Liên hệ",
@@ -45,6 +45,11 @@
       "label": "TikTok",
       "href": "https://www.tiktok.com/@queenie.qp",
       "handle": "@queenie.qp"
+    },
+    {
+      "label": "Zalo",
+      "href": "https://zalo.me/0774758235",
+      "handle": "0774758235"
     }
   ]
 }

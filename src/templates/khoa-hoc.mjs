@@ -43,10 +43,11 @@ ${paragraphs(s.text)}
 
 function register(c) {
   const r = c.register;
+  const res = c.resources;
   return `    <section class="closing" id="dang-ky">
       <div class="shell closing-inner reveal">
         <p class="closing-actions">
-          <a class="btn btn-primary" href="${r.href}">${escapeHtml(r.label)}</a>
+${res ? `          <a class="btn btn-quiet" href="${res.href}">${escapeHtml(res.label)}</a>\n` : ''}          <a class="btn btn-primary" href="${r.href}">${escapeHtml(r.label)}</a>
         </p>
       </div>
     </section>`;
