@@ -17,3 +17,4 @@ __pycache__/
 # Cấu hình riêng của trình soạn thảo
 .vscode/
 .idea/
+.claude/
