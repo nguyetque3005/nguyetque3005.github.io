@@ -67,7 +67,7 @@ function footer(site) {
       </div>
     </div>
     <div class="shell footer-base">
-      <p>&copy; ${new Date().getFullYear()} ${escapeHtml(site.person.fullName)}</p>
+      <p>&copy; ${new Date().getFullYear()} ${escapeHtml(site.brand.short)}</p>
     </div>
   </footer>`;
 }
