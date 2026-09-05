@@ -88,7 +88,6 @@ export function renderHoSo({ cv }) {
       eyebrow: cv.intro.eyebrow,
       title: cv.intro.title,
       lead: cv.intro.lead,
-      note: cv.intro.note,
     }),
     block('kinh-nghiem', 'Kinh nghiệm', 'Quá trình làm việc', cv.experience),
     block('hoc-van', 'Học vấn', 'Quá trình học tập', cv.education),

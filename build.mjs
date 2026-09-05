@@ -18,7 +18,7 @@ import { renderHome } from "./src/templates/home.mjs";
 import { renderHoSo } from "./src/templates/ho-so.mjs";
 import { renderBlogIndex, renderPost } from "./src/templates/blog.mjs";
 import { renderLopHoc } from "./src/templates/khoa-hoc.mjs";
-import { renderLienHe, renderCamOn } from "./src/templates/lien-he.mjs";
+import { renderLienHe } from "./src/templates/lien-he.mjs";
 
 const ROOT = path.dirname(fileURLToPath(import.meta.url));
 const CONTENT = path.join(ROOT, "content");
@@ -112,7 +112,6 @@ async function loadPosts(site) {
         .split(",")
         .map((t) => t.trim())
         .filter(Boolean),
-      summary: data.summary || "",
       image: data.image || "",
       imageAlt: data.imageAlt || "",
       author: site.person.fullName,
@@ -152,7 +151,6 @@ function rss(site, posts) {
       <link>${base}${p.url}</link>
       <guid>${base}${p.url}</guid>
       <pubDate>${new Date(p.date).toUTCString()}</pubDate>
-      <description>${escapeHtml(p.summary)}</description>
     </item>`,
     )
     .join("\n");
@@ -271,7 +269,6 @@ async function build() {
         page({
           site,
           title: post.title,
-          description: post.summary,
           path: post.url,
           bodyClass: "page-post",
           ogType: "article",
@@ -337,18 +334,6 @@ async function build() {
     ),
   );
 
-  written.push(
-    await write(
-      "cam-on.html",
-      page({
-        site,
-        title: "Cảm ơn bạn",
-        path: "/cam-on.html",
-        bodyClass: "page-thanks",
-        main: renderCamOn({ site }),
-      }),
-    ),
-  );
 
   // Trang 404
   written.push(
@@ -363,7 +348,6 @@ async function build() {
       <div class="shell">
         <p class="eyebrow">404</p>
         <h1>Trang này không có ở đây</h1>
-        <p class="page-lead">Có thể đường dẫn đã đổi, hoặc mình gõ nhầm ở đâu đó. Bạn thử quay về trang chủ nhé.</p>
         <p class="closing-actions"><a class="btn btn-primary" href="/">Về trang chủ</a> <a class="btn btn-quiet" href="/blog.html">Xem blog</a></p>
       </div>
     </section>`,

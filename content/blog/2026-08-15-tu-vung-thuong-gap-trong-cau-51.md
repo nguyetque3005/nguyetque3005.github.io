@@ -5,7 +5,6 @@ category: TOPIK
 tags: Câu 51, Từ vựng
 image: /assets/banner/tu-vung-thuong-gap-trong-cau-51.jpg
 imageAlt: Banner bài viết — Từ vựng thường gặp trong câu 51
-summary: Từ vựng thường gặp trong câu 51, gom theo từng tình huống ra đề.
 ---
 
 ## 1. 모집 / 대회 — Tuyển/ Chiêu mộ/ Cuộc thi

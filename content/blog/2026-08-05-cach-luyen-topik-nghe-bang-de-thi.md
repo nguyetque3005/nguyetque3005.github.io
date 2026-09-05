@@ -5,7 +5,6 @@ category: TOPIK
 tags: Luyện nghe, Kinh nghiệm
 image: /assets/banner/cach-luyen-topik-nghe-bang-de-thi.jpg
 imageAlt: Banner bài viết — Cách luyện thi TOPIK nghe bằng đề thi
-summary: TOPIK 듣기 không chỉ là cuộc thi xem ai nghe được nhiều nhất, mà là cuộc thi xem ai xử lý bài nghe hiệu quả hơn trong thời gian giới hạn.
 ---
 
 ## 1. Làm đề như thi thật

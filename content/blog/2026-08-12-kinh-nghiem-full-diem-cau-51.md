@@ -5,7 +5,6 @@ category: TOPIK
 tags: Câu 51, Kinh nghiệm
 image: /assets/banner/kinh-nghiem-full-diem-cau-51.jpg
 imageAlt: Banner bài viết — Kinh nghiệm full điểm câu 51
-summary: Khi làm câu này không cố dùng từ vựng hay ngữ pháp quá "cao siêu", mà hãy tập trung vào đọc hiểu ngữ cảnh, tìm từ khóa và ngữ pháp chắc chắn.
 ---
 
 *Câu 51 là câu mở đầu trong đề thi viết, không quá khó và nội dung chủ yếu liên quan đến những kinh nghiệm trong cuộc sống thực tiễn như: Quảng cáo, đăng tin, tuyển dụng, thông báo hay thậm chí là những tin nhắn hội thoại cá nhân, Email.. Với mục đích là để đánh giá khả năng tiếng hàn thực tiễn trong cuộc sống của thí sinh.*

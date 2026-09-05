@@ -5,7 +5,6 @@ category: Ngữ pháp
 tags: Ngữ pháp, Trợ từ
 image: /assets/banner/phan-biet-eun-neun-va-i-ga.jpg
 imageAlt: Banner bài viết — Cách phân biệt 은/는 và 이/가
-summary: HIỂU 1 LẦN, DÙNG ĐÚNG HƠN!
 ---
 
 Chào các bạn! Có phải khi mới học tiếng Hàn, bộ đôi **==xanh: 은/는==** và **==tim: 이/가==** đã khiến không ít lần chúng ta phải “vò đầu bứt tai” vì không biết lúc nào dùng cái nào đúng không? 😵‍💫

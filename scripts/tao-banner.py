@@ -31,8 +31,9 @@ FONT_HAN_DAM = ("/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc", 1)
 
 W, H = 1600, 900          # khổ 16:9, khớp với .post-hero trên web
 NEN = (255, 252, 253)     # --paper
-HONG = (201, 95, 130)     # --pink-600
+CHU = (59, 48, 52)        # --ink, nâu sẫm — cùng màu chữ tiêu đề trên web
 MO = 0.16                 # độ đậm hình mờ: 0 là nền trơn, 1 là ảnh gốc
+GIAN = 0.04               # giãn chữ, tính theo cỡ chữ; chữ in hoa cần thở
 
 # Vùng chữ ký trong ảnh gốc, đã cắt bỏ lề trắng.
 CHU_KY = (80, 165, 1452, 837)
@@ -64,22 +65,29 @@ def bo_font(size):
     }
 
 
-def do_rong(draw, text, fonts):
-    return sum(draw.textlength(t, font=fonts[loai]) for loai, t in cat_doan(text))
+def do_rong(draw, text, fonts, gian=0):
+    rong = sum(draw.textlength(t, font=fonts[loai]) for loai, t in cat_doan(text))
+    return rong + gian * max(len(text) - 1, 0)
 
 
-def ve_dong(draw, x, y, text, fonts, mau):
-    """Vẽ một dòng, tự đổi font khi gặp chữ Hàn."""
+def ve_dong(draw, x, day, text, fonts, mau, gian=0):
+    """Vẽ một dòng trên cùng một đường chân chữ, tự đổi font khi gặp chữ Hàn.
+
+    Neo "ls" là đường chân chữ (baseline). Trước đây neo theo đỉnh ("lt") nên
+    chữ Hàn tụt xuống, vì Noto Sans CJK cao hơn Be Vietnam Pro 16% — chính là
+    chỗ làm 듣기 lệch khỏi hàng chữ Việt.
+    """
     for loai, t in cat_doan(text):
-        draw.text((x, y), t, font=fonts[loai], fill=mau, anchor="lt")
-        x += draw.textlength(t, font=fonts[loai])
+        for ch in t:
+            draw.text((x, day), ch, font=fonts[loai], fill=mau, anchor="ls")
+            x += draw.textlength(ch, font=fonts[loai]) + gian
 
 
-def xuong_dong(draw, text, fonts, rong_toi_da):
+def xuong_dong(draw, text, fonts, rong_toi_da, gian=0):
     dong, hien_tai = [], ""
     for tu in text.split():
         thu = f"{hien_tai} {tu}".strip()
-        if hien_tai and do_rong(draw, thu, fonts) > rong_toi_da:
+        if hien_tai and do_rong(draw, thu, fonts, gian) > rong_toi_da:
             dong.append(hien_tai)
             hien_tai = tu
         else:
@@ -94,7 +102,7 @@ def xuong_dong(draw, text, fonts, rong_toi_da):
         tot = None
         for k in range(1, len(tu)):
             t, d = " ".join(tu[:k]), " ".join(tu[k:])
-            rt, rd = do_rong(draw, t, fonts), do_rong(draw, d, fonts)
+            rt, rd = do_rong(draw, t, fonts, gian), do_rong(draw, d, fonts, gian)
             if max(rt, rd) > rong_toi_da:
                 continue
             if tot is None or abs(rt - rd) < tot[0]:
@@ -117,7 +125,7 @@ def dung_nen(goc):
     nen = Image.new("RGB", (W, H), NEN)
     nen.paste(chu_ky, ((W - rong) // 2, (H - cao) // 2))
 
-    # Pha với màu giấy để chữ ký lùi hẳn ra sau, chữ hồng phía trên đọc rõ.
+    # Pha với màu giấy để chữ ký lùi hẳn ra sau, chữ phía trên đọc rõ.
     return Image.blend(Image.new("RGB", (W, H), NEN), nen, MO)
 
 
@@ -128,22 +136,27 @@ def ve_chu(anh, tieu_de):
 
     # Cỡ chữ: thử từ lớn xuống, dừng khi vừa 2 dòng (tối đa 3).
     for size in range(112, 51, -4):
-        fonts = bo_font(size)
-        dong = xuong_dong(draw, tieu_de, fonts, rong_toi_da)
+        fonts, gian = bo_font(size), size * GIAN
+        dong = xuong_dong(draw, tieu_de, fonts, rong_toi_da, gian)
         if len(dong) <= 2:
             break
     else:
         size = 52
-        fonts = bo_font(size)
-        dong = xuong_dong(draw, tieu_de, fonts, rong_toi_da)
+        fonts, gian = bo_font(size), size * GIAN
+        dong = xuong_dong(draw, tieu_de, fonts, rong_toi_da, gian)
     dong = dong[:3]
 
     cao_dong = round(size * 1.24)
-    y = (H - len(dong) * cao_dong) // 2
+    # Đường chân chữ lấy theo font tiếng Việt, để chữ Hàn xen giữa cũng đứng
+    # đúng hàng chứ không tụt xuống theo chiều cao riêng của font Hàn.
+    len_tren = fonts["latin"].getmetrics()[0]
+    day = (H - len(dong) * cao_dong) // 2 + len_tren
 
     for d in dong:
-        ve_dong(draw, (W - do_rong(draw, d, fonts)) / 2, y, d, fonts, HONG)
-        y += cao_dong
+        rong = do_rong(draw, d, fonts, gian)
+        # Chữ cuối không có khoảng giãn theo sau nên trừ ra khi căn giữa.
+        ve_dong(draw, (W - rong + gian) / 2, day, d, fonts, CHU, gian)
+        day += cao_dong
     return anh
 
 

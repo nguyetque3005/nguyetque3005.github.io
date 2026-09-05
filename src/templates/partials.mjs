@@ -42,7 +42,6 @@ export function postCard(post) {
               <span class="post-category">${escapeHtml(post.category || 'Bài viết')}</span>
               <span class="post-date">${formatDate(post.date)}</span>
             </span>
-            <span class="post-summary">${escapeHtml(post.summary || '')}</span>
           </a>`;
 }
 

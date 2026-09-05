@@ -11,8 +11,6 @@ export function renderBlogIndex({ posts, tags }) {
       <div class="shell">
         <div class="empty-note reveal">
           <h2>Chưa có tài liệu nào</h2>
-          <p class="section-lead">Mình đang viết những bài đầu tiên. Bạn ghé lại sau một chút nhé — hoặc nhắn cho mình chủ đề bạn muốn đọc, mình sẽ viết cái đó trước.</p>
-          <p><a class="btn btn-primary" href="/lien-he.html">Gợi ý chủ đề cho mình</a></p>
         </div>
       </div>
     </section>`;
@@ -64,7 +62,6 @@ ${related.map((p) => postCard(p)).join('\n')}
             <span aria-hidden="true">·</span>
             <span>${post.readingMinutes} phút đọc</span>
           </p>
-          ${post.summary ? `<p class="post-lead">${escapeHtml(post.summary)}</p>` : ''}
           ${(post.tags || []).length
             ? `<p class="post-tags">${post.tags
                 .map((t) => `<a class="tag" href="/blog.html?tag=${encodeURIComponent(t)}">${escapeHtml(t)}</a>`)
