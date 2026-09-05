@@ -42,17 +42,28 @@ Frontmatter cho bài blog:
 ```yaml
 ---
 title: Cách phân biệt 은/는 và 이/가      # đúng tên trong tài liệu
-bannerTitle: 은/는 và 이/가               # chữ trên banner, ngắn, 1–2 dòng
 date: 2026-09-04
 category: TOPIK                          # TOPIK | Ngữ pháp | …
-tags: Ngữ pháp, Trợ từ, Sơ cấp           # mảng, chủ đề, loại nội dung
+tags: Ngữ pháp, Trợ từ                   # chọn trong bộ thẻ dưới đây
 image: /assets/banner/<slug>.jpg
-imageAlt: Banner bài viết — <bannerTitle>
+imageAlt: Banner bài viết — <title>
 summary: <một câu cắt từ chính tài liệu gốc>
 ---
 ```
 
 `date` chưa biết thì hỏi, đừng lấy ngày hôm nay.
+
+**Bộ thẻ đang dùng** — chọn trong đây, đừng đặt thẻ mới đồng nghĩa với thẻ cũ
+("Đọc hiểu" khi đã có "Luyện đọc"). Cần thẻ thật sự mới thì hỏi trước:
+
+| Nhóm | Thẻ |
+| --- | --- |
+| Câu hỏi trong đề | `Câu 51` `Câu 52` `Câu 53` `Câu 54` |
+| Kỹ năng | `Luyện nghe` `Luyện đọc` `Luyện viết` |
+| Chủ đề | `Từ vựng` `Ngữ pháp` `Trợ từ` |
+| Loại bài | `Kinh nghiệm` |
+
+Thẻ chỉ hiện lên trang Tài liệu khi đã có ít nhất một bài mang thẻ đó.
 
 ### 4. Giữ định dạng
 
@@ -73,7 +84,8 @@ npm run build
 ```
 
 Banner dùng chung một mẫu: nền chữ ký "Queenie" mờ, chữ hồng in hoa ở giữa,
-lấy từ `bannerTitle`. Không tự thiết kế banner khác.
+lấy nguyên văn từ `title`. Không rút gọn tiêu đề cho banner, không tự
+thiết kế banner khác.
 
 ### 6. Kiểm lại trước khi báo xong
 

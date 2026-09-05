@@ -1,11 +1,10 @@
 ---
 title: Từ vựng thường gặp trong câu 51
-bannerTitle: Từ vựng cho câu 51
 date: 2026-08-15
 category: TOPIK
-tags: TOPIK, Câu 51, Từ vựng
+tags: Câu 51, Từ vựng
 image: /assets/banner/tu-vung-thuong-gap-trong-cau-51.jpg
-imageAlt: Banner bài viết — Từ vựng cho câu 51
+imageAlt: Banner bài viết — Từ vựng thường gặp trong câu 51
 summary: Từ vựng thường gặp trong câu 51, gom theo từng tình huống ra đề.
 ---
 

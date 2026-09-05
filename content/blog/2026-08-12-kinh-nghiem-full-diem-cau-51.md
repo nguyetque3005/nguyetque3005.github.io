@@ -1,11 +1,10 @@
 ---
 title: Kinh nghiệm full điểm câu 51
-bannerTitle: Full điểm câu 51
-date: 2026-08-20
+date: 2026-08-12
 category: TOPIK
-tags: TOPIK, Câu 51, Kinh nghiệm
+tags: Câu 51, Kinh nghiệm
 image: /assets/banner/kinh-nghiem-full-diem-cau-51.jpg
-imageAlt: Banner bài viết — Full điểm câu 51
+imageAlt: Banner bài viết — Kinh nghiệm full điểm câu 51
 summary: Khi làm câu này không cố dùng từ vựng hay ngữ pháp quá "cao siêu", mà hãy tập trung vào đọc hiểu ngữ cảnh, tìm từ khóa và ngữ pháp chắc chắn.
 ---
 

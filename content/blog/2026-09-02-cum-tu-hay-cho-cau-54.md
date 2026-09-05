@@ -1,11 +1,10 @@
 ---
 title: Cụm từ hay cho câu 54 TOPIK II
-date: 2026-08-05
+date: 2026-09-02
 category: TOPIK
-tags: TOPIK, Câu 54, Từ vựng
-bannerTitle: Cụm từ hay cho câu 54
+tags: Câu 54, Từ vựng
 image: /assets/banner/cum-tu-hay-cho-cau-54.jpg
-imageAlt: Banner bài viết — Cụm từ hay cho câu 54
+imageAlt: Banner bài viết — Cụm từ hay cho câu 54 TOPIK II
 summary: Cụm từ hay cho câu 54, gom theo mười nhóm chức năng khi viết bài.
 ---
 

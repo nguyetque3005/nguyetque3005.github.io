@@ -41,12 +41,6 @@ ${cards}
 }
 
 export function renderPost({ post, related }) {
-  const hero = post.image
-    ? `        <figure class="post-hero reveal">
-          <img src="${post.image}" alt="${escapeHtml(post.imageAlt || '')}" data-fallback="${escapeHtml(post.category || 'Ảnh bài viết')}">
-        </figure>`
-    : '';
-
   const relatedHtml = related.length
     ? `    <section class="post-related">
       <div class="shell">
@@ -77,7 +71,6 @@ ${related.map((p) => postCard(p)).join('\n')}
                 .join('')}</p>`
             : ''}
         </header>
-${hero}
         <div class="doc-sheet">
           <span class="doc-corner tl" aria-hidden="true">&#9825;</span>
           <span class="doc-corner tr" aria-hidden="true">&#9825;</span>
