@@ -13,25 +13,6 @@
     ],
     "note": "Vậy cùng mình hệ thống lại kiến thức, hiểu cách ra đề và xây dựng chiến lược làm bài phù hợp với mục tiêu của bạn."
   },
-  "method": {
-    "title": "Phương pháp học",
-    "intro": "Khoá học không hướng đến việc học thuộc hàng loạt công thức hay văn mẫu. Thay vào đó, bạn sẽ được luyện theo quá trình:",
-    "flow": [
-      "Hiểu",
-      "Phân tích",
-      "Thực hành",
-      "Chữa lỗi",
-      "Áp dụng",
-      "Luyện đề"
-    ],
-    "focusLabel": "Tập trung vào 4 yếu tố",
-    "focus": [
-      "Kiến thức",
-      "Chiến lược",
-      "Phản xạ",
-      "Thực hành"
-    ]
-  },
   "content": {
     "title": "Nội dung khóa học",
     "intro": "Khóa học được xây dựng theo lộ trình phù hợp giúp củng cố từ vựng và ngữ pháp trọng tâm, đồng thời hướng dẫn cách phân tích dạng đề và xây dựng chiến thuật làm bài.",
@@ -65,30 +46,8 @@
       }
     ]
   },
-  "audience": {
-    "title": "Ai phù hợp với khoá học?",
-    "intro": "Khoá học phù hợp với những bạn:",
-    "items": [
-      "Đã có nền tảng tiếng Hàn và muốn nâng điểm TOPIK",
-      "Làm đề nhiều nhưng chưa biết mình mất điểm ở đâu",
-      "Muốn học cách tư duy và xử lý đề thay vì học thuộc",
-      "Đặc biệt muốn cải thiện TOPIK II 쓰기"
-    ],
-    "note": "Không phù hợp nếu bạn chỉ muốn học thuộc văn mẫu và công thức có sẵn mà không muốn luyện tập."
-  },
-  "goal": {
-    "title": "Mục tiêu",
-    "items": [
-      "Học chắc kiến thức",
-      "Hiểu cách ra đề",
-      "Làm chủ chiến thuật",
-      "Tối ưu thời gian",
-      "Bứt phá điểm số TOPIK"
-    ]
-  },
   "register": {
     "title": "Đăng ký",
-    "text": "Nhắn cho mình qua email hoặc form liên hệ, kể mình nghe bạn đang ở mức nào và muốn đạt bao nhiêu điểm. Mình sẽ trao đổi lại về lộ trình, lịch học và học phí.",
     "label": "Đăng ký học",
     "href": "/lien-he.html"
   }
