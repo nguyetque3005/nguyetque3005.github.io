@@ -1316,6 +1316,10 @@ ul.chapter-aside li::before {
   margin-top: 26px;
 }
 
+.closing-actions:first-child {
+  margin-top: 0;
+}
+
 .empty-note {
   max-width: 620px;
   margin-inline: auto;
@@ -1693,12 +1697,12 @@ ul.chapter-aside li::before {
 
 .skill-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
 }
 
 .skill {
-  padding: 32px 28px;
+  padding: 28px 22px;
   background: var(--white);
   border: 1px solid var(--blush);
   border-radius: var(--radius);
@@ -1986,6 +1990,10 @@ ul.chapter-aside li,
    ========================================================= */
 
 @media (max-width: 960px) {
+  .skill-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
   .credentials-inner,
   .contact-grid {
     grid-template-columns: 1fr;
@@ -2092,6 +2100,10 @@ ul.chapter-aside li,
 @media (max-width: 620px) {
   body {
     font-size: 16px;
+  }
+
+  .skill-grid {
+    grid-template-columns: 1fr;
   }
 
   .shell {
