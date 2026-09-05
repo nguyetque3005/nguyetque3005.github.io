@@ -1,4 +1,4 @@
-import { escapeHtml } from '../lib/markdown.mjs';
+import { escapeHtml, renderInline } from '../lib/markdown.mjs';
 import { figure, postCard, testimonialSection } from './partials.mjs';
 
 function letter(story) {
@@ -15,8 +15,8 @@ function letter(story) {
           <h1 class="letter-quote">
             ${quote}
           </h1>
-          ${story.letter.lead ? `<p class="letter-lead">${escapeHtml(story.letter.lead)}</p>` : ''}
-          ${story.letter.body.map((p) => `<p class="letter-body">${escapeHtml(p)}</p>`).join('\n          ')}
+          ${story.letter.lead ? `<p class="letter-lead">${renderInline(story.letter.lead)}</p>` : ''}
+          ${story.letter.body.map((p) => `<p class="letter-body">${renderInline(p)}</p>`).join('\n          ')}
           <p class="letter-actions">
             <a class="btn btn-primary" href="${story.letter.cta.href}">${escapeHtml(story.letter.cta.label)}</a>${story.letter.ctaSecondary
               ? `\n            <a class="btn btn-quiet" href="${story.letter.ctaSecondary.href}">${escapeHtml(story.letter.ctaSecondary.label)}</a>`
@@ -29,7 +29,7 @@ function letter(story) {
 
 function chapter(ch, index) {
   const side = index % 2 === 0 ? 'is-left' : 'is-right';
-  const body = ch.body.map((p) => `<p>${escapeHtml(p)}</p>`).join('\n              ');
+  const body = ch.body.map((p) => `<p>${renderInline(p)}</p>`).join('\n              ');
   const aside = !ch.aside
     ? ''
     : Array.isArray(ch.aside)

@@ -95,44 +95,6 @@
     });
   });
 
-  /* ---------- Form liên hệ ----------
-     Website tĩnh nên không có máy chủ nhận form. Thay vì để nút bấm
-     không làm gì cả, mình soạn sẵn một email đầy đủ nội dung và mở
-     bằng ứng dụng mail của người gửi. */
-
-  var mailForm = document.querySelector('[data-mailto-form]');
-
-  if (mailForm) {
-    mailForm.addEventListener('submit', function (e) {
-      e.preventDefault();
-
-      // Ô bẫy spam: robot điền vào thì im lặng bỏ qua
-      var bot = mailForm.querySelector('[name="bot-field"]');
-      if (bot && bot.value) return;
-
-      var get = function (name) {
-        var el = mailForm.querySelector('[name="' + name + '"]');
-        return el ? el.value.trim() : '';
-      };
-
-      var ten = get('ten');
-      var email = get('email');
-      var chuDe = get('chu-de');
-      var loiNhan = get('loi-nhan');
-
-      var subject = 'Liên hệ từ website — ' + (chuDe || 'Chuyện khác');
-      var body =
-        'Tên: ' + ten + '\n' +
-        'Email: ' + email + '\n' +
-        'Chủ đề: ' + chuDe + '\n\n' +
-        loiNhan + '\n';
-
-      var to = mailForm.getAttribute('data-mailto');
-      window.location.href =
-        'mailto:' + to + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-    });
-  }
-
   /* ---------- Hạn chế sao chép nội dung tài liệu ----------
      Chỉ là rào cản với người đọc thông thường. Không thể chặn tuyệt đối:
      ai muốn lấy vẫn xem được mã nguồn, tắt JavaScript hoặc chụp màn hình. */

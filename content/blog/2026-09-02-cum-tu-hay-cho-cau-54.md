@@ -5,7 +5,6 @@ category: TOPIK
 tags: Câu 54, Từ vựng
 image: /assets/banner/cum-tu-hay-cho-cau-54.jpg
 imageAlt: Banner bài viết — Cụm từ hay cho câu 54
-summary: Cụm từ hay cho câu 54, gom theo mười nhóm chức năng khi viết bài.
 ---
 
 ## 1. HIỆN TRẠNG & XU HƯỚNG XÃ HỘI
