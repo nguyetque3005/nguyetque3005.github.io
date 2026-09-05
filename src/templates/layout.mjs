@@ -1,4 +1,5 @@
 import { escapeHtml } from '../lib/markdown.mjs';
+import { icon, socialIcon } from './partials.mjs';
 
 function navLinks(site, current) {
   return site.nav
@@ -37,12 +38,13 @@ function header(site, current) {
 
 function footer(site) {
   const socials = (site.socials || []).filter((s) => s.href);
+  // Icon thay cho chữ; tên mạng xã hội vẫn có trong aria-label và title
   const socialHtml = socials.length
     ? `<div class="footer-socials">${socials
-        .map(
-          (s) =>
-            `<a href="${s.href}" target="_blank" rel="noopener noreferrer">${escapeHtml(s.label)}</a>`
-        )
+        .map((s) => {
+          const svg = socialIcon(s);
+          return `<a class="social-btn${svg ? '' : ' is-text'}" href="${s.href}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(s.label)}" title="${escapeHtml(s.label)}">${svg || escapeHtml(s.label)}</a>`;
+        })
         .join('')}</div>`
     : '';
 
@@ -59,8 +61,8 @@ function footer(site) {
       </nav>
 
       <div class="footer-contact">
-        <p><a href="mailto:${site.contact.email}">${escapeHtml(site.contact.email)}</a></p>
-        <p>${escapeHtml(site.contact.location)}</p>
+        <p class="footer-line">${icon('mail')}<a href="mailto:${site.contact.email}">${escapeHtml(site.contact.email)}</a></p>
+        <p class="footer-line">${icon('location')}<span>${escapeHtml(site.contact.location)}</span></p>
         ${socialHtml}
       </div>
     </div>

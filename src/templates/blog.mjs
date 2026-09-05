@@ -1,6 +1,15 @@
 import { escapeHtml } from '../lib/markdown.mjs';
 import { pageHead, postCard, formatDate } from './partials.mjs';
 
+// Khối cuối trang Tài liệu: đưa người đọc sang trang Liên hệ để đăng ký
+const dangKyKhoaHoc = `    <section class="closing">
+      <div class="shell closing-inner reveal">
+        <p class="closing-actions">
+          <a class="btn btn-primary" href="/lien-he.html">Đăng ký khóa học</a>
+        </p>
+      </div>
+    </section>`;
+
 export function renderBlogIndex({ posts, tags }) {
   const head = pageHead({ eyebrow: '', title: 'Tài liệu' });
 
@@ -13,7 +22,9 @@ export function renderBlogIndex({ posts, tags }) {
           <h2>Chưa có tài liệu nào</h2>
         </div>
       </div>
-    </section>`;
+    </section>
+
+${dangKyKhoaHoc}`;
   }
 
   const filters = tags.length
@@ -35,7 +46,9 @@ ${cards}
         </div>
         <p class="blog-empty-filter" data-empty-filter hidden>Chưa có bài viết nào trong mục này.</p>
       </div>
-    </section>`;
+    </section>
+
+${dangKyKhoaHoc}`;
 }
 
 export function renderPost({ post, related }) {

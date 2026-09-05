@@ -155,20 +155,6 @@ p {
   margin: 0;
 }
 
-.section-head-row {
-  max-width: none;
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 24px;
-  text-align: left;
-  flex-wrap: wrap;
-}
-
-.section-head-row h2 {
-  margin: 0;
-}
-
 /* ---------- Nút ---------- */
 
 .btn {
@@ -694,7 +680,6 @@ ul.chapter-aside li::before {
 
 /* ---------- Bài viết ---------- */
 
-.posts-teaser,
 .blog-list,
 .post-related {
   padding: var(--step) 0;
@@ -1742,6 +1727,9 @@ ul.chapter-aside li::before {
 }
 
 .contact-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   font-size: 0.88rem;
   font-weight: 600;
   padding: 9px 22px;
@@ -1760,7 +1748,28 @@ ul.chapter-aside li::before {
   text-decoration: none;
 }
 
+.icon {
+  flex: none;
+  width: 1.15em;
+  height: 1.15em;
+  vertical-align: -0.2em;
+}
+
+.contact-email a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-icon {
+  color: var(--pink-400);
+}
+
 .contact-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   margin: 0;
   font-size: 0.86rem;
   color: var(--muted);
@@ -1826,11 +1835,50 @@ ul.chapter-aside li::before {
   font-size: 0.94rem;
 }
 
+.footer-line {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.footer-line .icon {
+  color: rgba(255, 255, 255, 0.45);
+}
+
 .footer-socials {
   display: flex;
   flex-wrap: wrap;
-  gap: 14px;
-  margin-top: 14px;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+/* Nút mạng xã hội: khung tròn, chỉ còn icon */
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: rgba(255, 255, 255, 0.75);
+  transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+}
+
+.social-btn:hover {
+  background: var(--pink-400);
+  border-color: var(--pink-400);
+  color: var(--white);
+  text-decoration: none;
+}
+
+/* Tên mạng xã hội chưa có icon thì vẫn hiện bằng chữ */
+.social-btn.is-text {
+  width: auto;
+  height: auto;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 0.88rem;
 }
 
 .footer-base {
@@ -2091,10 +2139,6 @@ ul.chapter-aside li,
     flex-direction: column;
     text-align: center;
     align-items: center;
-  }
-
-  .section-head-row {
-    align-items: flex-start;
   }
 }
 

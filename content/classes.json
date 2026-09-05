@@ -45,8 +45,12 @@
             }
         ]
     },
+    "resources": {
+        "label": "Tài liệu tham khảo",
+        "href": "/blog.html"
+    },
     "register": {
-        "label": "Đăng ký học",
+        "label": "Đăng ký khóa học",
         "href": "/lien-he.html"
     }
 }

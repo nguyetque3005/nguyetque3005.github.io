@@ -1,5 +1,5 @@
 import { escapeHtml, renderInline } from '../lib/markdown.mjs';
-import { figure, postCard, testimonialSection } from './partials.mjs';
+import { figure, testimonialSection } from './partials.mjs';
 
 function letter(story) {
   const quote = escapeHtml(story.letter.quote)
@@ -74,52 +74,22 @@ ${story.chapters.map(chapter).join('\n')}
     </section>`;
 }
 
-function latestPosts(posts) {
-  if (!posts.length) {
-    return `    <section class="posts-teaser">
-      <div class="shell">
-        <div class="empty-note reveal">
-          <p class="eyebrow">Tài liệu</p>
-          <h2>Tài liệu đầu tiên đang trên đường tới</h2>
-          <p class="section-lead">Mình đang chuẩn bị những bài đầu tiên về ngữ pháp, từ vựng và chuyện sống ở Hàn. Ghé lại sau nhé.</p>
-        </div>
-      </div>
-    </section>`;
-  }
-
-  return `    <section class="posts-teaser">
-      <div class="shell">
-        <header class="section-head section-head-row reveal">
-          <div>
-            <p class="eyebrow">Tài liệu</p>
-            <h2>Tài liệu mới</h2>
-          </div>
-          <a class="btn btn-quiet" href="/blog.html">Xem tất cả tài liệu</a>
-        </header>
-        <div class="post-grid">
-${posts.slice(0, 3).map((p) => postCard(p)).join('\n')}
-        </div>
-      </div>
-    </section>`;
-}
-
 function closing(site) {
   return `    <section class="closing">
       <div class="shell closing-inner reveal">
-        <h2>Nếu bạn muốn đạt tới cột mốc mới trong tiếng Hàn.</h2>
-        <p>Nhưng chưa có kế hoạch cụ thể hãy nhắn cho mình, mình sẽ hỗ trợ bạn.</p>
+        <h2>Nếu bạn muốn đạt mục tiêu TOPIK</h2>
+        <p>Nhưng chưa có kế hoạch cụ thể hãy xem qua</p>
         <p class="closing-actions">
-          <a class="btn btn-primary" href="/lien-he.html">Inbox</a>
+          <a class="btn btn-primary" href="/khoa-hoc.html">khóa học của mình</a>
         </p>
       </div>
     </section>`;
 }
 
-export function renderHome({ site, story, testimonials, posts }) {
+export function renderHome({ site, story, testimonials }) {
   return [
     letter(story),
     journey(story),
-    latestPosts(posts),
     testimonialSection(testimonials),
     closing(site),
   ]
