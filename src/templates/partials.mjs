@@ -2,21 +2,28 @@ import { escapeHtml } from '../lib/markdown.mjs';
 
 // Ảnh có sẵn phương án dự phòng: nếu file ảnh chưa có, JS sẽ thay bằng
 // một khung giữ chỗ có nhãn, thay vì hiện biểu tượng ảnh vỡ.
-// photo.ratio: bỏ trống = khung ngang 4:3 (mặc định)
-//              "portrait" = khung dọc 3:4, hợp với ảnh chụp dọc
-//              "natural"  = giữ nguyên tỉ lệ gốc, không cắt gì cả
-// photo.focus: điểm lấy nét khi ảnh vẫn bị cắt, ví dụ "50% 38%" — giữ khuôn
-//              mặt trong khung thay vì cắt từ giữa. Bỏ trống là canh giữa.
+//
+// Mọi ảnh nằm trong .photo-frame — khung cao bằng nhau, nhờ vậy cả cột ảnh
+// đọc thành một mạch đều đặn thay vì cao thấp lộn xộn.
+//
+// photo.ratio: bỏ trống = ảnh ngang, lấp đầy khung
+//              "portrait" = ảnh dọc, cao bằng khung nhưng hẹp lại theo 3:4
+// photo.fit:   "contain"  = giấy tờ, bằng cấp — hiện trọn, không cắt mất chữ
+// photo.focus: điểm lấy nét khi ảnh bị cắt, ví dụ "50% 38%" — giữ khuôn mặt
+//              trong khung thay vì cắt từ giữa. Bỏ trống là canh giữa.
 //              Tính bằng: python3 scripts/photo-focus.py
 export function figure(photo, className = '') {
   if (!photo || !photo.src) return '';
   const caption = photo.caption
     ? `<figcaption>${escapeHtml(photo.caption)}</figcaption>`
     : '';
-  const ratio = photo.ratio === 'portrait' ? ' is-portrait' : photo.ratio === 'natural' ? ' is-natural' : '';
+  const ratio = photo.ratio === 'portrait' ? ' is-portrait' : '';
+  const fit = photo.fit === 'contain' ? ' is-contain' : '';
   const focus = photo.focus ? ` style="object-position:${escapeHtml(photo.focus)}"` : '';
-  return `<figure class="photo ${className}${ratio}">
-            <img src="${photo.src}"${focus} alt="${escapeHtml(photo.alt || '')}" loading="lazy" data-fallback="${escapeHtml(photo.alt || 'Ảnh')}">
+  return `<figure class="photo ${className}${ratio}${fit}">
+            <span class="photo-frame">
+              <img src="${photo.src}"${focus} alt="${escapeHtml(photo.alt || '')}" loading="lazy" data-fallback="${escapeHtml(photo.alt || 'Ảnh')}">
+            </span>
             ${caption}
           </figure>`;
 }

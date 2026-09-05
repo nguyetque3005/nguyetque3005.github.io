@@ -1,55 +1,55 @@
 {
-  "brand": {
-    "name": "Tiếng Hàn cùng Queenie",
-    "short": "Queenie",
-    "tagline": "Học chắc · Hiểu sâu · Dùng được",
-    "logo": "/assets/logo.png"
-  },
-  "person": {
-    "fullName": "Nguyễn Hồng Nguyệt Quế",
-    "nickname": "Queenie",
-    "role": "Thạc sĩ Biên–Phiên dịch Hàn–Việt",
-    "credentialLine": "Thạc sĩ Biên–Phiên dịch Hàn–Việt · TOPIK 6급 · 10 năm tại Shinhan, ANZ và HSBC"
-  },
-  "seo": {
-    "url": "https://nguyetque3005.github.io",
-    "description": "Nguyễn Hồng Nguyệt Quế (Queenie) — Thạc sĩ Biên–Phiên dịch Hàn–Việt, TOPIK 6급, 10 năm làm việc tại Shinhan Bank, ANZ và HSBC. Chia sẻ tiếng Hàn, văn hoá và cuộc sống tại Hàn Quốc.",
-    "locale": "vi_VN",
-    "image": "/assets/logo.jpeg"
-  },
-  "nav": [
-    {
-      "label": "Khóa học",
-      "href": "/khoa-hoc.html"
+    "brand": {
+        "name": "Tiếng Hàn cùng Queenie",
+        "short": "Queenie",
+        "tagline": "Học chắc · Hiểu sâu · Dùng được",
+        "logo": "/assets/logo.png"
     },
-    {
-      "label": "Tài liệu",
-      "href": "/blog.html"
+    "person": {
+        "fullName": "Nguyễn Hồng Nguyệt Quế",
+        "nickname": "Queenie",
+        "role": "Thạc sĩ Biên–Phiên dịch Hàn–Việt",
+        "credentialLine": "Thạc sĩ Biên–Phiên dịch Hàn–Việt · TOPIK 6 · 10 năm tại Shinhan, ANZ và HSBC"
     },
-    {
-      "label": "Liên hệ",
-      "href": "/lien-he.html"
-    }
-  ],
-  "contact": {
-    "email": "nguyetque3005@gmail.com",
-    "location": "Seoul, Hàn Quốc"
-  },
-  "socials": [
-    {
-      "label": "Facebook",
-      "href": "https://www.facebook.com/queenie.qp/",
-      "handle": "queenie.qp"
+    "seo": {
+        "url": "https://nguyetque3005.github.io",
+        "description": "Nguyễn Hồng Nguyệt Quế (Queenie) — Thạc sĩ Biên–Phiên dịch Hàn–Việt, TOPIK 6, 10 năm làm việc tại Shinhan Bank, ANZ và HSBC. Chia sẻ tiếng Hàn, văn hoá và cuộc sống tại Hàn Quốc.",
+        "locale": "vi_VN",
+        "image": "/assets/logo.jpeg"
     },
-    {
-      "label": "TikTok",
-      "href": "https://www.tiktok.com/@queenie.qp",
-      "handle": "@queenie.qp"
+    "nav": [
+        {
+            "label": "Khóa học",
+            "href": "/khoa-hoc.html"
+        },
+        {
+            "label": "Tài liệu",
+            "href": "/blog.html"
+        },
+        {
+            "label": "Liên hệ",
+            "href": "/lien-he.html"
+        }
+    ],
+    "contact": {
+        "email": "nguyetque3005@gmail.com",
+        "location": "Seoul, Hàn Quốc"
     },
-    {
-      "label": "Zalo",
-      "href": "https://zalo.me/0774758235",
-      "handle": "0774758235"
-    }
-  ]
+    "socials": [
+        {
+            "label": "Facebook",
+            "href": "https://www.facebook.com/queenie.qp/",
+            "handle": "queenie.qp"
+        },
+        {
+            "label": "TikTok",
+            "href": "https://www.tiktok.com/@queenie.qp",
+            "handle": "@queenie.qp"
+        },
+        {
+            "label": "Zalo",
+            "href": "https://zalo.me/0774758235",
+            "handle": "0774758235"
+        }
+    ]
 }

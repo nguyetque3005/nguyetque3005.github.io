@@ -96,7 +96,7 @@ ${post.html}
           <img class="post-foot-logo" src="/assets/logo.png" alt="" width="72" height="72">
           <div>
             <p class="post-foot-name">${escapeHtml(post.author)}</p>
-            <p class="post-foot-text">Thạc sĩ Biên–Phiên dịch Hàn–Việt, TOPIK 6급, KIIP 5. <br> Yêu tiếng Hàn, thích dạy TOPIK.</p>
+            <p class="post-foot-text">Thạc sĩ Biên–Phiên dịch Hàn–Việt, TOPIK 6, KIIP 5. <br> Yêu tiếng Hàn, thích dạy TOPIK.</p>
             <p><a class="btn btn-quiet" href="/khoa-hoc.html">Xem Khóa học</a></p>
           </div>
         </footer>

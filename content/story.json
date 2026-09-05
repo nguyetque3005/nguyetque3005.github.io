@@ -1,163 +1,164 @@
 {
-  "letter": {
-    "eyebrow": "Thư ngỏ",
-    "quote": "Bắt đầu muộn,\nnhưng chưa bao giờ là quá trễ.",
-    "body": [
-      "Chào mọi người, mình là Nguyệt Quế (Queenie).",
-      "Trước khi đến với tiếng Hàn, mình có 10 năm làm việc trong ngành ngân hàng tại Shinhan, ANZ và HSBC. Trong suốt quãng thời gian đó, tiếng Hàn gần như không xuất hiện trong công việc hay cuộc sống của mình.",
-      "Năm 2022, sau khi rời HSBC và sang Hàn Quốc, mình bắt đầu học tiếng Hàn tại 울산과학대학교 (Ulsan College). Từ những bước đầu tiên, mình từng bước xây dựng nền tảng tiếng Hàn, tiếp tục học tập và theo đuổi con đường học thuật. Đến năm 2026, mình hoàn thành chương trình Thạc sĩ Biên–Phiên dịch Hàn–Việt tại 국제언어대학원대학교 (IGSE).",
-      "Vì vậy, khi ai đó nói “Bây giờ bắt đầu có phải đã quá muộn rồi không?”, mình hiểu cảm giác ấy.",
-      "Bởi mình cũng từng bắt đầu từ con số 0, khi đã rời khỏi một công việc ổn định và bước sang một con đường hoàn toàn mới.",
-      "**Mình không bắt đầu sớm. Nhưng mình đã bắt đầu.**",
-      "Và có lẽ, điều quan trọng không phải là bạn bắt đầu lúc bao nhiêu tuổi, mà là bạn có quyết định bước đi hay không."
-    ],
-    "cta": {
-      "label": "Xem hành trình",
-      "href": "#hanh-trinh"
-    }
-  },
-  "journeyIntro": {
-    "eyebrow": "",
-    "title": "",
-    "lead": ""
-  },
-  "chapters": [
-    {
-      "year": "2009 — 2013",
-      "title": "Đại học Ngân hàng TP.HCM",
-      "body": [
-        "Cử nhân Ngôn ngữ Anh — Học bổng thành tích qua từng học kỳ và tốt nghiệp loại giỏi với GPA 8.14/10.",
-        "Những năm tháng đại học của mình không chỉ gói gọn trên giảng đường: song song với việc học, mỗi cuối tuần mình đều đi dạy tiếng Anh. Những buổi dạy đầu tiên ấy không chỉ giúp mình tự lập tài chính từ sớm, mà còn nuôi dưỡng niềm yêu thích truyền đạt ngôn ngữ — hành trình kết nối và gieo mầm đam mê cho đến tận sau này."
-      ],
-      "aside": null,
-      "photos": [
-        {
-          "src": "/assets/di-day-tieng-anh.jpeg",
-          "alt": "Mình trong một buổi dạy tiếng Anh thời sinh viên",
-          "caption": "Đi dạy tiếng Anh",
-          "ratio": "portrait"
-        },
-        {
-          "src": "/assets/hinh-tot-nghiep-dh.jpeg",
-          "alt": "Mình trong lễ tốt nghiệp Đại học Ngân hàng TP.HCM",
-          "caption": "Tốt nghiệp Đại học Ngân hàng TP.HCM, 2013",
-          "ratio": "portrait"
+    "letter": {
+        "eyebrow": "Thư ngỏ",
+        "quote": "Bắt đầu muộn,\nnhưng chưa bao giờ là quá trễ.",
+        "body": [
+            "Chào mọi người, mình là Nguyệt Quế (Queenie).",
+            "Trước khi đến với tiếng Hàn, mình có 10 năm làm việc trong ngành ngân hàng tại Shinhan, ANZ và HSBC. Trong suốt quãng thời gian đó, tiếng Hàn gần như không xuất hiện trong công việc hay cuộc sống của mình.",
+            "Năm 2022, sau khi rời HSBC và sang Hàn Quốc, mình bắt đầu học tiếng Hàn tại 울산과학대학교 (Ulsan College). Từ những bước đầu tiên, mình từng bước xây dựng nền tảng tiếng Hàn, tiếp tục học tập và theo đuổi con đường học thuật. Đến năm 2026, mình hoàn thành chương trình Thạc sĩ Biên–Phiên dịch Hàn–Việt tại 국제언어대학원대학교 (IGSE).",
+            "Vì vậy, khi ai đó nói “Bây giờ bắt đầu có phải đã quá muộn rồi không?”, mình hiểu cảm giác ấy.",
+            "Bởi mình cũng từng bắt đầu từ con số 0, khi đã rời khỏi một công việc ổn định và bước sang một con đường hoàn toàn mới.",
+            "**Mình không bắt đầu sớm. Nhưng mình đã bắt đầu.**",
+            "Và có lẽ, điều quan trọng không phải là bạn bắt đầu lúc bao nhiêu tuổi, mà là bạn có quyết định bước đi hay không."
+        ],
+        "cta": {
+            "label": "Xem hành trình",
+            "href": "#hanh-trinh"
         }
-      ]
     },
-    {
-      "year": "2013 — 2018",
-      "title": "Shinhan Bank Việt Nam",
-      "body": [
-        "Hành trình 5 năm của mình tại Shinhan Bank là bước tiến từ One-Stop Services đến International Banking Department. Tại đây, mình trực tiếp tư vấn và xử lý các nghiệp vụ tài trợ thương mại xuất nhập khẩu cũng như chuyển tiền quốc tế cho cả khách hàng cá nhân lẫn doanh nghiệp.",
-        "Cột mốc đáng nhớ nhất là khi mình vinh dự nhận giải thưởng Nhân viên xuất sắc năm 2016 và đại diện chi nhánh tham gia chương trình Global Young Force tại Hàn Quốc. 5 năm thực chiến tại Shinhan đã trang bị cho mình nền tảng kiến thức tài chính – ngân hàng vững chắc cùng tư duy làm việc chuyên nghiệp."
-      ],
-      "aside": null,
-      "photos": [
+    "journeyIntro": {
+        "eyebrow": "",
+        "title": "",
+        "lead": ""
+    },
+    "chapters": [
         {
-          "src": "/assets/shinhan-1.jpeg",
-          "alt": "Mình tại quầy giao dịch Shinhan Bank Việt Nam",
-          "caption": "Những ngày ở Shinhan Bank Việt Nam",
-          "ratio": "portrait",
-          "focus": "50% 38%"
+            "year": "2009 — 2013",
+            "title": "Đại học Ngân hàng TP.HCM",
+            "body": [
+                "Cử nhân Ngôn ngữ Anh — Học bổng thành tích qua từng học kỳ và tốt nghiệp loại giỏi với GPA 8.14/10.",
+                "Những năm tháng đại học của mình không chỉ gói gọn trên giảng đường: song song với việc học, mỗi cuối tuần mình đều đi dạy tiếng Anh. Những buổi dạy đầu tiên ấy không chỉ giúp mình tự lập tài chính từ sớm, mà còn nuôi dưỡng niềm yêu thích truyền đạt ngôn ngữ — hành trình kết nối và gieo mầm đam mê cho đến tận sau này."
+            ],
+            "aside": null,
+            "photos": [
+                {
+                    "src": "/assets/di-day-tieng-anh.jpeg",
+                    "alt": "Mình trong một buổi dạy tiếng Anh thời sinh viên",
+                    "caption": "Đi dạy tiếng Anh",
+                    "ratio": "portrait"
+                },
+                {
+                    "src": "/assets/hinh-tot-nghiep-dh.jpeg",
+                    "alt": "Mình trong lễ tốt nghiệp Đại học Ngân hàng TP.HCM",
+                    "caption": "Tốt nghiệp Đại học Ngân hàng TP.HCM, 2013",
+                    "ratio": "portrait"
+                }
+            ]
         },
         {
-          "src": "/assets/shinhan-2.jpeg",
-          "alt": "Mình cùng đồng nghiệp tại chương trình Global Young Force của Shinhan Bank",
-          "caption": "Chương trình Global Young Force tại Hàn Quốc"
+            "year": "2013 — 2018",
+            "title": "Shinhan Bank Việt Nam",
+            "body": [
+                "Hành trình 5 năm của mình tại Shinhan Bank là bước tiến từ One-Stop Services đến International Banking Department. Tại đây, mình trực tiếp tư vấn và xử lý các nghiệp vụ tài trợ thương mại xuất nhập khẩu cũng như chuyển tiền quốc tế cho cả khách hàng cá nhân lẫn doanh nghiệp.",
+                "Cột mốc đáng nhớ nhất là khi mình vinh dự nhận giải thưởng Nhân viên xuất sắc năm 2016 và đại diện chi nhánh tham gia chương trình Global Young Force tại Hàn Quốc. 5 năm thực chiến tại Shinhan đã trang bị cho mình nền tảng kiến thức tài chính – ngân hàng vững chắc cùng tư duy làm việc chuyên nghiệp."
+            ],
+            "aside": null,
+            "photos": [
+                {
+                    "src": "/assets/shinhan-1.jpeg",
+                    "alt": "Mình tại quầy giao dịch Shinhan Bank Việt Nam",
+                    "caption": "Những ngày ở Shinhan Bank Việt Nam",
+                    "ratio": "portrait",
+                    "focus": "50% 38%"
+                },
+                {
+                    "src": "/assets/shinhan-2.jpeg",
+                    "alt": "Mình cùng đồng nghiệp tại chương trình Global Young Force của Shinhan Bank",
+                    "caption": "Chương trình Global Young Force tại Hàn Quốc"
+                }
+            ]
+        },
+        {
+            "year": "2018",
+            "title": "ANZ Việt Nam",
+            "body": [
+                "6 tháng tư vấn khách hàng ở mảng Ngân hàng Doanh nghiệp tại ANZ đã mang lại cho mình một bài học đắt giá, trở thành kim chỉ nam sau này: “Người nghe không chỉ cần bạn nói đúng — họ cần bạn giúp họ hiểu.”"
+            ],
+            "aside": null,
+            "photos": []
+        },
+        {
+            "year": "2018 — 2022",
+            "title": "HSBC Việt Nam",
+            "body": [
+                "Chịu trách nhiệm kiểm tra chứng từ tín dụng thư (L/C) và nhờ thu theo tiêu chuẩn quốc tế ICC — môi trường giao dịch khối lượng lớn đòi hỏi tính chính xác tuyệt đối. 4 năm thực chiến khắt khe tại HSBC đã tôi luyện nên tư duy nghề nghiệp cốt lõi mà mình mang sang lĩnh vực dịch thuật: thận trọng trong từng thuật ngữ, hiểu thấu đáo bản chất văn bản."
+            ],
+            "aside": [
+                "2020 – 2021: đạt danh hiệu Top Performance & giải thưởng 2021 CEO Recognition Award",
+                "Chứng chỉ quốc tế mảng tài trợ thương mại: CDCS (92/100) | CITF (90/100)"
+            ],
+            "photos": [
+                {
+                    "src": "/assets/HSBC.jpeg",
+                    "alt": "Mình tại bàn làm việc ở HSBC Việt Nam",
+                    "ratio": "portrait"
+                },
+                {
+                    "src": "/assets/chung-chi-cdcs-citf.jpeg",
+                    "alt": "Chứng chỉ CDCS và CITF do The London Institute of Banking & Finance cấp",
+                    "caption": "CDCS · CITF",
+                    "fit": "contain"
+                }
+            ]
+        },
+        {
+            "year": "2022 — 2024",
+            "title": "Cột mốc chuyển hướng: đặt chân đến Hàn Quốc",
+            "body": [
+                "Tháng 9/2022, sau gần một thập kỷ gắn bó với ngành ngân hàng, mình quyết định khép lại chặng đường cũ để sang Hàn Quốc. Mở ra một chương mới, mình hoàn thành 3 học kỳ tại 울산과학대학교, sau đó tham gia Chương trình Hội nhập Xã hội (KIIP) và tự học tại nhà để chuẩn bị nền tảng tốt nhất cho bậc cao học."
+            ],
+            "aside": null,
+            "photos": [
+                {
+                    "src": "/assets/ulsan.jpeg",
+                    "alt": "Khóa học tại 울산과학대학교",
+                    "caption": "울산과학대학교"
+                },
+                {
+                    "src": "/assets/Ulsan_course.jpeg",
+                    "alt": "Các chứng nhận hoàn thành khóa học của 울산과학대학교",
+                    "caption": "Chứng nhận hoàn thành từng khóa học",
+                    "ratio": "portrait"
+                }
+            ]
+        },
+        {
+            "year": "2024 — 2026",
+            "title": "Viện Cao học Ngôn ngữ Quốc tế (국제언어대학원대학교 – IGSE)",
+            "body": [
+                "Thạc sĩ Biên – Phiên dịch Hàn – Việt - Tốt nghiệp loại xuất sắc (GPA 4.3)."
+            ],
+            "aside": [
+                "TOPIK 6",
+                "KIIP bậc 5",
+                "Thủ khoa đầu ra 2026 (성적 최우수상)"
+            ],
+            "photos": [
+                {
+                    "src": "/assets/KIIP.png",
+                    "alt": "한국이민귀화적격시험 합격증 (KINAT) — số hiệu và ngày sinh đã che",
+                    "caption": "한국이민귀화적격시험 합격증 (KINAT)",
+                    "ratio": "portrait",
+                    "fit": "contain"
+                },
+                {
+                    "src": "/assets/IBK.jpeg",
+                    "alt": "장학증서 — chứng thư học bổng của IBK 기업은행",
+                    "caption": "IBK 기업은행 장학증서",
+                    "fit": "contain"
+                },
+                {
+                    "src": "/assets/IGSE.jpeg",
+                    "alt": "Mình phát biểu tốt nghiệp tại 국제언어대학원대학교",
+                    "caption": "Phát biểu tốt nghiệp"
+                },
+                {
+                    "src": "/assets/giai-thanh-tich-hoc-tap.jpeg",
+                    "alt": "Cúp giải 성적 최우수상 — thủ khoa đầu ra 2026",
+                    "caption": "Thủ khoa đầu ra 2026 — 성적 최우수상",
+                    "ratio": "portrait"
+                }
+            ]
         }
-      ]
-    },
-    {
-      "year": "2018",
-      "title": "ANZ Việt Nam",
-      "body": [
-        "6 tháng tư vấn khách hàng ở mảng Ngân hàng Doanh nghiệp tại ANZ đã mang lại cho mình một bài học đắt giá, trở thành kim chỉ nam sau này: “Người nghe không chỉ cần bạn nói đúng — họ cần bạn giúp họ hiểu.”"
-      ],
-      "aside": null,
-      "photos": []
-    },
-    {
-      "year": "2018 — 2022",
-      "title": "HSBC Việt Nam",
-      "body": [
-        "Chịu trách nhiệm kiểm tra chứng từ tín dụng thư (L/C) và nhờ thu theo tiêu chuẩn quốc tế ICC — môi trường giao dịch khối lượng lớn đòi hỏi tính chính xác tuyệt đối. 4 năm thực chiến khắt khe tại HSBC đã tôi luyện nên tư duy nghề nghiệp cốt lõi mà mình mang sang lĩnh vực dịch thuật: thận trọng trong từng thuật ngữ, hiểu thấu đáo bản chất văn bản."
-      ],
-      "aside": [
-        "2020 – 2021: đạt danh hiệu Top Performance & giải thưởng 2021 CEO Recognition Award",
-        "Chứng chỉ quốc tế mảng tài trợ thương mại: CDCS (92/100) | CITF (90/100)"
-      ],
-      "photos": [
-        {
-          "src": "/assets/HSBC.jpeg",
-          "alt": "Mình tại bàn làm việc ở HSBC Việt Nam",
-          "ratio": "portrait"
-        },
-        {
-          "src": "/assets/chung-chi-cdcs-citf.jpeg",
-          "alt": "Chứng chỉ CDCS và CITF do The London Institute of Banking & Finance cấp",
-          "caption": "CDCS · CITF",
-          "ratio": "natural"
-        }
-      ]
-    },
-    {
-      "year": "2022 — 2024",
-      "title": "Cột mốc chuyển hướng: đặt chân đến Hàn Quốc",
-      "body": [
-        "Tháng 9/2022, sau gần một thập kỷ gắn bó với ngành ngân hàng, mình quyết định khép lại chặng đường cũ để sang Hàn Quốc. Mở ra một chương mới, mình hoàn thành 3 học kỳ tại 울산과학대학교, sau đó tham gia Chương trình Hội nhập Xã hội (KIIP) và tự học tại nhà để chuẩn bị nền tảng tốt nhất cho bậc cao học."
-      ],
-      "aside": null,
-      "photos": [
-        {
-          "src": "/assets/ulsan.jpeg",
-          "alt": "Khóa học tại 울산과학대학교",
-          "caption": "울산과학대학교"
-        },
-        {
-          "src": "/assets/Ulsan_course.jpeg",
-          "alt": "Các chứng nhận hoàn thành khóa học của 울산과학대학교",
-          "caption": "Chứng nhận hoàn thành từng khóa học",
-          "ratio": "portrait"
-        }
-      ]
-    },
-    {
-      "year": "2024 — 2026",
-      "title": "Viện Cao học Ngôn ngữ Quốc tế (국제언어대학원대학교 – IGSE)",
-      "body": [
-        "Thạc sĩ Biên – Phiên dịch Hàn – Việt - Tốt nghiệp loại xuất sắc (GPA 4.3)."
-      ],
-      "aside": [
-        "TOPIK 6급",
-        "KIIP bậc 5",
-        "Thủ khoa đầu ra 2026 (성적 최우수상)"
-      ],
-      "photos": [
-        {
-          "src": "/assets/KIIP.png",
-          "alt": "한국이민귀화적격시험 합격증 (KINAT) — số hiệu và ngày sinh đã che",
-          "caption": "한국이민귀화적격시험 합격증 (KINAT)",
-          "ratio": "natural"
-        },
-        {
-          "src": "/assets/IBK.jpeg",
-          "alt": "장학증서 — chứng thư học bổng của IBK 기업은행",
-          "caption": "IBK 기업은행 장학증서",
-          "ratio": "natural"
-        },
-        {
-          "src": "/assets/IGSE.jpeg",
-          "alt": "Mình phát biểu tốt nghiệp tại 국제언어대학원대학교",
-          "caption": "Phát biểu tốt nghiệp"
-        },
-        {
-          "src": "/assets/giai-thanh-tich-hoc-tap.jpeg",
-          "alt": "Cúp giải 성적 최우수상 — thủ khoa đầu ra 2026",
-          "caption": "Thủ khoa đầu ra 2026 — 성적 최우수상",
-          "ratio": "portrait"
-        }
-      ]
-    }
-  ]
+    ]
 }
