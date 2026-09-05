@@ -1,53 +1,52 @@
 {
-  "intro": {
-    "eyebrow": "Đăng ký",
-    "title": "Luyện thi TOPIK cùng Queenie",
-    "lead": "Hiểu đề – có chiến lược – đạt mục tiêu.",
-    "statusNote": ""
-  },
-  "pains": {
-    "items": [
-      "Bạn đã học tiếng Hàn khá lâu nhưng điểm TOPIK vẫn chưa đạt mục tiêu?",
-      "Bạn làm nhiều đề nhưng điểm số vẫn không ổn định?",
-      "Bạn biết từ vựng, ngữ pháp nhưng khi vào phòng thi lại không biết nên xử lý câu hỏi như thế nào?"
-    ],
-    "note": "Vậy cùng mình hệ thống lại kiến thức, hiểu cách ra đề và xây dựng chiến lược làm bài phù hợp với mục tiêu của bạn."
-  },
-  "content": {
-    "title": "Nội dung khóa học",
-    "intro": "Khóa học được xây dựng theo lộ trình phù hợp giúp củng cố từ vựng và ngữ pháp trọng tâm, đồng thời hướng dẫn cách phân tích dạng đề và xây dựng chiến thuật làm bài.",
-    "skills": [
-      {
-        "title": "Nghe",
-        "text": [
-          "Làm quen và phân tích từng dạng câu hỏi, luyện cách **đọc nhanh đáp án trước khi nghe, bắt từ khóa, xác định thông tin cần tìm và nhận diện những thông tin dễ gây nhiễu**.",
-          "Đặc biệt chú trọng cách xử lý các dạng nghe dài, xác định **ý chính, mục đích, thái độ và suy nghĩ của người nói**, giúp học viên không bị phụ thuộc vào việc nghe hiểu từng từ."
+    "intro": {
+        "title": "Luyện thi TOPIK cùng Queenie",
+        "lead": "Hiểu đề – có chiến lược – đạt mục tiêu.",
+        "statusNote": ""
+    },
+    "pains": {
+        "items": [
+            "Bạn đã học tiếng Hàn khá lâu nhưng điểm TOPIK vẫn chưa đạt mục tiêu?",
+            "Bạn làm nhiều đề nhưng điểm số vẫn không ổn định?",
+            "Bạn biết từ vựng, ngữ pháp nhưng khi vào phòng thi lại không biết nên xử lý câu hỏi như thế nào?"
+        ],
+        "note": "Vậy cùng mình hệ thống lại kiến thức, hiểu cách ra đề và xây dựng chiến lược làm bài phù hợp với mục tiêu của bạn."
+    },
+    "content": {
+        "title": "Nội dung khóa học",
+        "intro": "Khóa học được xây dựng theo lộ trình phù hợp giúp củng cố từ vựng và ngữ pháp trọng tâm, đồng thời hướng dẫn cách phân tích dạng đề và xây dựng chiến thuật làm bài.",
+        "skills": [
+            {
+                "title": "Nghe",
+                "text": [
+                    "Làm quen và phân tích từng dạng câu hỏi, luyện cách **đọc nhanh đáp án trước khi nghe, bắt từ khóa, xác định thông tin cần tìm và nhận diện những thông tin dễ gây nhiễu**.",
+                    "Đặc biệt chú trọng cách xử lý các dạng nghe dài, xác định **ý chính, mục đích, thái độ và suy nghĩ của người nói**, giúp học viên không bị phụ thuộc vào việc nghe hiểu từng từ."
+                ]
+            },
+            {
+                "title": "Đọc",
+                "text": [
+                    "Rèn luyện cách **phân tích dạng bài, tìm từ khóa, nắm ý chính và xử lý thông tin trong thời gian giới hạn**.",
+                    "Tập trung vào việc **hiểu cấu trúc câu, suy luận ngữ cảnh và loại trừ đáp án dựa trên thông tin trong bài**, thay vì cố gắng đọc và dịch toàn bộ."
+                ]
+            },
+            {
+                "title": "Viết",
+                "text": [
+                    "Hệ thống **ngữ pháp, từ vựng và các công thức diễn đạt trọng tâm cho câu 51, 52, 53**, giúp học viên nắm chắc cách xử lý từng dạng bài và hạn chế những lỗi dễ mất điểm.",
+                    "Đồng thời, rèn luyện **khả năng phát triển ý, mở rộng và làm dài câu cho câu 54**, giúp học viên từng bước hình thành tư duy triển khai bài viết **mạch lạc, logic và phù hợp với yêu cầu của đề**."
+                ]
+            },
+            {
+                "title": "Chữa bài & luyện đề",
+                "text": [
+                    "Không chỉ sửa đúng/sai, mà phân tích vì sao sai – sửa thế nào – làm sao để không lặp lại. Từ đó áp dụng vào các đề mới và tối ưu thời gian làm bài."
+                ]
+            }
         ]
-      },
-      {
-        "title": "Đọc",
-        "text": [
-          "Rèn luyện cách **phân tích dạng bài, tìm từ khóa, nắm ý chính và xử lý thông tin trong thời gian giới hạn**.",
-          "Tập trung vào việc **hiểu cấu trúc câu, suy luận ngữ cảnh và loại trừ đáp án dựa trên thông tin trong bài**, thay vì cố gắng đọc và dịch toàn bộ."
-        ]
-      },
-      {
-        "title": "Viết",
-        "text": [
-          "Hệ thống **ngữ pháp, từ vựng và các công thức diễn đạt trọng tâm cho câu 51, 52, 53**, giúp học viên nắm chắc cách xử lý từng dạng bài và hạn chế những lỗi dễ mất điểm.",
-          "Đồng thời, rèn luyện **khả năng phát triển ý, mở rộng và làm dài câu cho câu 54**, giúp học viên từng bước hình thành tư duy triển khai bài viết **mạch lạc, logic và phù hợp với yêu cầu của đề**."
-        ]
-      },
-      {
-        "title": "Chữa bài & luyện đề",
-        "text": [
-          "Không chỉ sửa đúng/sai, mà phân tích vì sao sai – sửa thế nào – làm sao để không lặp lại. Từ đó áp dụng vào các đề mới và tối ưu thời gian làm bài."
-        ]
-      }
-    ]
-  },
-  "register": {
-    "label": "Đăng ký học",
-    "href": "/lien-he.html"
-  }
+    },
+    "register": {
+        "label": "Đăng ký học",
+        "href": "/lien-he.html"
+    }
 }

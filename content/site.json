@@ -1,56 +1,56 @@
 {
-  "brand": {
-    "name": "Tiếng Hàn cùng Queenie",
-    "short": "Queenie",
-    "tagline": "Học chắc · Hiểu sâu · Dùng được",
-    "logo": "/assets/logo.png"
-  },
-  "person": {
-    "fullName": "Nguyễn Hồng Nguyệt Quế",
-    "nickname": "Queenie",
-    "role": "Thạc sĩ Biên–Phiên dịch Hàn–Việt",
-    "credentialLine": "Thạc sĩ Biên–Phiên dịch Hàn–Việt · TOPIK 6급 · 10 năm tại Shinhan, ANZ và HSBC"
-  },
-  "seo": {
-    "url": "https://nguyetque3005.github.io",
-    "description": "Nguyễn Hồng Nguyệt Quế (Queenie) — Thạc sĩ Biên–Phiên dịch Hàn–Việt, TOPIK 6급, 10 năm làm việc tại Shinhan Bank, ANZ và HSBC. Chia sẻ tiếng Hàn, văn hoá và cuộc sống tại Hàn Quốc.",
-    "locale": "vi_VN",
-    "image": "/assets/logo.jpeg"
-  },
-  "nav": [
-    {
-      "label": "Hành trình",
-      "href": "/"
+    "brand": {
+        "name": "Tiếng Hàn cùng Queenie",
+        "short": "Queenie",
+        "tagline": "Học chắc · Hiểu sâu · Dùng được",
+        "logo": "/assets/logo.png"
     },
-    {
-      "label": "Tài liệu",
-      "href": "/blog.html"
+    "person": {
+        "fullName": "Nguyễn Hồng Nguyệt Quế",
+        "nickname": "Queenie",
+        "role": "Thạc sĩ Biên–Phiên dịch Hàn–Việt",
+        "credentialLine": "Thạc sĩ Biên–Phiên dịch Hàn–Việt · TOPIK 6급 · 10 năm tại Shinhan, ANZ và HSBC"
     },
-    {
-      "label": "Lớp học",
-      "href": "/lop-hoc.html"
+    "seo": {
+        "url": "https://nguyetque3005.github.io",
+        "description": "Nguyễn Hồng Nguyệt Quế (Queenie) — Thạc sĩ Biên–Phiên dịch Hàn–Việt, TOPIK 6급, 10 năm làm việc tại Shinhan Bank, ANZ và HSBC. Chia sẻ tiếng Hàn, văn hoá và cuộc sống tại Hàn Quốc.",
+        "locale": "vi_VN",
+        "image": "/assets/logo.jpeg"
     },
-    {
-      "label": "Liên hệ",
-      "href": "/lien-he.html"
-    }
-  ],
-  "contact": {
-    "email": "nguyetque3005@gmail.com",
-    "location": "Seoul, Hàn Quốc",
-    "note": "Mình đọc và trả lời email mỗi ngày. Vì lệch múi giờ 2 tiếng với Việt Nam, đôi khi mình trả lời hơi muộn một chút — mong bạn thông cảm nhé."
-  },
-  "socials": [
-    {
-      "label": "Facebook",
-      "href": "https://www.facebook.com/queenie.qp/",
-      "handle": "queenie.qp"
+    "nav": [
+        {
+            "label": "Hành trình",
+            "href": "/"
+        },
+        {
+            "label": "Tài liệu",
+            "href": "/blog.html"
+        },
+        {
+            "label": "Khóa học",
+            "href": "/khoa-hoc.html"
+        },
+        {
+            "label": "Liên hệ",
+            "href": "/lien-he.html"
+        }
+    ],
+    "contact": {
+        "email": "nguyetque3005@gmail.com",
+        "location": "Seoul, Hàn Quốc",
+        "note": "Mình đọc và trả lời email mỗi ngày. Vì lệch múi giờ 2 tiếng với Việt Nam, đôi khi mình trả lời hơi muộn một chút — mong bạn thông cảm nhé."
     },
-    {
-      "label": "TikTok",
-      "href": "https://www.tiktok.com/@queenie.qp",
-      "handle": "@queenie.qp"
-    }
-  ],
-  "footerNote": "Trang cá nhân của Nguyễn Hồng Nguyệt Quế (Queenie). Mọi thông tin học vấn, kinh nghiệm và chứng chỉ trên trang đều là thật và có thể kiểm chứng."
+    "socials": [
+        {
+            "label": "Facebook",
+            "href": "https://www.facebook.com/queenie.qp/",
+            "handle": "queenie.qp"
+        },
+        {
+            "label": "TikTok",
+            "href": "https://www.tiktok.com/@queenie.qp",
+            "handle": "@queenie.qp"
+        }
+    ],
+    "footerNote": "Trang cá nhân của Nguyễn Hồng Nguyệt Quế (Queenie). Mọi thông tin học vấn, kinh nghiệm và chứng chỉ trên trang đều là thật và có thể kiểm chứng."
 }
