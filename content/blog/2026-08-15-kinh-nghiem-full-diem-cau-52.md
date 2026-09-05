@@ -1,11 +1,10 @@
 ---
 title: Kinh nghiệm full điểm câu 52
-bannerTitle: Full điểm câu 52
-date: 2026-08-30
+date: 2026-08-15
 category: TOPIK
-tags: TOPIK, Câu 52, Kinh nghiệm
+tags: Câu 52, Kinh nghiệm
 image: /assets/banner/kinh-nghiem-full-diem-cau-52.jpg
-imageAlt: Banner bài viết — Full điểm câu 52
+imageAlt: Banner bài viết — Kinh nghiệm full điểm câu 52
 summary: Hãy xem câu 52 như một bài toán logic, bạn sẽ thấy nó dễ thở hơn rất nhiều.
 ---
 

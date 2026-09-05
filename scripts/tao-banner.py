@@ -8,9 +8,9 @@ phía trên là tên bài viết in màu hồng. Không khung, không logo — b
 Chạy:  python3 scripts/tao-banner.py
 Kết quả: assets/banner/<slug>.jpg cho mỗi bài trong content/blog/.
 
-Chữ trên banner lấy từ "bannerTitle" trong phần đầu file .md; nếu không có
-thì dùng "title", và luôn được in hoa toàn bộ. Giữ chữ ngắn — banner chỉ
-cần một dòng nhận diện.
+Chữ trên banner là "title" trong phần đầu file .md, in hoa toàn bộ và giữ
+nguyên từng chữ — không rút gọn, không viết lại. Tiêu đề dài thì script tự
+hạ cỡ chữ và ngắt xuống dòng cho vừa khổ.
 """
 
 import re
@@ -179,7 +179,7 @@ def main():
             print(f"  ! bỏ qua {f.name}: thiếu title")
             continue
         slug = fm.get("slug") or re.sub(r"^\d{4}-\d{2}-\d{2}-", "", f.stem)
-        chu = fm.get("bannerTitle") or fm["title"]
+        chu = fm["title"]
         anh = ve_chu(dung_nen(goc), chu)
         ra = XUAT / f"{slug}.jpg"
         anh.save(ra, "JPEG", quality=88, optimize=True, progressive=True)

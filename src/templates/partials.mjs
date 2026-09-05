@@ -29,7 +29,7 @@ export function formatDate(iso) {
 
 export function postCard(post) {
   const thumb = post.image
-    ? `<span class="post-thumb"><img src="${post.image}" alt="${escapeHtml(post.imageAlt || '')}" loading="lazy" data-fallback="${escapeHtml(post.category || 'Bài viết')}"></span>`
+    ? `<span class="post-thumb"><img src="${post.image}" alt="${escapeHtml(post.imageAlt || '')}" loading="lazy" data-fallback="${escapeHtml(post.title)}"></span>`
     : '<span class="post-thumb post-thumb-blank" aria-hidden="true"></span>';
 
   const tagAttr = (post.tags || []).length
@@ -42,7 +42,6 @@ export function postCard(post) {
               <span class="post-category">${escapeHtml(post.category || 'Bài viết')}</span>
               <span class="post-date">${formatDate(post.date)}</span>
             </span>
-            <span class="post-title">${escapeHtml(post.title)}</span>
             <span class="post-summary">${escapeHtml(post.summary || '')}</span>
           </a>`;
 }
