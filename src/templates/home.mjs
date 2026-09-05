@@ -12,9 +12,9 @@ function letter(story) {
         <article class="letter-card reveal">
           <img class="letter-logo" src="/assets/logo.png" alt="Logo Tiếng Hàn cùng Queenie" width="120" height="120">
           <p class="eyebrow">${escapeHtml(story.letter.eyebrow)}</p>
-          <blockquote class="letter-quote">
+          <h1 class="letter-quote">
             ${quote}
-          </blockquote>
+          </h1>
           ${story.letter.lead ? `<p class="letter-lead">${escapeHtml(story.letter.lead)}</p>` : ''}
           ${story.letter.body.map((p) => `<p class="letter-body">${escapeHtml(p)}</p>`).join('\n          ')}
           <p class="letter-actions">

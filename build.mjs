@@ -300,6 +300,29 @@ async function build() {
     ),
   );
 
+  // Địa chỉ cũ /lop-hoc.html: giữ lại một trang chuyển hướng để link cũ và
+  // kết quả Google không rơi vào 404. GitHub Pages không chuyển hướng được
+  // ở phía máy chủ nên phải dùng thẻ meta refresh.
+  written.push(
+    await write(
+      "lop-hoc.html",
+      `<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<title>Khóa học · ${site.brand.name}</title>
+<link rel="canonical" href="${site.seo.url.replace(/\/$/, "")}/khoa-hoc.html">
+<meta name="robots" content="noindex">
+<meta http-equiv="refresh" content="0; url=/khoa-hoc.html">
+</head>
+<body>
+<p>Trang này đã chuyển sang <a href="/khoa-hoc.html">Khóa học</a>.</p>
+</body>
+</html>
+`,
+    ),
+  );
+
   // Liên hệ + trang cảm ơn
   written.push(
     await write(
@@ -365,8 +388,9 @@ async function build() {
     );
   }
 
+  // 404 và trang chuyển hướng địa chỉ cũ không đưa vào sitemap.
   const pageUrls = written
-    .filter((u) => !u.startsWith("404"))
+    .filter((u) => !u.startsWith("404") && !u.startsWith("lop-hoc"))
     .map((u) => "/" + u.replace(/^index\.html$/, ""));
   await fs.writeFile(path.join(DIST, "sitemap.xml"), sitemap(site, pageUrls));
   await fs.writeFile(path.join(DIST, "feed.xml"), rss(site, posts));
