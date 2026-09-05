@@ -551,49 +551,41 @@ ul.chapter-aside li::before {
   gap: 18px;
 }
 
-/* Khi một chương có hai tấm ảnh: xếp lệch nhau cho đỡ cứng */
-.chapter-media.is-stacked .chapter-photo:nth-child(2):last-child {
-  width: 78%;
-  margin-left: auto;
-}
-
-.chapter.is-right .chapter-media.is-stacked .chapter-photo:nth-child(2):last-child {
-  margin-left: 0;
-  margin-right: auto;
-}
-
 /* ---------- Ảnh ---------- */
 
 .photo {
   margin: 0;
 }
 
+/* Khung ảnh chuẩn: mọi ảnh trong một cột đều cao bằng nhau, bất kể ảnh
+   ngang hay dọc, ảnh chụp hay giấy tờ. Ảnh dọc hẹp lại chứ không cao lên. */
+.photo-frame {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+}
+
 .photo img,
 .img-missing {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
 }
 
-.photo img {
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-}
-
-/* Ảnh chụp dọc: dùng khung dọc để không bị cắt mất phần trên dưới.
-   Chiều cao ghìm lại cho gần bằng ảnh ngang (399px) — cả hàng nhìn thành
-   một mạch mà không phải cắt khuôn hình ảnh nào. */
+/* Ảnh chụp dọc: cao bằng khung, bề ngang thu theo 3:4 và canh giữa */
 .photo.is-portrait img {
-  aspect-ratio: 3 / 4;
-  max-height: 440px;
+  display: block;
   width: auto;
+  aspect-ratio: 3 / 4;
   margin-inline: auto;
 }
 
-/* Giữ nguyên tỉ lệ gốc, không cắt gì cả */
-.photo.is-natural img {
-  aspect-ratio: auto;
+/* Giấy tờ, bằng cấp: hiện trọn tờ giấy, không cắt mất chữ */
+.photo.is-contain img {
   object-fit: contain;
+  background: var(--white);
 }
 
 .photo figcaption {
@@ -610,8 +602,6 @@ ul.chapter-aside li::before {
   align-items: center;
   justify-content: center;
   text-align: center;
-  min-height: 220px;
-  aspect-ratio: 4 / 3;
   padding: 24px;
   color: #c98fa6;
   font-size: 0.82rem;
@@ -713,9 +703,10 @@ ul.chapter-aside li::before {
   text-decoration: none;
 }
 
+/* Khung đúng bằng tỉ lệ file banner (1600x900) — không cắt, không đội cao */
 .post-thumb {
   display: block;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 16 / 9;
   background: var(--blush);
   overflow: hidden;
 }
@@ -2075,10 +2066,28 @@ ul.chapter-aside li,
     order: 0;
   }
 
-  .chapter-media.is-stacked .chapter-photo:nth-child(2),
-  .chapter.is-right .chapter-media.is-stacked .chapter-photo:nth-child(2):last-child {
+  /* Màn hẹp chỉ còn một cột: cho ảnh rộng hết bề ngang, chiều cao theo tỉ lệ
+     thật của từng tấm. Ở đây thứ tự đọc là từng ảnh một nên bề ngang bằng
+     nhau mới là cái nhìn thấy, không phải chiều cao. */
+  .photo-frame {
+    aspect-ratio: auto;
+  }
+
+  .photo img {
     width: 100%;
-    margin: 0;
+    height: auto;
+    aspect-ratio: 4 / 3;
+  }
+
+  .photo.is-portrait img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+  }
+
+  .photo.is-contain img,
+  .photo.is-portrait.is-contain img {
+    aspect-ratio: auto;
+    height: auto;
   }
 
   .chapter::before {
