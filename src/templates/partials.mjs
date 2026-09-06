@@ -9,6 +9,8 @@ import { escapeHtml } from '../lib/markdown.mjs';
 // photo.ratio: bỏ trống = ảnh ngang, lấp đầy khung
 //              "portrait" = ảnh dọc, cao bằng khung nhưng hẹp lại theo 3:4
 // photo.fit:   "contain"  = giấy tờ, bằng cấp — hiện trọn, không cắt mất chữ
+// photo.half:  true = ảnh nhỏ, đứng cạnh một ảnh nhỏ khác thành một hàng đôi.
+//              Các ảnh còn lại trong cùng chương vẫn rộng hết cột.
 // photo.focus: điểm lấy nét khi ảnh bị cắt, ví dụ "50% 38%" — giữ khuôn mặt
 //              trong khung thay vì cắt từ giữa. Bỏ trống là canh giữa.
 //              Tính bằng: python3 scripts/photo-focus.py
@@ -19,8 +21,9 @@ export function figure(photo, className = '') {
     : '';
   const ratio = photo.ratio === 'portrait' ? ' is-portrait' : '';
   const fit = photo.fit === 'contain' ? ' is-contain' : '';
+  const half = photo.half ? ' is-half' : '';
   const focus = photo.focus ? ` style="object-position:${escapeHtml(photo.focus)}"` : '';
-  return `<figure class="photo ${className}${ratio}${fit}">
+  return `<figure class="photo ${className}${ratio}${fit}${half}">
             <span class="photo-frame">
               <img src="${photo.src}"${focus} alt="${escapeHtml(photo.alt || '')}" loading="lazy" data-fallback="${escapeHtml(photo.alt || 'Ảnh')}">
             </span>
