@@ -1157,6 +1157,17 @@ ul.chapter-aside li::before {
   color: var(--muted);
 }
 
+/* Bảng từ 3 cột trở lên — ví dụ hai cặp từ trái nghĩa xếp song song — thì hai
+   nửa phải ngang nhau: chia đều bề ngang, không làm nhạt cột cuối. Hai luật
+   trên chỉ đúng cho bảng 2 cột kiểu "từ | nghĩa". */
+.table-wrap table:has(th:nth-child(3)) td:first-child {
+  width: auto;
+}
+
+.table-wrap table:has(th:nth-child(3)) td:last-child {
+  color: var(--ink);
+}
+
 .post-foot-actions {
   display: flex;
   flex-wrap: wrap;
