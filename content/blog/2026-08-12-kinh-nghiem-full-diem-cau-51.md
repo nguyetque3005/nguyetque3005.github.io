@@ -1,5 +1,6 @@
 ---
 title: Kinh nghiệm full điểm câu 51
+bannerTitle: Câu 51 <br> Kinh nghiệm giành trọn điểm
 date: 2026-08-12
 category: TOPIK
 tags: Câu 51, Kinh nghiệm

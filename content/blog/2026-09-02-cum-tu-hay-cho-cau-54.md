@@ -1,5 +1,6 @@
 ---
 title: Cụm từ hay cho câu 54
+bannerTitle: câu 54 <br> những cụm từ ăn điểm
 date: 2026-09-02
 category: TOPIK
 tags: Câu 54, Từ vựng
