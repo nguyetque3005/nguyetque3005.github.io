@@ -1,11 +1,11 @@
 ---
-title: Cặp từ trái nghĩa
+title: Cặp từ trái nghĩa (Sơ cấp)
 bannerTitle: Cặp từ trái nghĩa <br> (Sơ cấp)
 date: 2026-09-01
 category: TOPIK
 tags: Từ vựng
 image: /assets/banner/cap-tu-trai-nghia.jpg
-imageAlt: Banner bài viết — Cặp từ trái nghĩa
+imageAlt: Banner bài viết — Cặp từ trái nghĩa (Sơ cấp)
 ---
 
 Học từ vựng theo CẶP TỪ TRÁI NGHĨA là cách nhanh nhất để x2 vốn từ mà không lo bị học trước quên sau không?

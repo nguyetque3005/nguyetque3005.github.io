@@ -46,6 +46,9 @@ FONT_DAM = FONTS / "BeVietnamPro-Bold.ttf"
 FONT_HAN_DAM = ("/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc", 1)
 
 W, H = 1600, 900          # khổ 16:9, khớp với .post-hero trên web
+CO_LON_NHAT = 112         # cỡ chữ lớn nhất cho phép
+CO_NHO_NHAT = 40          # cỡ chữ nhỏ nhất cho phép
+TOI_DA_DONG = 2           # tiêu đề dài mấy cũng chỉ được xuống 2 dòng
 NEN = (255, 252, 253)     # --paper
 CHU = (59, 48, 52)        # --ink, nâu sẫm — cùng màu chữ tiêu đề trên web
 MO = 0.16                 # độ đậm hình mờ: 0 là nền trơn, 1 là ảnh gốc
@@ -150,32 +153,31 @@ def dung_nen(goc):
     return Image.blend(Image.new("RGB", (W, H), NEN), nen, MO)
 
 
-def ve_chu(anh, tieu_de):
+def co_chu_vua(draw, tieu_de, toi_da_dong=TOI_DA_DONG):
+    """Cỡ chữ lớn nhất mà tiêu đề này còn vừa trong toi_da_dong dòng."""
+    rong_toi_da = W - 260
+    tieu_de = tieu_de.upper()
+    tu_ngat = bool(re.search(r"(?i)<br\s*/?>", tieu_de))
+
+    for size in range(CO_LON_NHAT, CO_NHO_NHAT - 1, -2):
+        fonts, gian = bo_font(size), size * GIAN
+        dong = xuong_dong(draw, tieu_de, fonts, rong_toi_da, gian)
+        vua_ngang = max(do_rong(draw, d, fonts, gian) for d in dong) <= rong_toi_da
+        # Tác giả tự ngắt bằng <br> thì tôn trọng số dòng họ chọn.
+        if vua_ngang and (tu_ngat or len(dong) <= toi_da_dong):
+            return size
+    return CO_NHO_NHAT
+
+
+def ve_chu(anh, tieu_de, size=None):
     draw = ImageDraw.Draw(anh)
     rong_toi_da = W - 260
     tieu_de = tieu_de.upper()  # banner luôn viết hoa toàn bộ
 
-    tu_ngat = bool(re.search(r"(?i)<br\s*/?>", tieu_de))
-
-    if tu_ngat:
-        # Tác giả tự ngắt: giữ nguyên số dòng, chỉ hạ cỡ tới khi dòng dài nhất vừa khổ.
-        for size in range(112, 39, -4):
-            fonts, gian = bo_font(size), size * GIAN
-            dong = xuong_dong(draw, tieu_de, fonts, rong_toi_da, gian)
-            if max(do_rong(draw, d, fonts, gian) for d in dong) <= rong_toi_da:
-                break
-    else:
-        # Cỡ chữ: thử từ lớn xuống, dừng khi vừa 2 dòng (tối đa 3).
-        for size in range(112, 51, -4):
-            fonts, gian = bo_font(size), size * GIAN
-            dong = xuong_dong(draw, tieu_de, fonts, rong_toi_da, gian)
-            if len(dong) <= 2:
-                break
-        else:
-            size = 52
-            fonts, gian = bo_font(size), size * GIAN
-            dong = xuong_dong(draw, tieu_de, fonts, rong_toi_da, gian)
-        dong = dong[:3]
+    if size is None:
+        size = co_chu_vua(draw, tieu_de)
+    fonts, gian = bo_font(size), size * GIAN
+    dong = xuong_dong(draw, tieu_de, fonts, rong_toi_da, gian)
 
     cao_dong = round(size * 1.24)
     # Đường chân chữ lấy theo font tiếng Việt, để chữ Hàn xen giữa cũng đứng
@@ -217,6 +219,8 @@ def main():
     if not files:
         sys.exit("Chưa có bài viết nào trong content/blog/.")
 
+    # Gom chữ của mọi banner trước, để chọn một cỡ chữ chung.
+    bai = []
     for f in files:
         fm = doc_frontmatter(f)
         if not fm.get("title"):
@@ -225,11 +229,21 @@ def main():
         slug = fm.get("slug") or re.sub(r"^\d{4}-\d{2}-\d{2}-", "", f.stem)
         # bannerTitle cho phép banner ghi khác tiêu đề bài; không có thì dùng title
         chu = fm.get("bannerTitle") or fm["title"]
-        rieng = " (bannerTitle)" if fm.get("bannerTitle") else ""
-        anh = ve_chu(dung_nen(goc), chu)
+        bai.append((slug, chu, bool(fm.get("bannerTitle"))))
+
+    # Cỡ chữ chung: bài nào cũng phải vừa, nên lấy cỡ của bài chật nhất.
+    # Nhờ vậy mọi banner trên site có chữ to bằng nhau.
+    do = ImageDraw.Draw(Image.new("RGB", (W, H)))
+    moi_co = {slug: co_chu_vua(do, chu) for slug, chu, _ in bai}
+    co_chung = min(moi_co.values())
+    chat_nhat = min(moi_co, key=moi_co.get)
+    print(f"  Cỡ chữ chung: {co_chung}px (bài chật nhất: {chat_nhat})\n")
+
+    for slug, chu, rieng in bai:
+        anh = ve_chu(dung_nen(goc), chu, co_chung)
         ra = XUAT / f"{slug}.jpg"
         anh.save(ra, "JPEG", quality=88, optimize=True, progressive=True)
-        print(f"  {ra.relative_to(ROOT)}  ·  {chu}{rieng}")
+        print(f"  {ra.relative_to(ROOT)}  ·  {chu}{' (bannerTitle)' if rieng else ''}")
 
 
 if __name__ == "__main__":
