@@ -33,8 +33,8 @@ function chapter(ch, index) {
   const aside = !ch.aside
     ? ''
     : Array.isArray(ch.aside)
-      ? `<ul class="chapter-aside">${ch.aside.map((a) => `<li>${escapeHtml(a)}</li>`).join('')}</ul>`
-      : `<p class="chapter-aside">${escapeHtml(ch.aside)}</p>`;
+      ? `<ul class="chapter-aside">${ch.aside.map((a) => `<li>${renderInline(a)}</li>`).join('')}</ul>`
+      : `<p class="chapter-aside">${renderInline(ch.aside)}</p>`;
 
   const photos = ch.photos || [];
   const media = photos.length
