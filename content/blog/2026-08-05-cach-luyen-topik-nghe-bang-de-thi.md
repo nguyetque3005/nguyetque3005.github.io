@@ -65,7 +65,7 @@ Một đề làm kỹ có thể cho bạn:
 - biết bẫy thường gặp
 - cải thiện tốc độ nghe
 
-**Làm ít nhưng chữa kỹ vẫn tốt hơn làm nhiều rồi quên.**
+**Làm ít nhưng sửa kỹ vẫn tốt hơn làm nhiều rồi quên.**
 
 ## 🎯 Và một điều rất quan trọng
 
