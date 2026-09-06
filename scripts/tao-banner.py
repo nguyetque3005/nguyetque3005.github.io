@@ -8,9 +8,25 @@ phía trên là tên bài viết in màu hồng. Không khung, không logo — b
 Chạy:  python3 scripts/tao-banner.py
 Kết quả: assets/banner/<slug>.jpg cho mỗi bài trong content/blog/.
 
-Chữ trên banner là "title" trong phần đầu file .md, in hoa toàn bộ và giữ
-nguyên từng chữ — không rút gọn, không viết lại. Tiêu đề dài thì script tự
-hạ cỡ chữ và ngắt xuống dòng cho vừa khổ.
+Chữ trên banner lấy từ phần đầu file .md, in hoa toàn bộ và giữ nguyên từng
+chữ — không rút gọn, không viết lại. Tiêu đề dài thì script tự hạ cỡ chữ và
+ngắt xuống dòng cho vừa khổ.
+
+Mặc định banner dùng "title". Muốn banner ghi khác tiêu đề bài — thường là
+khi tiêu đề quá dài, đọc trên thẻ bài viết bị bé — thì thêm "bannerTitle"
+vào phần đầu file:
+
+    title: Tổng kết dạng nghe TOPIK II
+    bannerTitle: Dạng nghe TOPIK II
+
+Chữ trong bannerTitle cũng là lời tác giả, không tự nghĩ ra.
+
+Muốn tự chọn chỗ xuống dòng thì đặt <br> vào đúng chỗ đó:
+
+    bannerTitle: Tổng kết<br>dạng nghe TOPIK II
+
+Có <br> thì script ngắt đúng theo ý bạn, không tự xếp lại, và chỉ hạ cỡ chữ
+cho tới khi dòng dài nhất vừa khổ.
 """
 
 import re
@@ -84,6 +100,11 @@ def ve_dong(draw, x, day, text, fonts, mau, gian=0):
 
 
 def xuong_dong(draw, text, fonts, rong_toi_da, gian=0):
+    # Có <br> nghĩa là tác giả tự chọn chỗ ngắt — cứ theo đúng vậy, không tự
+    # xếp lại. Cỡ chữ vẫn tự hạ cho tới khi dòng dài nhất vừa khổ.
+    if "<BR>" in text.upper():
+        return [d.strip() for d in re.split(r"(?i)<br\s*/?>", text) if d.strip()]
+
     dong, hien_tai = [], ""
     for tu in text.split():
         thu = f"{hien_tai} {tu}".strip()
@@ -134,17 +155,27 @@ def ve_chu(anh, tieu_de):
     rong_toi_da = W - 260
     tieu_de = tieu_de.upper()  # banner luôn viết hoa toàn bộ
 
-    # Cỡ chữ: thử từ lớn xuống, dừng khi vừa 2 dòng (tối đa 3).
-    for size in range(112, 51, -4):
-        fonts, gian = bo_font(size), size * GIAN
-        dong = xuong_dong(draw, tieu_de, fonts, rong_toi_da, gian)
-        if len(dong) <= 2:
-            break
+    tu_ngat = bool(re.search(r"(?i)<br\s*/?>", tieu_de))
+
+    if tu_ngat:
+        # Tác giả tự ngắt: giữ nguyên số dòng, chỉ hạ cỡ tới khi dòng dài nhất vừa khổ.
+        for size in range(112, 39, -4):
+            fonts, gian = bo_font(size), size * GIAN
+            dong = xuong_dong(draw, tieu_de, fonts, rong_toi_da, gian)
+            if max(do_rong(draw, d, fonts, gian) for d in dong) <= rong_toi_da:
+                break
     else:
-        size = 52
-        fonts, gian = bo_font(size), size * GIAN
-        dong = xuong_dong(draw, tieu_de, fonts, rong_toi_da, gian)
-    dong = dong[:3]
+        # Cỡ chữ: thử từ lớn xuống, dừng khi vừa 2 dòng (tối đa 3).
+        for size in range(112, 51, -4):
+            fonts, gian = bo_font(size), size * GIAN
+            dong = xuong_dong(draw, tieu_de, fonts, rong_toi_da, gian)
+            if len(dong) <= 2:
+                break
+        else:
+            size = 52
+            fonts, gian = bo_font(size), size * GIAN
+            dong = xuong_dong(draw, tieu_de, fonts, rong_toi_da, gian)
+        dong = dong[:3]
 
     cao_dong = round(size * 1.24)
     # Đường chân chữ lấy theo font tiếng Việt, để chữ Hàn xen giữa cũng đứng
@@ -192,11 +223,13 @@ def main():
             print(f"  ! bỏ qua {f.name}: thiếu title")
             continue
         slug = fm.get("slug") or re.sub(r"^\d{4}-\d{2}-\d{2}-", "", f.stem)
-        chu = fm["title"]
+        # bannerTitle cho phép banner ghi khác tiêu đề bài; không có thì dùng title
+        chu = fm.get("bannerTitle") or fm["title"]
+        rieng = " (bannerTitle)" if fm.get("bannerTitle") else ""
         anh = ve_chu(dung_nen(goc), chu)
         ra = XUAT / f"{slug}.jpg"
         anh.save(ra, "JPEG", quality=88, optimize=True, progressive=True)
-        print(f"  {ra.relative_to(ROOT)}  ·  {chu}")
+        print(f"  {ra.relative_to(ROOT)}  ·  {chu}{rieng}")
 
 
 if __name__ == "__main__":
