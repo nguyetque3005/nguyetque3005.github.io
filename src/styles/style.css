@@ -551,6 +551,25 @@ ul.chapter-aside li::before {
   gap: 18px;
 }
 
+/* Hàng đôi: ảnh nào có "half" thì hai tấm đứng cạnh nhau thành một hàng,
+   các ảnh còn lại vẫn rộng hết cột. Khung của ảnh đôi dựng đứng 3:4 nên hai
+   tấm giấy tờ cao bằng nhau. */
+.chapter-media.has-pair {
+  grid-template-columns: 1fr 1fr;
+}
+
+.chapter-media.has-pair > .photo {
+  grid-column: 1 / -1;
+}
+
+.chapter-media.has-pair > .photo.is-half {
+  grid-column: auto;
+}
+
+.chapter-media.has-pair > .photo.is-half .photo-frame {
+  aspect-ratio: 3 / 4;
+}
+
 /* ---------- Ảnh ---------- */
 
 .photo {
@@ -2101,6 +2120,10 @@ ul.chapter-aside li,
     height: auto;
   }
 
+  .chapter-media.has-pair > .photo.is-half .photo-frame {
+    aspect-ratio: auto;
+  }
+
   .chapter::before {
     content: '';
     position: absolute;
@@ -2117,6 +2140,16 @@ ul.chapter-aside li,
 @media (max-width: 620px) {
   body {
     font-size: 16px;
+  }
+
+  /* Màn điện thoại: hai ảnh nhỏ đứng cạnh nhau thì chữ trên giấy tờ bé quá,
+     cho xếp dọc lại như các ảnh khác. */
+  .chapter-media.has-pair {
+    grid-template-columns: 1fr;
+  }
+
+  .chapter-media.has-pair > .photo.is-half {
+    grid-column: 1 / -1;
   }
 
   .skill-grid {

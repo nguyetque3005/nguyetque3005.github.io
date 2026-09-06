@@ -109,7 +109,16 @@
                     "src": "/assets/Ulsan_course.jpeg",
                     "alt": "Các chứng nhận hoàn thành khóa học của 울산과학대학교",
                     "caption": "Hoàn thành 4 khóa học tại 울산과학대학교",
-                    "ratio": "portrait"
+                    "ratio": "portrait",
+                    "half": true
+                },
+                {
+                    "src": "/assets/KIIP.png",
+                    "alt": "한국이민귀화적격시험 합격증 (KINAT) — số hiệu và ngày sinh đã che",
+                    "caption": "Hoàn thành KIIP 5",
+                    "ratio": "portrait",
+                    "fit": "contain",
+                    "half": true
                 }
             ]
         },
@@ -125,13 +134,6 @@
                 "Thủ khoa Thạc sĩ Biên-Phiên dịch Hàn-Việt (GPA 4.3/4.3)."
             ],
             "photos": [
-                {
-                    "src": "/assets/KIIP.png",
-                    "alt": "한국이민귀화적격시험 합격증 (KINAT) — số hiệu và ngày sinh đã che",
-                    "caption": "Hoàn thành KIIP 5 sau 1 năm 5 tháng",
-                    "ratio": "portrait",
-                    "fit": "contain"
-                },
                 {
                     "src": "/assets/IBK.jpeg",
                     "alt": "장학증서 — chứng thư học bổng của IBK 기업은행",

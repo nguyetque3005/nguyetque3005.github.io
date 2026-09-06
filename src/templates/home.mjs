@@ -37,8 +37,9 @@ function chapter(ch, index) {
       : `<p class="chapter-aside">${renderInline(ch.aside)}</p>`;
 
   const photos = ch.photos || [];
+  const hasPair = photos.some((p) => p.half);
   const media = photos.length
-    ? `<div class="chapter-media${photos.length > 1 ? ' is-stacked' : ''}">
+    ? `<div class="chapter-media${photos.length > 1 ? ' is-stacked' : ''}${hasPair ? ' has-pair' : ''}">
             ${photos.map((p) => figure(p, 'chapter-photo')).join('\n            ')}
           </div>`
     : '';
