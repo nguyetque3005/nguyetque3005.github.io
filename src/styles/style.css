@@ -1160,6 +1160,8 @@ ul.chapter-aside li::before {
   padding: 11px 18px;
   border-top: 1px solid var(--blush);
   vertical-align: top;
+  /* Mọi cột cùng một kiểu chữ — chỗ nào đậm là do tác giả in đậm trong bài */
+  color: var(--ink);
 }
 
 .table-wrap tbody tr:nth-child(even) {
@@ -1167,24 +1169,13 @@ ul.chapter-aside li::before {
 }
 
 .table-wrap td:first-child {
-  font-weight: 600;
-  color: var(--ink);
   width: 42%;
 }
 
-.table-wrap td:last-child {
-  color: var(--muted);
-}
-
-/* Bảng từ 3 cột trở lên — ví dụ hai cặp từ trái nghĩa xếp song song — thì hai
-   nửa phải ngang nhau: chia đều bề ngang, không làm nhạt cột cuối. Hai luật
-   trên chỉ đúng cho bảng 2 cột kiểu "từ | nghĩa". */
+/* Bảng từ 3 cột trở lên — ví dụ hai cặp từ trái nghĩa xếp song song — thì
+   chia đều bề ngang. */
 .table-wrap table:has(th:nth-child(3)) td:first-child {
   width: auto;
-}
-
-.table-wrap table:has(th:nth-child(3)) td:last-child {
-  color: var(--ink);
 }
 
 .post-foot-actions {
