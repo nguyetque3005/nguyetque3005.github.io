@@ -105,7 +105,9 @@ async function loadPosts(site) {
     posts.push({
       slug,
       url: `/blog/${slug}.html`,
-      title: data.title,
+      // <br> trong title chỉ để ngắt dòng tiêu đề trên trang bài; chỗ khác gộp thành một dòng
+      title: data.title.replace(/\s*<br\s*\/?>\s*/gi, " "),
+      titleLines: data.title.split(/\s*<br\s*\/?>\s*/i),
       date: data.date,
       category: data.category || "Bài viết",
       tags: (data.tags || "")
