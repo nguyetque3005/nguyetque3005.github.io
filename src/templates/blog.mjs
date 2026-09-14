@@ -67,7 +67,7 @@ ${related.map((p) => postCard(p)).join('\n')}
       <div class="shell shell-narrow">
         <header class="post-head reveal">
           <p class="post-breadcrumb"><a href="/blog.html">Tài liệu</a> <span aria-hidden="true">/</span> ${escapeHtml(post.category || 'Bài viết')}</p>
-          <h1>${escapeHtml(post.title)}</h1>
+          <h1>${post.titleLines.map(escapeHtml).join('<br>')}</h1>
           <p class="post-byline">
             <span>${escapeHtml(post.author)}</span>
             <span aria-hidden="true">·</span>
