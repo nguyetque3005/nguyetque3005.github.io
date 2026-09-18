@@ -1180,6 +1180,12 @@ ul.chapter-aside li::before {
   white-space: nowrap;
 }
 
+/* Bảng từ 4 cột trở lên (lộ trình theo ngày, hai cặp từ song song): các cột
+   trước đều ngắn, giữ một dòng; chỉ cột cuối được xuống dòng. */
+.table-wrap table:has(th:nth-child(4)) td:not(:last-child) {
+  white-space: nowrap;
+}
+
 .post-foot-actions {
   display: flex;
   flex-wrap: wrap;
