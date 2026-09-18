@@ -1173,9 +1173,11 @@ ul.chapter-aside li::before {
 }
 
 /* Bảng từ 3 cột trở lên — ví dụ hai cặp từ trái nghĩa xếp song song — thì
-   chia đều bề ngang. */
+   chia đều bề ngang. Cột đầu thường ngắn (ngày, từ) nên giữ một dòng,
+   tránh "18/09" bị bẻ thành "18/0 9". */
 .table-wrap table:has(th:nth-child(3)) td:first-child {
   width: auto;
+  white-space: nowrap;
 }
 
 .post-foot-actions {
