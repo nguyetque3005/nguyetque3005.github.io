@@ -1,0 +1,31 @@
+# Phiếu nộp bài. Mở: .../issues/new/choose — lưu link đó ra màn hình chính
+# điện thoại là thành "nút đăng bài".
+name: Đăng bài mới
+description: Dán link Google Docs, máy tự dựng bài và đăng lên website
+title: "Đăng bài"   # workflow nop-bai.yml nhận phiếu theo tiêu đề này
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Ở **đầu tài liệu Google Docs** phải có khối thông tin này, kết thúc
+        bằng một dòng chỉ có dấu gạch:
+
+        ```
+        TIÊU ĐỀ: Cách phân biệt 은/는 và 이/가
+        NGÀY: 22/09/2026
+        CHUYÊN MỤC: Ngữ pháp
+        THẺ: Ngữ pháp, Trợ từ
+        BANNER: Phân biệt<br>은/는 và 이/가
+        ---
+        ```
+
+        `BANNER` bỏ trống thì banner lấy đúng tiêu đề bài.
+        Tài liệu phải chia sẻ ở chế độ **Bất kỳ ai có đường liên kết**.
+
+  - type: input
+    id: link
+    attributes:
+      label: Link Google Docs
+      placeholder: https://docs.google.com/document/d/...
+    validations:
+      required: true

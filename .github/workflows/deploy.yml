@@ -12,6 +12,7 @@ on:
   push:
     branches: [source]
   workflow_dispatch:
+  workflow_call:          # workflow nộp bài gọi sang đây sau khi commit xong
 
 permissions:
   contents: write
@@ -29,6 +30,7 @@ jobs:
       - name: Lấy mã nguồn
         uses: actions/checkout@v4
         with:
+          ref: source     # luôn dựng từ nhánh source, kể cả khi được gọi từ nơi khác
           fetch-depth: 0
 
       - name: Cài Node.js
