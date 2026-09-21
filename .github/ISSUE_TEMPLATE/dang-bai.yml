@@ -2,7 +2,7 @@
 # điện thoại là thành "nút đăng bài".
 name: Đăng bài mới
 description: Dán link Google Docs, máy tự dựng bài và đăng lên website
-title: "Đăng bài"   # workflow nop-bai.yml nhận phiếu theo tiêu đề này
+title: "Đăng bài"   # điền sẵn vào ô tiêu đề; viết thêm vào sau cũng được
 body:
   - type: markdown
     attributes:
