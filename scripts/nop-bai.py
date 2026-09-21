@@ -1,12 +1,15 @@
 #!/usr/bin/env python3
-"""Đọc một Google Docs đã ghi sẵn khối thông tin ở đầu, dựng thành bài viết.
+"""Đọc một Google Docs rồi dựng thành bài viết, có kiểm tra thông tin.
 
 Khác với gdoc-sang-md.py (chỉ in Markdown ra màn hình cho người sửa tay),
 script này chạy trọn khâu: kiểm tra thông tin -> dựng content/blog/<ngày>-<slug>.md.
 Thiếu hoặc sai thông tin thì không dựng gì cả, chỉ in ra danh sách chỗ phải sửa.
 
-Khối thông tin đặt ở ngay đầu tài liệu, mỗi dòng một mục, kết thúc bằng dòng
-chỉ có dấu gạch:
+Thông tin bài (tiêu đề, ngày, chuyên mục, thẻ…) lấy từ phiếu Issues trên
+GitHub — xem --phieu. Tài liệu Google Docs cứ để nguyên như tác giả vẫn viết.
+
+Cách thứ hai, dùng khi không qua phiếu: ghi sẵn khối thông tin ở đầu tài liệu,
+mỗi dòng một mục, kết thúc bằng dòng chỉ có dấu gạch:
 
     TIÊU ĐỀ: Cách phân biệt 은/는 và 이/가
     NGÀY: 22/09/2026
@@ -20,8 +23,11 @@ chỉ có dấu gạch:
 BANNER, TÓM TẮT, SLUG có thể bỏ trống. Chữ có dấu hay không dấu, in hoa hay
 in thường, in đậm hay bôi nền đều nhận.
 
+Điền cả hai chỗ thì phiếu thắng.
+
 Chạy:
     python3 scripts/nop-bai.py "<link Google Docs>"
+    python3 scripts/nop-bai.py --phieu=<file chứa thân phiếu Issues>
     python3 scripts/nop-bai.py --tu-kiem      # tự kiểm tra script
 """
 
@@ -40,9 +46,13 @@ _spec = importlib.util.spec_from_file_location("gdoc", ROOT / "scripts/gdoc-sang
 gdoc = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(gdoc)
 
-# Tên mục trong tài liệu -> tên trường trong frontmatter
+# Tên mục (trong tài liệu hoặc trên phiếu) -> tên trường trong frontmatter
 KHOA = {
     "tieu de": "title",
+    "tieu de bai viet": "title",
+    "ngay dang": "date",
+    "chu tren banner": "bannerTitle",
+    "link google docs": "link",
     "ngay": "date",
     "chuyen muc": "category",
     "the": "tags",
@@ -53,12 +63,6 @@ KHOA = {
 BAT_BUOC = ("title", "date", "category", "tags")
 # Tên mục in ra khi báo lỗi — viết đúng như tác giả gõ trong tài liệu.
 TEN_HIEN = {"title": "TIÊU ĐỀ", "date": "NGÀY", "category": "CHUYÊN MỤC", "tags": "THẺ"}
-MAU_KHOI = """TIÊU ĐỀ: <tên bài>
-NGÀY: <ngày/tháng/năm>
-CHUYÊN MỤC: <một mục đang có>
-THẺ: <các thẻ, cách nhau bằng dấu phẩy>
----"""
-
 
 def khong_dau(s):
     """So khớp tên mục và tên thẻ mà không phụ thuộc dấu, hoa thường."""
@@ -72,6 +76,35 @@ def lam_slug(s):
     s = khong_dau(s)
     s = re.sub(r"[^a-z0-9가-힣]+", "-", s)
     return s.strip("-")[:80]
+
+
+def doc_phieu(than):
+    """Đọc thân phiếu Issues: mỗi mục là một dòng '### Nhãn' rồi tới giá trị."""
+    ra, ten = {}, None
+    for d in than.replace("\r", "").split("\n"):
+        if d.startswith("### "):
+            ten = KHOA.get(khong_dau(d[4:]))
+            continue
+        gt = d.strip()
+        if not ten or not gt or gt == "_No response_":
+            continue
+        if gt.startswith("- ["):                      # ô tick, chỉ lấy ô đã tick
+            if gt[3:4].lower() == "x":
+                ra[ten] = ", ".join(filter(None, [ra.get(ten), gt[6:].strip()]))
+            continue
+        ra[ten] = (ra[ten] + " " + gt) if ten in ra else gt
+    return ra
+
+
+def bo_dong_tieu_de(than, title):
+    """Dòng đầu tài liệu thường là chính tên bài — đã có ở frontmatter rồi."""
+    for i, d in enumerate(than.split("\n")):
+        if not d.strip():
+            continue
+        if title and khong_dau(re.sub(r"[*#=]", "", d)) == khong_dau(title):
+            return "\n".join(than.split("\n")[i + 1:]).strip()
+        break
+    return than
 
 
 def tach_khoi(md):
@@ -91,8 +124,9 @@ def tach_khoi(md):
         if not truong:
             break
         khoa[truong] = gia_tri.strip()
-    than = "\n".join(dong[het + 1:]).strip() if het is not None else ""
-    return khoa, than
+    # Không có khối nào thì cả tài liệu là nội dung.
+    than = "\n".join(dong[het + 1:]).strip() if het is not None else md.strip()
+    return (khoa, than) if het is not None else ({}, than)
 
 
 def doc_the_va_muc():
@@ -114,10 +148,6 @@ def doc_the_va_muc():
 def kiem_tra(khoa, than, co_anh):
     """Trả về (danh sách lỗi, thông tin đã chuẩn hoá)."""
     loi, sach = [], {}
-    if not khoa:
-        return ["Không thấy khối thông tin ở đầu tài liệu. Dán khối này lên "
-                "trên cùng rồi nộp lại:\n\n" + MAU_KHOI], {}
-
     for truong in BAT_BUOC:
         if not khoa.get(truong):
             loi.append(f"Thiếu mục {TEN_HIEN[truong]}.")
@@ -196,26 +226,73 @@ def tu_kiem():
     assert sach["tags"] == "Từ vựng, Ngữ pháp", sach   # giữ đúng chữ của bộ thẻ cũ
     assert sach["slug"] == "bai-thu", sach
 
+    # Tài liệu không có khối nào: giữ nguyên toàn bộ làm nội dung.
+    khoa, than = tach_khoi("# Bài thử\n\nCâu đầu.\n")
+    assert khoa == {} and than == "# Bài thử\n\nCâu đầu.", (khoa, than)
+
+    # Thông tin lấy từ phiếu Issues thay vì từ tài liệu.
+    phieu = doc_phieu("""### Link Google Docs
+
+https://docs.google.com/document/d/abc
+
+### Tiêu đề bài viết
+
+Bài thử
+
+### Ngày đăng
+
+22/09/2026
+
+### Chuyên mục
+
+TOPIK
+
+### Thẻ
+
+- [x] Từ vựng
+- [ ] Câu 51
+- [X] Ngữ pháp
+
+### Chữ trên banner
+
+_No response_
+""")
+    assert phieu == {"link": "https://docs.google.com/document/d/abc",
+                     "title": "Bài thử", "date": "22/09/2026",
+                     "category": "TOPIK", "tags": "Từ vựng, Ngữ pháp"}, phieu
+    loi, sach = kiem_tra(phieu, than, co_anh=False)
+    assert not loi, loi
+    assert bo_dong_tieu_de(than, sach["title"]) == "Câu đầu.", than
+
     loi, _ = kiem_tra(*tach_khoi("TIÊU ĐỀ: X\n---\nnội dung"), co_anh=True)
     assert loi[:3] == ["Thiếu mục NGÀY.", "Thiếu mục CHUYÊN MỤC.", "Thiếu mục THẺ."], loi
     assert "ảnh" in loi[3], loi
-    assert kiem_tra({}, "x", False)[0][0].startswith("Không thấy khối")
+    assert len(kiem_tra({}, "x", False)[0]) == 4   # trống trơn: thiếu cả bốn mục
     print("Tự kiểm tra: đạt.")
 
 
 def main():
     if "--tu-kiem" in sys.argv:
         return tu_kiem()
-    if len(sys.argv) < 2:
-        sys.exit(__doc__)
 
-    html = gdoc.tai_ve(sys.argv[1])
+    phieu = {}
+    for a in sys.argv[1:]:
+        if a.startswith("--phieu="):
+            phieu = doc_phieu(Path(a[8:]).read_text(encoding="utf-8"))
+    tu_do = [a for a in sys.argv[1:] if not a.startswith("--")]
+    link = tu_do[0] if tu_do else phieu.get("link", "")
+    if not link:
+        sys.exit("Không thấy link Google Docs.")
+
+    html = gdoc.tai_ve(link)
     p = gdoc.DocParser(gdoc.bang_style(html))
     p.feed(html)
     p.dong_khoi()
     khoa, than = tach_khoi(gdoc.sang_markdown(p))
+    khoa.update({k: v for k, v in phieu.items() if v})   # phiếu thắng tài liệu
 
     loi, sach = kiem_tra(khoa, than, co_anh="<img" in html)
+    than = bo_dong_tieu_de(than, sach.get("title"))
     if loi:
         print("Chưa đăng được. Sửa trong Google Docs rồi nộp lại:\n")
         for l in loi:

@@ -1,26 +1,17 @@
-# Phiếu nộp bài. Mở: .../issues/new/choose — lưu link đó ra màn hình chính
-# điện thoại là thành "nút đăng bài".
+# Phiếu nộp bài. Mở: .../issues/new?template=dang-bai.yml — lưu link đó ra
+# màn hình chính điện thoại là thành "nút đăng bài".
+#
+# Nhãn của từng ô phải khớp với bảng KHOA trong scripts/nop-bai.py; đổi chữ ở
+# đây thì đổi cả bên đó.
 name: Đăng bài mới
-description: Dán link Google Docs, máy tự dựng bài và đăng lên website
+description: Dán link Google Docs, điền thông tin, máy tự dựng bài và đăng lên web
 title: "Đăng bài"   # điền sẵn vào ô tiêu đề; viết thêm vào sau cũng được
 body:
   - type: markdown
     attributes:
       value: |
-        Ở **đầu tài liệu Google Docs** phải có khối thông tin này, kết thúc
-        bằng một dòng chỉ có dấu gạch:
-
-        ```
-        TIÊU ĐỀ: Cách phân biệt 은/는 và 이/가
-        NGÀY: 22/09/2026
-        CHUYÊN MỤC: Ngữ pháp
-        THẺ: Ngữ pháp, Trợ từ
-        BANNER: Phân biệt<br>은/는 và 이/가
-        ---
-        ```
-
-        `BANNER` bỏ trống thì banner lấy đúng tiêu đề bài.
-        Tài liệu phải chia sẻ ở chế độ **Bất kỳ ai có đường liên kết**.
+        Tài liệu Google Docs cứ để nguyên, không phải thêm gì vào trong đó.
+        Chỉ cần chia sẻ ở chế độ **Bất kỳ ai có đường liên kết**.
 
   - type: input
     id: link
@@ -29,3 +20,59 @@ body:
       placeholder: https://docs.google.com/document/d/...
     validations:
       required: true
+
+  - type: input
+    id: tieu-de
+    attributes:
+      label: Tiêu đề bài viết
+      description: Tên bài hiện trên web. Dòng đầu tài liệu trùng với tên này thì máy tự bỏ đi cho khỏi lặp.
+    validations:
+      required: true
+
+  - type: input
+    id: ngay
+    attributes:
+      label: Ngày đăng
+      placeholder: 22/09/2026
+    validations:
+      required: true
+
+  - type: dropdown
+    id: chuyen-muc
+    attributes:
+      label: Chuyên mục
+      options:
+        - TOPIK
+        - Ngữ pháp
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: the
+    attributes:
+      label: Thẻ
+      description: Tick những thẻ hợp với bài.
+      options:
+        - label: Câu 51
+        - label: Câu 52
+        - label: Câu 53
+        - label: Câu 54
+        - label: Luyện nghe
+        - label: Luyện đọc
+        - label: Luyện viết
+        - label: Từ vựng
+        - label: Ngữ pháp
+        - label: Trợ từ
+        - label: Kinh nghiệm
+
+  - type: input
+    id: banner
+    attributes:
+      label: Chữ trên banner
+      description: Bỏ trống thì banner ghi đúng tiêu đề bài. Muốn tự xuống dòng thì đặt <br> vào chỗ đó.
+
+  - type: textarea
+    id: tom-tat
+    attributes:
+      label: Tóm tắt
+      description: Một câu hiện ở đầu bài và trên thẻ bài viết. Cắt từ chính câu chữ trong tài liệu, đừng viết câu mới.

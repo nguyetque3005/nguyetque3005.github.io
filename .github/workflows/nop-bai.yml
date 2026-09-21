@@ -1,5 +1,7 @@
 # Nộp bài từ Google Docs: mở một issue theo phiếu "Đăng bài mới", dán link.
 #
+# Thông tin bài lấy từ chính các ô trên phiếu; tài liệu Google Docs để nguyên.
+#
 #   thiếu thông tin  -> máy ghi rõ chỗ phải sửa vào issue rồi đóng lại.
 #                       Sửa trong Docs xong bấm "Reopen" là nộp lại.
 #   đủ thông tin     -> dựng bài + banner, commit lên nhánh source,
@@ -45,35 +47,16 @@ jobs:
           sudo apt-get update -qq
           sudo apt-get install -y -qq fonts-noto-cjk
 
-      # Thân issue là chữ người dùng gõ — truyền qua biến môi trường,
-      # không ghép thẳng vào lệnh shell.
-      - name: Tìm link trong phiếu
-        id: link
-        env:
-          THAN: ${{ github.event.issue.body }}
-        run: |
-          python3 - <<'PY' >> "$GITHUB_OUTPUT"
-          import os, re
-          m = re.search(r"https://docs\.google\.com/document/d/[\w-]+", os.environ["THAN"])
-          print("link=" + (m.group(0) if m else ""))
-          PY
-
-      - name: Không thấy link
-        if: steps.link.outputs.link == ''
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          gh issue close ${{ github.event.issue.number }} \
-            -c "Không thấy link Google Docs trong phiếu. Mở phiếu mới và dán link vào ô *Link Google Docs*."
-          exit 1
-
+      # Thân phiếu là chữ người dùng gõ — truyền qua biến môi trường rồi ghi
+      # ra file, không ghép thẳng vào lệnh shell.
       - name: Dựng bài
         id: dung
         continue-on-error: true
         env:
-          LINK: ${{ steps.link.outputs.link }}
+          THAN: ${{ github.event.issue.body }}
         run: |
-          python3 scripts/nop-bai.py "$LINK" > ket-qua.txt 2>&1
+          printf '%s' "$THAN" > phieu.txt
+          python3 scripts/nop-bai.py --phieu=phieu.txt > ket-qua.txt 2>&1
           cat ket-qua.txt
 
       - name: Báo lỗi vào issue
