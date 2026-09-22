@@ -34,6 +34,7 @@ import importlib.util
 import re
 import sys
 import unicodedata
+import urllib.error
 from datetime import datetime
 from pathlib import Path
 
@@ -66,12 +67,35 @@ def khong_dau(s):
     """So khớp tên mục và tên thẻ mà không phụ thuộc dấu, hoa thường."""
     s = unicodedata.normalize("NFD", str(s)).replace("đ", "d").replace("Đ", "D")
     s = "".join(c for c in s if unicodedata.category(c) != "Mn")
+    s = unicodedata.normalize("NFC", s)          # 경제 tách ra rồi phải ghép lại
     return re.sub(r"\s+", " ", s).strip().lower()
+
+
+def anh_noi_dung(html):
+    """Ảnh thật trong bài. Bỏ qua ảnh nền cả trang — khung hồng và chữ ký
+    Queenie nằm sẵn trong mẫu tài liệu, không phải nội dung bài."""
+    ra = []
+    for the in re.findall(r"<img[^>]*>", html):
+        rong = re.search(r"width:\s*([\d.]+)px", the)
+        cao = re.search(r"height:\s*([\d.]+)px", the)
+        rong = float(rong.group(1)) if rong else 0
+        cao = float(cao.group(1)) if cao else 0
+        # ponytail: nhận ảnh nền bằng khổ giấy. Ảnh nội dung to bằng cả trang
+        # sẽ bị coi nhầm là nền — khi nào gặp thì đổi sang so mã băm của ảnh.
+        if rong >= 700 and cao >= 1000:
+            continue
+        ra.append(the)
+    return ra
+
+
+def bo_br(s):
+    """<br> chỉ để ngắt dòng khi hiện ra, không tính là chữ."""
+    return re.sub(r"\s*<br\s*/?>\s*", " ", str(s), flags=re.I).strip()
 
 
 def lam_slug(s):
     """Giống slugify trong src/lib/markdown.mjs — giữ cả chữ Hàn."""
-    s = khong_dau(s)
+    s = khong_dau(bo_br(s))
     s = re.sub(r"[^a-z0-9가-힣]+", "-", s)
     return s.strip("-")[:80]
 
@@ -95,12 +119,21 @@ def doc_phieu(than):
 
 
 def bo_dong_tieu_de(than, title):
-    """Dòng đầu tài liệu thường là chính tên bài — đã có ở frontmatter rồi."""
-    for i, d in enumerate(than.split("\n")):
+    """Dòng đầu tài liệu thường lặp lại chính tên bài — đã có ở frontmatter rồi.
+
+    Chỉ bỏ đúng một dòng, và chỉ khi nó nằm gọn trong tên bài. Tên bài hay
+    gộp thêm phần chủ đề mà tài liệu để riêng một dòng có tô màu; dòng tô màu
+    đó là chữ của tác giả, phải giữ."""
+    if not title:
+        return than
+    can = khong_dau(bo_br(title))
+    dong = than.split("\n")
+    for i, d in enumerate(dong):
         if not d.strip():
             continue
-        if title and khong_dau(re.sub(r"[*#=]", "", d)) == khong_dau(title):
-            return "\n".join(than.split("\n")[i + 1:]).strip()
+        tho = khong_dau(re.sub(r"[*#=]", "", d))
+        if len(tho) >= 5 and can.startswith(tho):
+            return "\n".join(dong[i + 1:]).strip()
         break
     return than
 
@@ -189,7 +222,7 @@ def dung_bai(sach, than):
     fm = [f"title: {sach['title']}", f"date: {sach['date']}",
           f"tags: {sach['tags']}",
           f"image: /assets/banner/{sach['slug']}.jpg",
-          f"imageAlt: Banner bài viết — {sach['title']}"]
+          f"imageAlt: Banner bài viết — {bo_br(sach['title'])}"]
     for t in ("summary", "bannerTitle"):
         if sach.get(t):
             fm.append(f"{t}: {sach[t]}")
@@ -248,10 +281,27 @@ _No response_
     assert not loi, loi
     assert bo_dong_tieu_de(than, sach["title"]) == "Câu đầu.", than
 
+    # Tiêu đề trong tài liệu chỉ là một phần tên bài: bỏ dòng đó, giữ dòng tô màu.
+    hai = "# TỪ VỰNG TOPIK THEO CHỦ ĐỀ\n\n**==xanh: 경제 - KINH TẾ==**\n\n| a | b |"
+    assert bo_dong_tieu_de(hai, "TỪ VỰNG TOPIK THEO CHỦ ĐỀ <br>경제 - KINH TẾ") == \
+        "**==xanh: 경제 - KINH TẾ==**\n\n| a | b |"
+    # Khớp hụt thì giữ nguyên, không cắt bừa.
+    assert bo_dong_tieu_de(hai, "Tên khác hẳn") == hai
+
     loi, _ = kiem_tra(*tach_khoi("TIÊU ĐỀ: X\n---\nnội dung"), co_anh=True)
     assert loi[:2] == ["Thiếu mục NGÀY.", "Thiếu mục THẺ."], loi
     assert "ảnh" in loi[2], loi
     assert len(kiem_tra({}, "x", False)[0]) == 3   # trống trơn: thiếu cả ba mục
+    nen = '<img style="width: 764.00px; height: 1083.50px;">'
+    trong_bai = '<img style="width: 320.00px; height: 240.00px;">'
+    assert anh_noi_dung(nen) == [], "ảnh nền không được tính là nội dung"
+    assert anh_noi_dung(nen + trong_bai) == [trong_bai]
+    assert anh_noi_dung("<img>") == ["<img>"], "không rõ khổ thì cứ coi là ảnh thật"
+
+    t = "TỪ VỰNG TOPIK THEO CHỦ ĐỀ <br>경제 - KINH TẾ"
+    assert lam_slug(t) == "tu-vung-topik-theo-chu-de-경제-kinh-te", lam_slug(t)
+    assert bo_br(t) == "TỪ VỰNG TOPIK THEO CHỦ ĐỀ 경제 - KINH TẾ", bo_br(t)
+
     print("Tự kiểm tra: đạt.")
 
 
@@ -268,14 +318,25 @@ def main():
     if not link:
         sys.exit("Không thấy link Google Docs.")
 
-    html = gdoc.tai_ve(link)
+    try:
+        html = gdoc.tai_ve(link)
+    except urllib.error.HTTPError as e:
+        if e.code in (401, 403):
+            sys.exit("Không mở được tài liệu — Google Docs đang để riêng tư.\n"
+                     "Mở tài liệu → nút Chia sẻ → Quyền truy cập chung →\n"
+                     "chọn “Bất kỳ ai có đường liên kết”, vai trò Người xem.")
+        if e.code == 404:
+            sys.exit("Không thấy tài liệu này. Kiểm tra lại link đã dán.")
+        sys.exit(f"Không mở được tài liệu, Google trả về lỗi {e.code}.")
+    except urllib.error.URLError as e:
+        sys.exit(f"Không kết nối được tới Google Docs: {e.reason}")
     p = gdoc.DocParser(gdoc.bang_style(html))
     p.feed(html)
     p.dong_khoi()
     khoa, than = tach_khoi(gdoc.sang_markdown(p))
     khoa.update({k: v for k, v in phieu.items() if v})   # phiếu thắng tài liệu
 
-    loi, sach = kiem_tra(khoa, than, co_anh="<img" in html)
+    loi, sach = kiem_tra(khoa, than, co_anh=bool(anh_noi_dung(html)))
     than = bo_dong_tieu_de(than, sach.get("title"))
     if loi:
         print("Chưa đăng được. Sửa trong Google Docs rồi nộp lại:\n")
