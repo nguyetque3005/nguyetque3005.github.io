@@ -1,10 +1,10 @@
 ---
-title: Từ vựng TOPIK theo chủ đề <br> - Kinh tế
+title: Từ vựng TOPIK theo chủ đề <br>Kinh tế
 date: 2026-09-21
 tags: Từ vựng
 image: /assets/banner/tu-vung-topik-theo-chu-de-kinh-te.jpg
-imageAlt: Banner bài viết — Từ vựng TOPIK theo chủ đề - Kinh tế
-bannerTitle: Từ vựng theo chủ đề<br>경제 - Kinh tế
+imageAlt: Banner bài viết — Từ vựng TOPIK theo chủ đề Kinh tế
+bannerTitle: Từ vựng theo chủ đề<br>Kinh tế
 ---
 
 **==xanh: 경제 - KINH TẾ==**
