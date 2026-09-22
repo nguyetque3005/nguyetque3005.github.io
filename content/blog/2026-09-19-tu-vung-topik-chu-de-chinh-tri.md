@@ -2,7 +2,6 @@
 title: Từ vựng TOPIK theo chủ đề <br> Chính trị
 bannerTitle: Từ vựng theo chủ đề <br> Chính trị
 date: 2026-09-19
-category: TOPIK
 tags: Từ vựng
 image: /assets/banner/tu-vung-topik-chu-de-chinh-tri.jpg
 imageAlt: Banner bài viết — Từ vựng TOPIK theo chủ đề Chính trị

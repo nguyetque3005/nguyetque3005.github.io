@@ -2,7 +2,6 @@
 title: Tổng hợp chủ đề TOPIK câu 54 qua các kỳ
 bannerTitle: Câu 54 <br> 98 chủ đề đã thi
 date: 2026-08-11
-category: TOPIK
 tags: Câu 54, Luyện viết
 image: /assets/banner/chu-de-topik-cau-54-qua-cac-ky.jpg
 imageAlt: Banner bài viết — Tổng hợp chủ đề TOPIK câu 54 qua các kỳ

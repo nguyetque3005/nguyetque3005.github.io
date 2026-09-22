@@ -102,6 +102,11 @@ async function loadPosts(site) {
       data.slug ||
       slugify(file.replace(/\.md$/, "").replace(/^\d{4}-\d{2}-\d{2}-/, ""));
 
+    const tags = (data.tags || "")
+      .split(",")
+      .map((t) => t.trim())
+      .filter(Boolean);
+
     posts.push({
       slug,
       url: `/blog/${slug}.html`,
@@ -109,11 +114,9 @@ async function loadPosts(site) {
       title: data.title.replace(/\s*<br\s*\/?>\s*/gi, " "),
       titleLines: data.title.split(/\s*<br\s*\/?>\s*/i),
       date: data.date,
-      category: data.category || "Bài viết",
-      tags: (data.tags || "")
-        .split(",")
-        .map((t) => t.trim())
-        .filter(Boolean),
+      tags,
+      // Chỗ ghi chuyên mục trên thẻ bài viết và đường dẫn lấy luôn thẻ đầu tiên
+      category: tags[0] || "Bài viết",
       image: data.image || "",
       imageAlt: data.imageAlt || "",
       author: site.person.fullName,

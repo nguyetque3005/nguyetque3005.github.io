@@ -2,7 +2,6 @@
 title: Cặp từ trái nghĩa (Trung cấp)
 bannerTitle: Cặp từ trái nghĩa <br> (Trung cấp)
 date: 2026-09-02
-category: TOPIK
 tags: Từ vựng
 image: /assets/banner/cap-tu-trai-nghia-trung-cap.jpg
 imageAlt: Banner bài viết — Cặp từ trái nghĩa (Trung cấp)

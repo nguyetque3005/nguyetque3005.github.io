@@ -2,7 +2,6 @@
 title: Tổng kết dạng nghe TOPIK II
 bannerTitle: 20 DẠNG BÀI NGHE <br> Chiến thuật làm bài
 date: 2026-09-06
-category: TOPIK
 tags: Luyện nghe
 image: /assets/banner/tong-ket-dang-nghe-topik-ii.jpg
 imageAlt: Banner bài viết — Tổng kết dạng nghe TOPIK II

@@ -2,7 +2,6 @@
 title: Câu 53 <br> Đáp án mẫu các kỳ công khai
 bannerTitle: CÂU 53 <br> ĐÁP ÁN MẪU CÁC KỲ CÔNG KHAI
 date: 2026-09-17
-category: TOPIK
 tags: Câu 53, Luyện viết
 image: /assets/banner/cau-53-dap-an-mau-cac-ky-cong-khai.jpg
 imageAlt: Banner bài viết — Câu 53 Đáp án mẫu các kỳ công khai

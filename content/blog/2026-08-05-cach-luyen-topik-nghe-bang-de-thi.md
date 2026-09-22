@@ -2,7 +2,6 @@
 title: Cách luyện thi TOPIK nghe bằng đề thi
 bannerTitle: luyện nghe <br> Làm sao để tiến bộ? 
 date: 2026-08-05
-category: TOPIK
 tags: Luyện nghe, Kinh nghiệm
 image: /assets/banner/cach-luyen-topik-nghe-bang-de-thi.jpg
 imageAlt: Banner bài viết — Cách luyện thi TOPIK nghe bằng đề thi

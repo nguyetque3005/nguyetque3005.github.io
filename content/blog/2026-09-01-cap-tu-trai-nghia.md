@@ -2,7 +2,6 @@
 title: Cặp từ trái nghĩa (Sơ cấp)
 bannerTitle: Cặp từ trái nghĩa <br> (Sơ cấp)
 date: 2026-09-01
-category: TOPIK
 tags: Từ vựng
 image: /assets/banner/cap-tu-trai-nghia.jpg
 imageAlt: Banner bài viết — Cặp từ trái nghĩa (Sơ cấp)

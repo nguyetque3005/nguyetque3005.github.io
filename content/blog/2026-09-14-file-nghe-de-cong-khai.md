@@ -2,7 +2,6 @@
 title: File nghe đề công khai
 bannerTitle: File nghe <br> đề công khai
 date: 2026-09-14
-category: TOPIK
 tags: Luyện nghe
 image: /assets/banner/file-nghe-de-cong-khai.jpg
 imageAlt: Banner bài viết — File nghe đề công khai

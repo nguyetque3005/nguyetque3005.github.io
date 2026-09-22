@@ -2,7 +2,6 @@
 title: Lộ trình nước rút cho kỳ 108
 bannerTitle: LỘ TRÌNH NƯỚC RÚT <br> KỲ 108
 date: 2026-09-16
-category: TOPIK
 tags: Luyện nghe, Luyện đọc, Luyện viết, Kinh nghiệm
 image: /assets/banner/lo-trinh-nuoc-rut-cho-ky-108.jpg
 imageAlt: Banner bài viết — Lộ trình nước rút cho kỳ 108

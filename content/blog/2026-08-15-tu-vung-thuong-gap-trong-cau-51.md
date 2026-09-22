@@ -2,7 +2,6 @@
 title: Từ vựng thường gặp trong câu 51
 bannerTitle: câu 51 <br> từ vựng thường gặp
 date: 2026-08-15
-category: TOPIK
 tags: Câu 51, Từ vựng
 image: /assets/banner/tu-vung-thuong-gap-trong-cau-51.jpg
 imageAlt: Banner bài viết — Từ vựng thường gặp trong câu 51

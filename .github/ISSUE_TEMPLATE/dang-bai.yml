@@ -37,21 +37,11 @@ body:
     validations:
       required: true
 
-  - type: dropdown
-    id: chuyen-muc
-    attributes:
-      label: Chuyên mục
-      options:
-        - TOPIK
-        - Ngữ pháp
-    validations:
-      required: true
-
   - type: checkboxes
     id: the
     attributes:
       label: Thẻ
-      description: Tick những thẻ hợp với bài.
+      description: Tick những thẻ hợp với bài. Thẻ đầu tiên cũng là chữ hiện trên thẻ bài viết ngoài trang Tài liệu.
       options:
         - label: Câu 51
         - label: Câu 52
@@ -69,7 +59,7 @@ body:
     id: banner
     attributes:
       label: Chữ trên banner
-      description: Bỏ trống thì banner ghi đúng tiêu đề bài. Muốn tự xuống dòng thì đặt <br> vào chỗ đó.
+      description: "Bỏ trống thì banner ghi đúng tiêu đề bài. Muốn tự chọn chỗ xuống dòng thì đặt `<br>` vào đúng chỗ đó."
 
   - type: textarea
     id: tom-tat

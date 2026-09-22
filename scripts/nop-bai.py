@@ -5,7 +5,7 @@ Khác với gdoc-sang-md.py (chỉ in Markdown ra màn hình cho người sửa 
 script này chạy trọn khâu: kiểm tra thông tin -> dựng content/blog/<ngày>-<slug>.md.
 Thiếu hoặc sai thông tin thì không dựng gì cả, chỉ in ra danh sách chỗ phải sửa.
 
-Thông tin bài (tiêu đề, ngày, chuyên mục, thẻ…) lấy từ phiếu Issues trên
+Thông tin bài (tiêu đề, ngày, thẻ…) lấy từ phiếu Issues trên
 GitHub — xem --phieu. Tài liệu Google Docs cứ để nguyên như tác giả vẫn viết.
 
 Cách thứ hai, dùng khi không qua phiếu: ghi sẵn khối thông tin ở đầu tài liệu,
@@ -13,7 +13,6 @@ mỗi dòng một mục, kết thúc bằng dòng chỉ có dấu gạch:
 
     TIÊU ĐỀ: Cách phân biệt 은/는 và 이/가
     NGÀY: 22/09/2026
-    CHUYÊN MỤC: Ngữ pháp
     THẺ: Ngữ pháp, Trợ từ
     BANNER: Phân biệt<br>은/는 và 이/가
     ---
@@ -54,15 +53,14 @@ KHOA = {
     "chu tren banner": "bannerTitle",
     "link google docs": "link",
     "ngay": "date",
-    "chuyen muc": "category",
     "the": "tags",
     "tom tat": "summary",
     "banner": "bannerTitle",
     "slug": "slug",
 }
-BAT_BUOC = ("title", "date", "category", "tags")
+BAT_BUOC = ("title", "date", "tags")
 # Tên mục in ra khi báo lỗi — viết đúng như tác giả gõ trong tài liệu.
-TEN_HIEN = {"title": "TIÊU ĐỀ", "date": "NGÀY", "category": "CHUYÊN MỤC", "tags": "THẺ"}
+TEN_HIEN = {"title": "TIÊU ĐỀ", "date": "NGÀY", "tags": "THẺ"}
 
 def khong_dau(s):
     """So khớp tên mục và tên thẻ mà không phụ thuộc dấu, hoa thường."""
@@ -129,20 +127,18 @@ def tach_khoi(md):
     return (khoa, than) if het is not None else ({}, than)
 
 
-def doc_the_va_muc():
-    """Bộ thẻ và chuyên mục đang dùng, đọc từ chính các bài đã đăng."""
-    the, muc = {}, {}
+def doc_bo_the():
+    """Bộ thẻ đang dùng, đọc từ chính các bài đã đăng."""
+    the = {}
     for f in BLOG.glob("*.md"):
-        dau = f.read_text(encoding="utf-8").split("---")[1] if "---" in f.read_text(encoding="utf-8") else ""
-        for d in dau.split("\n"):
+        phan = f.read_text(encoding="utf-8").split("---")
+        for d in (phan[1] if len(phan) > 2 else "").split("\n"):
             ten, _, gt = d.partition(":")
             if ten.strip() == "tags":
                 for t in gt.split(","):
                     if t.strip():
                         the[khong_dau(t)] = t.strip()
-            elif ten.strip() == "category" and gt.strip():
-                muc[khong_dau(gt)] = gt.strip()
-    return the, muc
+    return the
 
 
 def kiem_tra(khoa, than, co_anh):
@@ -162,15 +158,7 @@ def kiem_tra(khoa, than, co_anh):
         else:
             loi.append(f"NGÀY không đọc được: “{khoa['date']}”. Viết dạng 22/09/2026.")
 
-    the_co, muc_co = doc_the_va_muc()
-    if khoa.get("category"):
-        ten = muc_co.get(khong_dau(khoa["category"]))
-        if ten:
-            sach["category"] = ten
-        else:
-            loi.append(f"CHUYÊN MỤC “{khoa['category']}” chưa có. Đang dùng: "
-                       + ", ".join(sorted(muc_co.values())) + ".")
-
+    the_co = doc_bo_the()
     if khoa.get("tags"):
         nhan, la = [], []
         for t in khoa["tags"].split(","):
@@ -199,7 +187,7 @@ def kiem_tra(khoa, than, co_anh):
 def dung_bai(sach, than):
     """Ghi file bài viết, trả về đường dẫn."""
     fm = [f"title: {sach['title']}", f"date: {sach['date']}",
-          f"category: {sach['category']}", f"tags: {sach['tags']}",
+          f"tags: {sach['tags']}",
           f"image: /assets/banner/{sach['slug']}.jpg",
           f"imageAlt: Banner bài viết — {sach['title']}"]
     for t in ("summary", "bannerTitle"):
@@ -213,7 +201,7 @@ def dung_bai(sach, than):
 
 
 def tu_kiem():
-    md = ("**TIÊU ĐỀ:** Bài thử\nNGAY: 22/09/2026\nCHUYÊN MỤC: topik\n"
+    md = ("**TIÊU ĐỀ:** Bài thử\nNGAY: 22/09/2026\n"
           "THẺ: tu vung, Ngữ pháp\n—\n\nCâu **đậm** của tác giả.\n")
     khoa, than = tach_khoi(md)
     assert khoa["title"] == "Bài thử", khoa
@@ -222,7 +210,7 @@ def tu_kiem():
 
     loi, sach = kiem_tra(khoa, than, co_anh=False)
     assert not loi, loi
-    assert sach["date"] == "2026-09-22" and sach["category"] == "TOPIK", sach
+    assert sach["date"] == "2026-09-22", sach
     assert sach["tags"] == "Từ vựng, Ngữ pháp", sach   # giữ đúng chữ của bộ thẻ cũ
     assert sach["slug"] == "bai-thu", sach
 
@@ -243,10 +231,6 @@ Bài thử
 
 22/09/2026
 
-### Chuyên mục
-
-TOPIK
-
 ### Thẻ
 
 - [x] Từ vựng
@@ -259,15 +243,15 @@ _No response_
 """)
     assert phieu == {"link": "https://docs.google.com/document/d/abc",
                      "title": "Bài thử", "date": "22/09/2026",
-                     "category": "TOPIK", "tags": "Từ vựng, Ngữ pháp"}, phieu
+                     "tags": "Từ vựng, Ngữ pháp"}, phieu
     loi, sach = kiem_tra(phieu, than, co_anh=False)
     assert not loi, loi
     assert bo_dong_tieu_de(than, sach["title"]) == "Câu đầu.", than
 
     loi, _ = kiem_tra(*tach_khoi("TIÊU ĐỀ: X\n---\nnội dung"), co_anh=True)
-    assert loi[:3] == ["Thiếu mục NGÀY.", "Thiếu mục CHUYÊN MỤC.", "Thiếu mục THẺ."], loi
-    assert "ảnh" in loi[3], loi
-    assert len(kiem_tra({}, "x", False)[0]) == 4   # trống trơn: thiếu cả bốn mục
+    assert loi[:2] == ["Thiếu mục NGÀY.", "Thiếu mục THẺ."], loi
+    assert "ảnh" in loi[2], loi
+    assert len(kiem_tra({}, "x", False)[0]) == 3   # trống trơn: thiếu cả ba mục
     print("Tự kiểm tra: đạt.")
 
 

@@ -2,7 +2,6 @@
 title: Phân biệt <br> V-아/어 가다 vs V-아/어 오다
 bannerTitle: PHÂN BIỆT <br> V-아/어 가다 vs V-아/어 오다
 date: 2026-09-13
-category: Ngữ pháp
 tags: Ngữ pháp
 image: /assets/banner/phan-biet-a-eo-gada-va-a-eo-oda.jpg
 imageAlt: Banner bài viết — Phân biệt V-아/어 가다 vs V-아/어 오다

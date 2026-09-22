@@ -2,7 +2,6 @@
 title: Cặp từ trái nghĩa (Cao cấp)
 bannerTitle: Cặp từ trái nghĩa <br> (Cao cấp)
 date: 2026-09-03
-category: TOPIK
 tags: Từ vựng
 image: /assets/banner/cap-tu-trai-nghia-cao-cap.jpg
 imageAlt: Banner bài viết — Cặp từ trái nghĩa (Cao cấp)

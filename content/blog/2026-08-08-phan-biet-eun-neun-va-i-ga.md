@@ -2,7 +2,6 @@
 title: Cách phân biệt 은/는 và 이/가
 bannerTitle: 은/는 và 이/가 <br> HIỂU 1 LẦN-DÙNG ĐÚNG HƠN
 date: 2026-08-08
-category: Ngữ pháp
 tags: Ngữ pháp, Trợ từ
 image: /assets/banner/phan-biet-eun-neun-va-i-ga.jpg
 imageAlt: Banner bài viết — Cách phân biệt 은/는 và 이/가
