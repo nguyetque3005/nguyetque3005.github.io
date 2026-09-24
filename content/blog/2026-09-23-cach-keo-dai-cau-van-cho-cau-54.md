@@ -7,8 +7,6 @@ imageAlt: Banner bài viết — CÁCH KÉO DÀI CÂU VĂN CHO CÂU 54
 bannerTitle: CÂU 54 <br> CÁCH KÉO DÀI CÂU VĂN
 ---
 
-# CHO CÂU 54
-
 ### Cách đơn giản nhất là
 
 - Đừng cố nhồi thật nhiều ngữ pháp khó. (X)
@@ -16,9 +14,8 @@ bannerTitle: CÂU 54 <br> CÁCH KÉO DÀI CÂU VĂN
 
 Cùng xem một ví dụ nhé!
 
-**Đề bài<br>**청소년들이 아르바이트를 통해 얻을 수 있는 것은 무엇인가?
-
-Thanh thiếu niên có thể nhận được gì thông qua việc làm thêm?
+| **Đề bài<br>**청소년들이 아르바이트를 통해 얻을 수 있는 것은 무엇인가?Thanh thiếu niên có thể nhận được gì thông qua việc làm thêm? |
+| --- |
 
 **CÂU CƠ BẢN**
 
