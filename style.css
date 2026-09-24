@@ -1115,7 +1115,9 @@ ul.chapter-aside li::before {
 }
 
 .doc-sheet .prose h3 {
-  display: inline-block;
+  /* block + fit-content: nền vừa chữ, hai tiêu đề liền nhau không dồn một dòng */
+  display: block;
+  width: fit-content;
   margin-top: 1.9em;
   padding: 2px 10px 3px;
   font-size: clamp(1rem, 1.9vw, 1.15rem);
