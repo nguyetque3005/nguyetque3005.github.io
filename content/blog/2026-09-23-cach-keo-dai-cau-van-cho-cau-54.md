@@ -24,7 +24,7 @@ Thanh thiếu niên có thể kiếm tiền và tích lũy kinh nghiệm khi là
 
 ### ==① THÊM ĐỊNH NGỮ==
 
-### Đừng chỉ viết:
+Đừng chỉ viết:
 
 경험을 쌓다. (tích lũy kinh nghiệm)
 
