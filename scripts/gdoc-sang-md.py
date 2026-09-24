@@ -105,6 +105,11 @@ class DocParser(HTMLParser):
     def handle_starttag(self, tag, attrs):
         style = doc_style(self.css, attrs)
         if tag in KHOI:
+            if self.o is not None:
+                # Nhiều đoạn trong cùng một ô bảng: giữ chỗ xuống dòng
+                if "".join(self.o).strip():
+                    self.o.append("<br>")
+                return
             self.dong_khoi()
             self.loai = tag
         elif tag in ("ul", "ol"):
@@ -163,10 +168,11 @@ class DocParser(HTMLParser):
 
     def boc(self, phan, f):
         """Bọc một đoạn chữ bằng dấu Markdown tương ứng."""
-        if not phan.strip():
+        # <br> ở mép vùng nhấn thì để ngoài dấu: **chữ<br>** -> **chữ**<br>
+        if not re.sub(r"<br>", "", phan).strip():
             return phan
-        dau = re.match(r"^\s*", phan).group(0)
-        cuoi = re.search(r"\s*$", phan).group(0)
+        dau = re.match(r"^(\s|<br>)*", phan).group(0)
+        cuoi = re.search(r"(\s|<br>)*$", phan).group(0)
         loi = phan[len(dau):len(phan) - len(cuoi) or None]
         if f["dam"] or f["nghieng"] or f["mau"]:
             self.runs.append((
@@ -200,6 +206,9 @@ def gon(s):
     s = s.replace("\xa0", " ").replace("﻿", "")
     s = re.sub(r"\*\*\s*\*\*", "", s)
     s = re.sub(r"==\s*==", "", s)
+    # Bỏ <br> lặp và <br> thừa ở đầu, cuối đoạn
+    s = re.sub(r"(<br>\s*)+", "<br>", s)
+    s = re.sub(r"^(\s*<br>)+|(<br>\s*)+$", "", s.strip())
     return re.sub(r"[ \t]+", " ", s).strip()
 
 
@@ -217,6 +226,11 @@ def sang_markdown(p):
         if loai == "bang":
             hang = [h for h in chu if any(h)]
             if not hang:
+                continue
+            if len(hang) == 1 and len(hang[0]) == 1:
+                # Bảng một ô chỉ là khung đóng hộp trong Docs -> trích dẫn
+                ra += ["", "> " + noi_lien(hang[0][0]), ""]
+                vua_li = False
                 continue
             dau = hang[0]
             ra += ["", "| " + " | ".join(dau) + " |",

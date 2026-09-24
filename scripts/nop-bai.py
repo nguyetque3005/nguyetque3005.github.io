@@ -302,6 +302,16 @@ _No response_
     assert lam_slug(t) == "tu-vung-topik-theo-chu-de-경제-kinh-te", lam_slug(t)
     assert bo_br(t) == "TỪ VỰNG TOPIK THEO CHỦ ĐỀ 경제 - KINH TẾ", bo_br(t)
 
+    # <br> dính trong vùng nhấn, ô bảng nhiều đoạn, bảng một ô (issue #2)
+    h = ('<style>.c1{font-weight:700}</style>'
+         '<h3><span class="c1">A<br></span></h3><p><span>a</span><br><span class="c1">b</span></p>'
+         '<table><tr><td><p><span class="c1">X<br></span></p><p><span>Y</span></p></td></tr></table>')
+    p = gdoc.DocParser(gdoc.bang_style(h))
+    p.feed(h)
+    p.dong_khoi()
+    md = gdoc.sang_markdown(p)
+    assert md == "### A\n\na<br>**b**\n\n> **X**<br>Y\n", repr(md)
+
     print("Tự kiểm tra: đạt.")
 
 
