@@ -77,16 +77,16 @@ Nghe các tín hiệu trong câu thoại của NAM - Chú ý cấu trúc mệnh 
 4. V-아/어/해 주시겠어요?
 5. V-아/어/해 주실 수 있어요?
 6. 먼저 / 우선 / 일단 → V1-고 V2-으세요 (Chọn V1)
-7. V1-을/를 테니까 V2-으세요 (Chọn V2)
+7. V1-(으)ㄹ 테니까 V2-(으)세요. (Chọn V1) 
 
 Nghe các tín hiệu trong câu thoại của NỮ - Chú ý cấu trúc kế hoạch, ý định:
 
 1. V-겠습니다.
-2. V-을/를게요.
+2. V-(으)ㄹ게요.
 3. V-아/어/해 줄게요.
 4. V-으려고 해요.
-5. V1-고 V2-을/를 거예요 (Chọn V1)
-6. V1-을/를 테니까 V2-으세요 (Chọn V1)
+5. V1-고 V2-(으)ㄹ 거예요. (Chọn V1) 
+6. V1-(으)ㄹ 테니까 V2-(으)세요. (Chọn V1) 
 
 ## DẠNG 4: NGHE VÀ CHỌN ĐÁP ÁN ĐÚNG (CÂU 13 - CÂU 16)
 
