@@ -77,7 +77,7 @@ Nghe các tín hiệu trong câu thoại của NAM - Chú ý cấu trúc mệnh 
 4. V-아/어/해 주시겠어요?
 5. V-아/어/해 주실 수 있어요?
 6. 먼저 / 우선 / 일단 → V1-고 V2-으세요 (Chọn V1)
-7. V1-(으)ㄹ 테니까 V2-(으)세요. (Chọn V1) 
+7. V1-(으)ㄹ 테니까 V2-(으)세요. (Chọn V2) 
 
 Nghe các tín hiệu trong câu thoại của NỮ - Chú ý cấu trúc kế hoạch, ý định:
 
